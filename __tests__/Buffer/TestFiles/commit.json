@@ -13,6 +13,7 @@
                 "commandId": "89c91e23-2e7e-43fb-8b43-88f41338a979",
                 "sqlString": "COMMIT",
                 "method": "COMMIT",
+                "partialResult": false,
                 "bindingsObject": {},
                 "bindingsSendObject": {}
             }
@@ -138,6 +139,7 @@
                 "commandId": "89c91e23-2e7e-43fb-8b43-88f41338a979",
                 "sqlString": "COMMIT",
                 "method": "COMMIT",
+                "partialResult": false,
                 "bindingsObject": {},
                 "bindingsSendObject": {}
             }

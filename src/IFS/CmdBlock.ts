@@ -140,7 +140,6 @@ export class _CmdBlock extends _PlSqlCommand implements CmdBlock {
     }
 
     public MapResponse(ifsData: IfsDataType): PlSqlMultiResponse {
-        const returnPartialResult : Array<boolean> = [];
         const returnBindings : Array<IfsDataObjectType> = [];
         const returnResult: Array<IfsDataArrayType> = [];
         let errorText = "";
@@ -149,14 +148,13 @@ export class _CmdBlock extends _PlSqlCommand implements CmdBlock {
             const response = el.MapResponse(ifsData);
             if (!response.ok)
                 errorText = response.errorText;
-            returnPartialResult.push(response.partialResult as boolean);
             returnBindings.push(response.bindings);
             returnResult.push(response.result);
         })
         if (errorText)
             return this.ErrorResponse(errorText) as PlSqlMultiResponse;
 
-        this._response = { ok: true, errorText: "", partialResult: returnPartialResult, bindings: returnBindings, result: returnResult, request: this, connection: this.connection as Connection };
+        this._response = { ok: true, errorText: "", partialResult: false, bindings: returnBindings, result: returnResult, request: this, connection: this.connection as Connection };
         return this._response as PlSqlMultiResponse;
    }
 

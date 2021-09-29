@@ -52,14 +52,21 @@ test("PlSql starting sentence1", () => {
 test("PlSql starting sentence2", async () => {
     const conn = new TestIfsConnection("ifs.test.com");
 
-    /*
     const spyExecute = jest.spyOn(_PlSqlCommand.prototype, "Execute").mockImplementation(async (): Promise<(PlSqlOneResponse | PlSqlMultiResponse)> => {
         return { ok: true, errorText: "", partialResult: false, bindings: {}, result: [], request: new _PlSqlCommand(conn, ""), connection: conn } as PlSqlOneResponse;
     });
 
-    expect(() => conn.Sql("declare") ).toThrow(Error);
-    expect(() => conn.PlSql("select")).toThrow(Error);
-    */
+    conn.Sql("declare").then(_r => {
+        expect('error').toBe('ok');        
+    }).catch(_r => {
+        // OK 
+    })
+
+    conn.PlSql("select").then(_r => {
+        expect('error').toBe('ok');        
+    }).catch(_r => {
+        // OK 
+    })
     
     const cmdBlock = conn.CmdBlock();
     expect(() => cmdBlock.Sql("declare") ).toThrow(Error);
@@ -67,7 +74,14 @@ test("PlSql starting sentence2", async () => {
     expect(() => cmdBlock.PlSql("declare") ).not.toThrow(Error);
     expect(() => cmdBlock.PlSql("select")).toThrow(Error);
 
-    //spyExecute.mockRestore();
+    conn.Sql("select", {"par1":1}).then(_r => {
+        expect('error').toBe('ok');        
+    }).catch(_r => {
+        // OK 
+    })
+    expect(() => cmdBlock.Sql("select", {"par1":1})).toThrow(Error);
+
+    spyExecute.mockRestore();
 })
 
 
@@ -96,7 +110,7 @@ test("PlSql call messages", async () => {
         return { ok: status, errorText: "", partialResult: false, bindings: {}, result: [], request: new _PlSqlCommand(conn, ""), connection: conn } as PlSqlOneResponse;
     });
     const spyCmdExecute = jest.spyOn(_CmdBlock.prototype, "Execute").mockImplementation(async (): Promise<PlSqlMultiResponse> => {
-        return { ok: true, errorText: "", partialResult: [], bindings: [], result: [], request: new _PlSqlCommand(conn, ""), connection: conn } as PlSqlMultiResponse;
+        return { ok: true, errorText: "", partialResult: false, bindings: [], result: [], request: new _PlSqlCommand(conn, ""), connection: conn } as PlSqlMultiResponse;
     });
     const spyCommit = jest.spyOn(Connection.prototype, "Commit").mockImplementation(async (): Promise<PlSqlOneResponse> => {
         return { ok: true, errorText: "", partialResult: false, bindings: {}, result: [], request: new _PlSqlCommand(conn, ""), connection: conn } as PlSqlOneResponse;
@@ -167,6 +181,7 @@ test("CmdBlock", () => {
     cmdBlock.Commit();
     cmdBlock.Rollback();
     cmdBlock.EndSession();
+
 
     const sqlArray = cmdBlock.commands.map(x => x.sqlString);
     expect(sqlArray).toStrictEqual([ "SELECT", "DECLARE;", "COMMIT", "ROLLBACK", "END_CLIENT_SESSION" ]);

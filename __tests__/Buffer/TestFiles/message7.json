@@ -14,6 +14,7 @@
                 "sqlString": "select objid, CUSTOMER_ID, NAME, ASSOCIATION_NO, CUSTOMER_CATEGORY                                                                                                                                                                                                                                                                            from &AO.CUSTOMER_INFO where (CUSTOMER_ID_ERROR = '1010')",
                 "method": "SQL",
                 "maxRows": "103",
+                "partialResult": false,
                 "debugContextName": "frmCustomerInfo",
                 "debugAppStackFrame": "Module: Ifs.Application.Enterp.dll\rNamespace: Ifs.Application.Enterp\rObject: frmCustomerInfo\rMethod: frmCustomerInfo_OnPM_DataSourcePopulate",
                 "selectColumns": "LPT^-1,LPT^-1,LPT^32767,LPT^50,LPT^-1",

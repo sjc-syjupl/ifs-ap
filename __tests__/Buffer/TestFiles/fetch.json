@@ -14,7 +14,7 @@
                 "sqlString": "FETCH",
                 "method": "FETCH",
                 "maxRows": "103",
-                "partialResult": "TRUE",
+                "partialResult": true,
                 "cursorId": "aec9c09a-1f50-44cc-8815-058c8a65537e",
                 "bindingsObject": {},
                 "bindingsSendObject": {}
@@ -153,7 +153,7 @@
                 "method": "FETCH",
                 "maxRows": "103",
                 "rowCount": null,
-                "partialResult": "TRUE",
+                "partialResult": true,
                 "cursorId": "aec9c09a-1f50-44cc-8815-058c8a65537e",
                 "bindingsObject": {},
                 "bindingsSendObject": {},

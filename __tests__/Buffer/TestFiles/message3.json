@@ -14,6 +14,7 @@
                 "sqlString": "BEGIN \n&AO.CUSTOMER_ORDER_API.MODIFY__( :p0        , :p1      , :p2            , :p3      , :p4        ); \nEXCEPTION \nWHEN &AO.Error_SYS.Err_Security_Checkpoint THEN \nraise; \nWHEN OTHERS THEN \nrollback; \nraise; \nEND;",
                 "method": "PL_SQL",
                 "maxRows": "103",
+                "partialResult": false,
                 "debugContextName": "frmCustomerOrder",
                 "debugAppStackFrame": "Module: Ifs.Application.Order_.dll\rNamespace: Ifs.Application.Order_\rObject: frmCustomerOrder\rMethod: DataRecordExecuteModify",
                 "debugBindInfo": "__lsResult,__sObjid,__lsObjversion,__lsAttr,__sAction",
@@ -238,6 +239,7 @@
             {
                 "commandId": "a2ead93c-fea4-4f9f-a44e-a698ff105cfc",
                 "maxRows": "103",
+                "partialResult": false,
                 "debugContextName": "frmCustomerOrder",
                 "debugAppStackFrame": "Module: Ifs.Application.Order_.dll\rNamespace: Ifs.Application.Order_\rObject: frmCustomerOrder\rMethod: DataRecordExecuteModify",
                 "debugBindInfo": "__lsResult,__sObjid,__lsObjversion,__lsAttr,__sAction",

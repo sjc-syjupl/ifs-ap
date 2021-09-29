@@ -26,6 +26,36 @@ function SaveToFile(fileName: string, body: (Buffer|string)) {
     fs.writeFileSync( fileName, body );
 }
 
+function MergeCommands(commands: IfsDataArrayType) {
+    const newCommands: IfsDataArrayType = [];
+    let prevItem : (IfsDataObjectType|undefined) = undefined;
+    for (const item of commands) {
+        if (prevItem) {
+            if (item.commandId.endsWith("-1") || prevItem.commandId == item.commandId.substring(0, item.commandId.length - 2)) {
+                if (!Array.isArray(prevItem.bindingsObject)) {
+                    prevItem.bindingsObject = [prevItem.bindingsObject];
+                    prevItem.bindingsSendObject = [prevItem.bindingsSendObject];
+                    prevItem.partialResult = false
+                    prevItem.result = [prevItem.result || []];
+                    prevItem.commandId = prevItem.commandId.substring(0, prevItem.commandId.length - 2);
+                }
+                prevItem.bindingsObject.push( item.bindingsObject );
+                prevItem.bindingsSendObject.push( item.bindingsSendObject );
+                prevItem.result.push( item.result || [] );
+            } else {
+                newCommands.push(prevItem);                
+                prevItem = item;            
+            }
+        } else {
+            prevItem = item;            
+        }
+    }
+    if (prevItem) {
+        newCommands.push(prevItem);
+    }
+    return newCommands;
+}
+
 function GetMessageInfo(message: IfsDataType): object {
     /*
     let header: IfsDataType;
@@ -89,8 +119,12 @@ function GetMessageInfo(message: IfsDataType): object {
                         commandsInfo.rowCount = (MasrshalObject.ExtractSubobject(data, [{ name: "ROW_COUNT" }]) as IfsDataObjectType)?.value;
                         commandsInfo.partialResult = (MasrshalObject.ExtractSubobject(data, [{ name: "PARTIAL_RESULT" }]) as IfsDataObjectType)?.value;
                         commandsInfo.cursorId = (MasrshalObject.ExtractSubobject(data, [{ name: "CURSOR_ID" }]) as IfsDataObjectType)?.value;
-                        if (commandsInfo.partialResult === undefined && commandsInfo.cursorId)
-                            commandsInfo.partialResult = "TRUE";
+                        if (commandsInfo.partialResult === undefined && commandsInfo.cursorId) {
+                            commandsInfo.partialResult = true;                            
+                        }
+                        else {
+                            commandsInfo.partialResult = commandsInfo.partialResult == "TRUE";
+                        }
 
                         commandsInfo.debugContextName = (MasrshalObject.ExtractSubobject(data, [{ name: "DEBUG_CONTEXT_NAME" }]) as IfsDataObjectType)?.value;
                         commandsInfo.debugAppStackFrame = (MasrshalObject.ExtractSubobject(data, [{ name: "DEBUG_APP_STACK_FRAME" }]) as IfsDataObjectType)?.value;
@@ -127,12 +161,13 @@ function GetMessageInfo(message: IfsDataType): object {
                     }
                 }
             })
-        info.commands = commandsArray;
+        info.commands = MergeCommands(commandsArray);
     }
 
     info.message = message;
     return info;
 }
+
 
 //execute IFS, switch on debug, export message to XML
 fs.readdirSync(".").filter(e => e.endsWith("xml")).forEach(file => {

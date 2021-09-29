@@ -18,7 +18,7 @@ export interface OneResponse {
 export interface MultiResponse {
     readonly ok: boolean;
     readonly errorText: string;
-    readonly partialResult: Array<boolean>;
+    readonly partialResult: boolean;
     readonly bindings : Array<IfsDataObjectType>;
     readonly result: Array<IfsDataArrayType>;
     readonly connection: Connection;
@@ -26,7 +26,7 @@ export interface MultiResponse {
 export interface _PlSqlResponse {
     readonly ok: boolean;
     readonly errorText: string;
-    readonly partialResult: (boolean | Array<boolean>);
+    readonly partialResult: boolean;
     readonly bindings : (IfsDataObjectType | Array<IfsDataObjectType>);
     readonly result: (IfsDataArrayType | Array<IfsDataArrayType>);
     readonly request: (PlSqlOneCommand | PlSqlMultiCommand);
@@ -40,7 +40,7 @@ export interface PlSqlOneResponse extends OneResponse {
     readonly request: PlSqlOneCommand;
 }
 export interface PlSqlMultiResponse extends MultiResponse {
-    readonly partialResult: Array<boolean>;
+    readonly partialResult: boolean;
     readonly bindings : Array<IfsDataObjectType>;
     readonly result: Array<IfsDataArrayType>;
     readonly request?: PlSqlMultiCommand;
@@ -137,7 +137,7 @@ export interface SqlMultiCommand extends _ISqlCommand {
 export class _PlSqlCommand extends _Message implements _IPlSqlCommand, _ISqlCommand {
     protected _sqlString: string = "";
     protected _commandId: string = "";
-    protected _cursorId?: (string|Array<string>);
+    protected _cursorId?: string;
     protected _response?: (PlSqlOneResponse | PlSqlMultiResponse);
 
     protected _maxRows?: number;
@@ -193,7 +193,7 @@ export class _PlSqlCommand extends _Message implements _IPlSqlCommand, _ISqlComm
     }
     public set maxRows( value : (number|undefined) ) {
         this._maxRows = value;
-        if (this._maxRows && !this._clientSessionId) {
+        if (this._maxRows && !this._clientSessionId && !this.multipleQuery) {
             this._clientSessionId = NewId();
         }
     }
@@ -205,22 +205,9 @@ export class _PlSqlCommand extends _Message implements _IPlSqlCommand, _ISqlComm
         this._skipRows = value;
     }
 
-    public GetCursorId( index? : number ): string {
-        if (!this._cursorId)
-            return "";
+    public get partialResult(): boolean {
         if (this.multipleQuery) {
-            if (!index || index < 0 || index >= this._cursorId.length )
-                return "";
-            return this._cursorId[index];
-        } else {
-            return this._cursorId as string;
-        }
-    }
-    public get partialResult(): (boolean | Array<boolean>) {
-        if (this.multipleQuery) {
-            if (!this._cursorId)
-                return this.bindings.map( () => false);
-            return (this._cursorId as Array<string>).map(el => el != "");
+            return false;
         } else {
             return this._cursorId ? this._cursorId != "" : false;
         }
@@ -230,6 +217,10 @@ export class _PlSqlCommand extends _Message implements _IPlSqlCommand, _ISqlComm
         if (!this._commandId)
             this._commandId = NewId();
         return this._commandId;
+    }    
+
+    public set commandId( value : string ){
+        this._commandId = value;
     }    
 
     public get executed(): boolean{
@@ -249,24 +240,19 @@ export class _PlSqlCommand extends _Message implements _IPlSqlCommand, _ISqlComm
     }
 
     public async Fetch(rows: number): Promise<(SqlOneResponse | SqlMultiResponse)> {
+        if (this.multipleQuery) {
+            return this.ErrorResponse("Fetch method is available only if you don't use array in the binding parameter.")  as SqlOneResponse;
+        }
         if (!this._clientSessionId) {
             return this.ErrorResponse("Fetch method is available if you used maxRows in a previous query.")  as SqlOneResponse;
         }
         this.maxRows = rows;
-        if (!this.executed && !this.partialResult) {
+        if (this.partialResult) {
+            await this._Execute();
+        } else if (!this.executed ) {
             await this.Execute();
-            return this._response as (SqlOneResponse|SqlMultiResponse);
-        } else if (this.multipleQuery) {
-            if ((this.partialResult as boolean[]).includes(true)) {
-                await this._Execute();
-            }
-            return this._response as SqlMultiResponse;
-        } else {
-            if (this.partialResult) {
-                await this._Execute();
-            }            
-            return this._response as SqlOneResponse;
         }
+        return this._response as SqlOneResponse;
     };
 
     public async CloseCursor(): Promise<PlSqlOneResponse> {
@@ -357,9 +343,9 @@ export class _PlSqlCommand extends _Message implements _IPlSqlCommand, _ISqlComm
         }
         const partialResult = this._cursorId != undefined && this._cursorId != "";
         for (; index < maxIndex; index++) {
-            const cursorId = partialResult ? this.GetCursorId(index) : "";
+            const cursorId = partialResult ? this._cursorId : "";
             if (!partialResult || cursorId != "") {
-                yield {index:index, cursorId : cursorId};
+                yield {index:index, cursorId : cursorId ||""};
             }
         }
     }
@@ -548,7 +534,7 @@ export class _PlSqlCommand extends _Message implements _IPlSqlCommand, _ISqlComm
 
     protected ErrorResponse(errorText: string): (PlSqlOneResponse | PlSqlMultiResponse) {
         if (this.multipleQuery) {
-            this._response = { ok: false, errorText: errorText, partialResult: [], bindings: [], result: [], request: this, connection: this.connection as Connection } as PlSqlMultiResponse;
+            this._response = { ok: false, errorText: errorText, partialResult: false, bindings: [], result: [], request: this, connection: this.connection as Connection } as PlSqlMultiResponse;
         } else {
             this._response = { ok: false, errorText: errorText, partialResult: false, bindings: {}, result: [], request: this, connection: this.connection as Connection } as PlSqlOneResponse;
         }
@@ -558,8 +544,9 @@ export class _PlSqlCommand extends _Message implements _IPlSqlCommand, _ISqlComm
     public async Execute(): Promise<(PlSqlOneResponse | PlSqlMultiResponse)> {
         this._response = undefined;
         this._cursorId = undefined;
+        const prevCurosrId = this._cursorId;
         await this._Execute();
-        if (this._clientSessionId && this._cursorId && !this.response.partialResult) {
+        if (this._clientSessionId && prevCurosrId && !this._cursorId) {
             await this.CloseCursor();
         }
         return this.response;
@@ -598,7 +585,6 @@ export class _PlSqlCommand extends _Message implements _IPlSqlCommand, _ISqlComm
         let bindingsArray: Array<IfsDataObjectType> = [];
         let tmpResultData: (IfsDataType | undefined);
         let resultDataArray: Array<IfsDataArrayType> = [];
-        let cursorId : string[] = [];
         tmpResultData = MasrshalObject.ExtractSubobject(ifsData,
              [  1,
                  { name: "PLSQL_INVOCATION", buffer: true },
@@ -647,21 +633,18 @@ export class _PlSqlCommand extends _Message implements _IPlSqlCommand, _ISqlComm
                 }
 
                 const tmpCursorId = MasrshalObject.ExtractSubobject(tmpData, [{ name: "CURSOR_ID" }]) as IfsDataObjectType;
-                cursorId.push(!tmpCursorId || tmpCursorId.isNull ? "" : tmpCursorId.value);
+                this._cursorId = !tmpCursorId || tmpCursorId.isNull ? "" : tmpCursorId.value;
 
             } else if (fetchData) {
                 resultDataArray.push((this._response as PlSqlMultiResponse).result[index]);
-                cursorId.push(this.GetCursorId(index));
             } else {
                 return this.ErrorResponse("Error in returned data. I can't find a record with result data.");
             }
         }
 
         if (this.multipleQuery) {
-            this._cursorId = cursorId;
             this._response = { ok: true, errorText: "", partialResult: this.partialResult, bindings: bindingsArray, result: resultDataArray, request: this, connection: this.connection as Connection } as PlSqlMultiResponse;         
         } else {
-            this._cursorId = cursorId[0];
             this._response = { ok: true, errorText: "", partialResult: this.partialResult, bindings: bindingsArray[0], result: resultDataArray[0], request: this, connection: this.connection as Connection } as PlSqlOneResponse;                      
         }
         return this._response;

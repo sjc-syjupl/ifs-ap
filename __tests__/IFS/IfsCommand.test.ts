@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import { Response } from "cross-fetch"
 import { IfsDataArrayType } from "../../src/Buffer/MarshalObject"
 import { _Message } from "../../src/IFS/Message"
-import { _PlSqlResponse, _PlSqlCommand } from "../../src/IFS/PlSqlCommand"
+import { _PlSqlResponse, _PlSqlCommand, SqlOneResponse } from "../../src/IFS/PlSqlCommand"
 import { Connection } from "../../src/IFS/Connection"
 //import { MasrshalObject } from "../../src/Buffer/MarshalObject"
 const util = require("../../src/IFS/Util")
@@ -162,14 +162,13 @@ test.each(fs.readdirSync(folderTestFiles).filter(e => e.endsWith("json")))("Test
         expect(response.bindings).toEqual(bindings);
         const result = (fileInfo.response.commands as IfsDataArrayType).map(el => ChangeDateStr(el.result || []));
         expect(response.result).toEqual(result);
-        const partialResult = (fileInfo.response.commands as IfsDataArrayType).map(el => el.partialResult === "TRUE");
-        expect(response.partialResult).toEqual(partialResult);
+        expect(response.partialResult).toEqual(false);
         expect(response.request?.multipleQuery).toEqual(true);
     } else {
         expect(response.bindings).toEqual(fileInfo.response.commands[0].bindingsObject || {});
         ChangeDateStr(fileInfo.response.commands[0].result || []);
         expect(response.result).toEqual(fileInfo.response.commands[0].result || []);
-        expect(response.partialResult).toEqual(fileInfo.response.commands[0].partialResult === "TRUE");
+        expect(response.partialResult).toEqual(fileInfo.response.commands[0].partialResult );
     }
     
 });
@@ -189,6 +188,98 @@ test.each(fs.readdirSync(folderTestFiles).filter(e => e.endsWith("_fetch.json"))
 });
 
 
+test("Fetch messages", async () => {
+        
+    const conn = new TestIfsConnection("ifs.test.com");
+
+    const fileInfo = JSON.parse(fs.readFileSync(folderTestFiles + "/fetch.json", 'utf8'));
+    const responseBody = new Uint8Array(fs.readFileSync(folderTestFiles + "/" + fileInfo.responseFile, null));
+    const result = fileInfo.response.commands[0].result;
+    ChangeDateStr(result || []);
+
+    const spySendMessage = jest.spyOn(_Message.prototype, "SendMessage").mockImplementation(async (_headerBytes: number, _body: Uint8Array): Promise<Response> => {
+        return new Response(responseBody, { headers: [["Content-Type", "application/octet-stream"]], status: 200 });
+    });
+
+
+    const sql = new _PlSqlCommand(conn, "SELECT", {}, { maxRows: result.length.toString() });
+    sql.commandId = fileInfo.request.commands[0].commandId;
+    const sqlResponse = (await sql.Execute()) as SqlOneResponse;
+    expect(sqlResponse.result.length).toBe(result.length);
+    expect(sqlResponse.result).toStrictEqual(result);
+    expect(sqlResponse.partialResult).toBe(true);
+    const fetchResponse = await sqlResponse.request.Fetch( result.length );
+    expect(fetchResponse.result.length).toBe(result.length + result.length);
+    expect(fetchResponse.result).toStrictEqual([...result, ...result]);
+    expect(fetchResponse.partialResult).toBe(true);
+    const closeResponse = await fetchResponse.request.CloseCursor();
+    expect(closeResponse.partialResult).toBe(false);
+
+    const sql2 = new _PlSqlCommand(conn, "SELECT :par1", [{ "par1":1 }], { maxRows: result.length.toString() });
+    const sqlResponse2 = (await sql2.Execute()) as SqlOneResponse;
+    const fetchResponse2 = await sqlResponse2.request.Fetch( result.length );
+    expect(fetchResponse2.ok).toBe(false);  // no multi binding
+
+    const sql3 = new _PlSqlCommand(conn, "SELECT", {} );
+    const sqlResponse3 = (await sql3.Execute()) as SqlOneResponse;
+    const fetchResponse3 = await sqlResponse3.request.Fetch( result.length );
+    expect(fetchResponse3.ok).toBe(false); // parameter maxRows is required
+
+    const sql4 = new _PlSqlCommand(conn, "SELECT", {}, { maxRows: result.length.toString() });
+    sql4.commandId = fileInfo.request.commands[0].commandId;
+    const sqlResponse4 = await sql4.Fetch(result.length);
+    expect(sqlResponse4.result.length).toBe(result.length);
+    expect(sqlResponse4.result).toStrictEqual(result);
+
+    spySendMessage.mockRestore();
+});
+
+
+test("Error in response1", async () => {
+        
+    const conn = new TestIfsConnection("ifs.test.com");
+    const errorMsg = 'Test error message.';
+    let num = 1;
+
+    const spySendMessage = jest.spyOn(_Message.prototype, "SendMessage").mockImplementation(async (_headerBytes: number, _body: Uint8Array): Promise<Response> => {
+        if (num == 1) {
+            return new Response( errorMsg, { headers: [["Content-Type", "application/octet-stream"]], status: 404 });
+        } else {            
+            return new Response( errorMsg, { headers: [["Content-Type", "text/html"]], status: 200 });
+        }
+    });
+
+    num = 1;
+    const sqlResponse = await conn.Sql("SELECT");
+    expect(sqlResponse.ok).toBe(false);
+    expect(sqlResponse.errorText).toBe(errorMsg);
+
+    num = 2;
+    const sqlResponse2 = await conn.Sql("SELECT");
+    expect(sqlResponse2.ok).toBe(false);
+    expect(sqlResponse2.errorText).toBe(errorMsg);
+
+    spySendMessage.mockRestore();
+});
+
+test("Error in response2", async () => {
+        
+    const conn = new TestIfsConnection("ifs.test.com");
+    const spySendMessage = jest.spyOn(_Message.prototype, "SendMessage").mockImplementation(async (_headerBytes: number, _body: Uint8Array): Promise<Response> => {
+            return new Response( 'error', { headers: [["Content-Type", "application/octet-stream"]], status: 200 });
+    });
+
+    expect.assertions(1);
+    try {
+        await conn.Sql("SELECT");
+    } catch (e) {
+        expect('error').toMatch('error');
+    }
+
+    spySendMessage.mockRestore();
+});
+
+
 afterAll(() => {
     jest.restoreAllMocks();
 });
@@ -200,9 +291,12 @@ function ChangeDateStr(result: IfsDataArrayType) {
         result.forEach(el => {
             if (Array.isArray(el)) {
                 ChangeDateStr(el);
-            } else if (typeof el === "object"){
+            } else if (el && (typeof el === "object")){
                 for (let [key, value] of Object.entries(el)) {
-                    if ((typeof value === "string") && value.length === 24 && value.endsWith(".000Z")) {
+                    if (Array.isArray(value)) {
+                        ChangeDateStr(value);
+                    }
+                    else if ((typeof value === "string") && value.length === 24 && value.endsWith(".000Z")) {
                         el[key] = new Date(value);
                     }
                 }

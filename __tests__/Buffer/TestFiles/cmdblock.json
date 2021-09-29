@@ -13,58 +13,60 @@
                 "commandId": "ksly5kqx2rf9hogenyq",
                 "sqlString": "SELECT count(*) num FROM &AO.customer_info",
                 "method": "SQL",
+                "partialResult": false,
                 "bindingsObject": {},
                 "bindingsSendObject": {}
             },
             {
-                "commandId": "ksly5kqx1eunxafq5xj-0",
+                "commandId": "ksly5kqx1eunxafq5xj",
                 "sqlString": "SELECT series_id, invoice_no, identity customer_id, &AO.Customer_Info_API.Get_Name(identity) customer_name FROM &AO.invoice WHERE party_type_db = 'CUSTOMER' AND invoice_id = :invoice_id",
                 "method": "SQL",
-                "bindingsObject": {
-                    "invoice_id": 100021
-                },
-                "bindingsSendObject": {
-                    "invoice_id": {
-                        "direction": "IN",
-                        "value": "100021",
-                        "type": "I"
+                "partialResult": false,
+                "bindingsObject": [
+                    {
+                        "invoice_id": 100021
+                    },
+                    {
+                        "invoice_id": 100022
+                    },
+                    {
+                        "invoice_id": 100023
                     }
-                }
-            },
-            {
-                "commandId": "ksly5kqx1eunxafq5xj-1",
-                "sqlString": "SELECT series_id, invoice_no, identity customer_id, &AO.Customer_Info_API.Get_Name(identity) customer_name FROM &AO.invoice WHERE party_type_db = 'CUSTOMER' AND invoice_id = :invoice_id",
-                "method": "SQL",
-                "bindingsObject": {
-                    "invoice_id": 100022
-                },
-                "bindingsSendObject": {
-                    "invoice_id": {
-                        "direction": "IN",
-                        "value": "100022",
-                        "type": "I"
+                ],
+                "bindingsSendObject": [
+                    {
+                        "invoice_id": {
+                            "direction": "IN",
+                            "value": "100021",
+                            "type": "I"
+                        }
+                    },
+                    {
+                        "invoice_id": {
+                            "direction": "IN",
+                            "value": "100022",
+                            "type": "I"
+                        }
+                    },
+                    {
+                        "invoice_id": {
+                            "direction": "IN",
+                            "value": "100023",
+                            "type": "I"
+                        }
                     }
-                }
-            },
-            {
-                "commandId": "ksly5kqx1eunxafq5xj-2",
-                "sqlString": "SELECT series_id, invoice_no, identity customer_id, &AO.Customer_Info_API.Get_Name(identity) customer_name FROM &AO.invoice WHERE party_type_db = 'CUSTOMER' AND invoice_id = :invoice_id",
-                "method": "SQL",
-                "bindingsObject": {
-                    "invoice_id": 100023
-                },
-                "bindingsSendObject": {
-                    "invoice_id": {
-                        "direction": "IN",
-                        "value": "100023",
-                        "type": "I"
-                    }
-                }
+                ],
+                "result": [
+                    [],
+                    [],
+                    []
+                ]
             },
             {
                 "commandId": "ksly5kqwsl9d8pc3n30",
                 "sqlString": "BEGIN :name := ifsapp.Customer_Info_API.Get_name('BP1'); END;",
                 "method": "PL_SQL",
+                "partialResult": false,
                 "bindingsObject": {
                     "name": null
                 },
@@ -77,88 +79,84 @@
                 }
             },
             {
-                "commandId": "ksly5kqwp7x0wey4tj0-0",
+                "commandId": "ksly5kqwp7x0wey4tj0",
                 "sqlString": "DECLARE customer_id_  VARCHAR2(50) := :customer_id; BEGIN :name := &AO.Customer_Info_API.Get_Name(customer_id_); END;",
                 "method": "PL_SQL",
-                "bindingsObject": {
-                    "customer_id": "BP1",
-                    "name": null
-                },
-                "bindingsSendObject": {
-                    "customer_id": {
-                        "direction": "IN",
-                        "value": "BP1",
-                        "type": "LPT"
+                "partialResult": false,
+                "bindingsObject": [
+                    {
+                        "customer_id": "BP1",
+                        "name": null
                     },
-                    "name": {
-                        "direction": "OUT",
-                        "value": null,
-                        "type": "LPT"
-                    }
-                }
-            },
-            {
-                "commandId": "ksly5kqwp7x0wey4tj0-1",
-                "sqlString": "DECLARE customer_id_  VARCHAR2(50) := :customer_id; BEGIN :name := &AO.Customer_Info_API.Get_Name(customer_id_); END;",
-                "method": "PL_SQL",
-                "bindingsObject": {
-                    "customer_id": "BP2",
-                    "name": null
-                },
-                "bindingsSendObject": {
-                    "customer_id": {
-                        "direction": "IN",
-                        "value": "BP2",
-                        "type": "LPT"
+                    {
+                        "customer_id": "BP2",
+                        "name": null
                     },
-                    "name": {
-                        "direction": "OUT",
-                        "value": null,
-                        "type": "LPT"
-                    }
-                }
-            },
-            {
-                "commandId": "ksly5kqwp7x0wey4tj0-2",
-                "sqlString": "DECLARE customer_id_  VARCHAR2(50) := :customer_id; BEGIN :name := &AO.Customer_Info_API.Get_Name(customer_id_); END;",
-                "method": "PL_SQL",
-                "bindingsObject": {
-                    "customer_id": "BP3",
-                    "name": null
-                },
-                "bindingsSendObject": {
-                    "customer_id": {
-                        "direction": "IN",
-                        "value": "BP3",
-                        "type": "LPT"
+                    {
+                        "customer_id": "BP3",
+                        "name": null
                     },
-                    "name": {
-                        "direction": "OUT",
-                        "value": null,
-                        "type": "LPT"
+                    {
+                        "customer_id": "NULL",
+                        "name": null
                     }
-                }
-            },
-            {
-                "commandId": "ksly5kqwp7x0wey4tj0-3",
-                "sqlString": "DECLARE customer_id_  VARCHAR2(50) := :customer_id; BEGIN :name := &AO.Customer_Info_API.Get_Name(customer_id_); END;",
-                "method": "PL_SQL",
-                "bindingsObject": {
-                    "customer_id": "NULL",
-                    "name": null
-                },
-                "bindingsSendObject": {
-                    "customer_id": {
-                        "direction": "IN",
-                        "value": "NULL",
-                        "type": "LPT"
+                ],
+                "bindingsSendObject": [
+                    {
+                        "customer_id": {
+                            "direction": "IN",
+                            "value": "BP1",
+                            "type": "LPT"
+                        },
+                        "name": {
+                            "direction": "OUT",
+                            "value": null,
+                            "type": "LPT"
+                        }
                     },
-                    "name": {
-                        "direction": "OUT",
-                        "value": null,
-                        "type": "LPT"
+                    {
+                        "customer_id": {
+                            "direction": "IN",
+                            "value": "BP2",
+                            "type": "LPT"
+                        },
+                        "name": {
+                            "direction": "OUT",
+                            "value": null,
+                            "type": "LPT"
+                        }
+                    },
+                    {
+                        "customer_id": {
+                            "direction": "IN",
+                            "value": "BP3",
+                            "type": "LPT"
+                        },
+                        "name": {
+                            "direction": "OUT",
+                            "value": null,
+                            "type": "LPT"
+                        }
+                    },
+                    {
+                        "customer_id": {
+                            "direction": "IN",
+                            "value": "NULL",
+                            "type": "LPT"
+                        },
+                        "name": {
+                            "direction": "OUT",
+                            "value": null,
+                            "type": "LPT"
+                        }
                     }
-                }
+                ],
+                "result": [
+                    [],
+                    [],
+                    [],
+                    []
+                ]
             }
         ],
         "message": [
@@ -628,7 +626,7 @@
             {
                 "commandId": "ksly5kqx2rf9hogenyq",
                 "rowCount": "1",
-                "partialResult": "FALSE",
+                "partialResult": false,
                 "cursorId": null,
                 "bindingsObject": {},
                 "bindingsSendObject": {},
@@ -639,79 +637,74 @@
                 ]
             },
             {
-                "commandId": "ksly5kqx1eunxafq5xj-0",
+                "commandId": "ksly5kqx1eunxafq5xj",
                 "rowCount": "1",
-                "partialResult": "FALSE",
+                "partialResult": false,
                 "cursorId": null,
-                "bindingsObject": {
-                    "invoice_id": 100021
-                },
-                "bindingsSendObject": {
-                    "invoice_id": {
-                        "direction": "IN",
-                        "value": "100021",
-                        "type": "I"
-                    }
-                },
-                "result": [
+                "bindingsObject": [
                     {
-                        "SERIES_ID": "CD",
-                        "INVOICE_NO": "970000001",
-                        "CUSTOMER_ID": "BP1",
-                        "CUSTOMER_NAME": "Team Rahal"
-                    }
-                ]
-            },
-            {
-                "commandId": "ksly5kqx1eunxafq5xj-1",
-                "rowCount": "1",
-                "partialResult": "FALSE",
-                "cursorId": null,
-                "bindingsObject": {
-                    "invoice_id": 100022
-                },
-                "bindingsSendObject": {
-                    "invoice_id": {
-                        "direction": "IN",
-                        "value": "100022",
-                        "type": "I"
-                    }
-                },
-                "result": [
+                        "invoice_id": 100021
+                    },
                     {
-                        "SERIES_ID": "CD",
-                        "INVOICE_NO": "970000002",
-                        "CUSTOMER_ID": "BP2",
-                        "CUSTOMER_NAME": "Newman/Haas Racing"
-                    }
-                ]
-            },
-            {
-                "commandId": "ksly5kqx1eunxafq5xj-2",
-                "rowCount": "1",
-                "partialResult": "FALSE",
-                "cursorId": null,
-                "bindingsObject": {
-                    "invoice_id": 100023
-                },
-                "bindingsSendObject": {
-                    "invoice_id": {
-                        "direction": "IN",
-                        "value": "100023",
-                        "type": "I"
-                    }
-                },
-                "result": [
+                        "invoice_id": 100022
+                    },
                     {
-                        "SERIES_ID": "CD",
-                        "INVOICE_NO": "970000003",
-                        "CUSTOMER_ID": "BP6",
-                        "CUSTOMER_NAME": "Ferrari"
+                        "invoice_id": 100023
                     }
+                ],
+                "bindingsSendObject": [
+                    {
+                        "invoice_id": {
+                            "direction": "IN",
+                            "value": "100021",
+                            "type": "I"
+                        }
+                    },
+                    {
+                        "invoice_id": {
+                            "direction": "IN",
+                            "value": "100022",
+                            "type": "I"
+                        }
+                    },
+                    {
+                        "invoice_id": {
+                            "direction": "IN",
+                            "value": "100023",
+                            "type": "I"
+                        }
+                    }
+                ],
+                "result": [
+                    [
+                        {
+                            "SERIES_ID": "CD",
+                            "INVOICE_NO": "970000001",
+                            "CUSTOMER_ID": "BP1",
+                            "CUSTOMER_NAME": "Team Rahal"
+                        }
+                    ],
+                    [
+                        {
+                            "SERIES_ID": "CD",
+                            "INVOICE_NO": "970000002",
+                            "CUSTOMER_ID": "BP2",
+                            "CUSTOMER_NAME": "Newman/Haas Racing"
+                        }
+                    ],
+                    [
+                        {
+                            "SERIES_ID": "CD",
+                            "INVOICE_NO": "970000003",
+                            "CUSTOMER_ID": "BP6",
+                            "CUSTOMER_NAME": "Ferrari"
+                        }
+                    ]
                 ]
             },
             {
                 "commandId": "ksly5kqwsl9d8pc3n30",
+                "partialResult": false,
                 "bindingsObject": {
                     "name": "Team Rahal"
                 },
@@ -724,80 +717,82 @@
                 }
             },
             {
-                "commandId": "ksly5kqwp7x0wey4tj0-0",
-                "bindingsObject": {
-                    "customer_id": "BP1",
-                    "name": "Team Rahal"
-                },
-                "bindingsSendObject": {
-                    "customer_id": {
-                        "direction": "IN",
-                        "value": "BP1",
-                        "type": "LPT"
+                "commandId": "ksly5kqwp7x0wey4tj0",
+                "partialResult": false,
+                "bindingsObject": [
+                    {
+                        "customer_id": "BP1",
+                        "name": "Team Rahal"
                     },
-                    "name": {
-                        "direction": "OUT",
-                        "value": "Team Rahal",
-                        "type": "LPT"
-                    }
-                }
-            },
-            {
-                "commandId": "ksly5kqwp7x0wey4tj0-1",
-                "bindingsObject": {
-                    "customer_id": "BP2",
-                    "name": "Newman/Haas Racing"
-                },
-                "bindingsSendObject": {
-                    "customer_id": {
-                        "direction": "IN",
-                        "value": "BP2",
-                        "type": "LPT"
+                    {
+                        "customer_id": "BP2",
+                        "name": "Newman/Haas Racing"
                     },
-                    "name": {
-                        "direction": "OUT",
-                        "value": "Newman/Haas Racing",
-                        "type": "LPT"
-                    }
-                }
-            },
-            {
-                "commandId": "ksly5kqwp7x0wey4tj0-2",
-                "bindingsObject": {
-                    "customer_id": "BP3",
-                    "name": "Hendrick Motorsports"
-                },
-                "bindingsSendObject": {
-                    "customer_id": {
-                        "direction": "IN",
-                        "value": "BP3",
-                        "type": "LPT"
+                    {
+                        "customer_id": "BP3",
+                        "name": "Hendrick Motorsports"
                     },
-                    "name": {
-                        "direction": "OUT",
-                        "value": "Hendrick Motorsports",
-                        "type": "LPT"
+                    {
+                        "customer_id": "NULL",
+                        "name": null
                     }
-                }
-            },
-            {
-                "commandId": "ksly5kqwp7x0wey4tj0-3",
-                "bindingsObject": {
-                    "customer_id": "NULL",
-                    "name": null
-                },
-                "bindingsSendObject": {
-                    "customer_id": {
-                        "direction": "IN",
-                        "value": "NULL",
-                        "type": "LPT"
+                ],
+                "bindingsSendObject": [
+                    {
+                        "customer_id": {
+                            "direction": "IN",
+                            "value": "BP1",
+                            "type": "LPT"
+                        },
+                        "name": {
+                            "direction": "OUT",
+                            "value": "Team Rahal",
+                            "type": "LPT"
+                        }
                     },
-                    "name": {
-                        "direction": "OUT",
-                        "value": null,
-                        "type": "LPT"
+                    {
+                        "customer_id": {
+                            "direction": "IN",
+                            "value": "BP2",
+                            "type": "LPT"
+                        },
+                        "name": {
+                            "direction": "OUT",
+                            "value": "Newman/Haas Racing",
+                            "type": "LPT"
+                        }
+                    },
+                    {
+                        "customer_id": {
+                            "direction": "IN",
+                            "value": "BP3",
+                            "type": "LPT"
+                        },
+                        "name": {
+                            "direction": "OUT",
+                            "value": "Hendrick Motorsports",
+                            "type": "LPT"
+                        }
+                    },
+                    {
+                        "customer_id": {
+                            "direction": "IN",
+                            "value": "NULL",
+                            "type": "LPT"
+                        },
+                        "name": {
+                            "direction": "OUT",
+                            "value": null,
+                            "type": "LPT"
+                        }
                     }
-                }
+                ],
+                "result": [
+                    [],
+                    [],
+                    [],
+                    []
+                ]
             }
         ],
         "message": [

@@ -13,6 +13,7 @@
                 "commandId": "6c70e5ba-4d59-45c1-a8cd-7febd9e4e489",
                 "sqlString": "ROLLBACK",
                 "method": "ROLLBACK",
+                "partialResult": false,
                 "bindingsObject": {},
                 "bindingsSendObject": {}
             }
@@ -133,6 +134,7 @@
                 "commandId": "6c70e5ba-4d59-45c1-a8cd-7febd9e4e489",
                 "sqlString": "ROLLBACK",
                 "method": "ROLLBACK",
+                "partialResult": false,
                 "bindingsObject": {},
                 "bindingsSendObject": {}
             }
