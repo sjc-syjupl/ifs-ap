@@ -1,0 +1,1404 @@
+{
+    "requestFile": "cmdblock_Request.dat",
+    "responseFile": "cmdblock_Response.dat",
+    "request": {
+        "clientId": "IFS.Node.AP",
+        "requestId": "ksly5kqw6sl3kp2wp1m",
+        "locale": "en-US",
+        "debug": false,
+        "invocationId": "ksly5kqxxlfajb6r330",
+        "transactionId": "",
+        "commands": [
+            {
+                "commandId": "ksly5kqx2rf9hogenyq",
+                "sqlString": "SELECT count(*) num FROM &AO.customer_info",
+                "method": "SQL",
+                "bindingsObject": {},
+                "bindingsSendObject": {}
+            },
+            {
+                "commandId": "ksly5kqx1eunxafq5xj-0",
+                "sqlString": "SELECT series_id, invoice_no, identity customer_id, &AO.Customer_Info_API.Get_Name(identity) customer_name FROM &AO.invoice WHERE party_type_db = 'CUSTOMER' AND invoice_id = :invoice_id",
+                "method": "SQL",
+                "bindingsObject": {
+                    "invoice_id": 100021
+                },
+                "bindingsSendObject": {
+                    "invoice_id": {
+                        "direction": "IN",
+                        "value": "100021",
+                        "type": "I"
+                    }
+                }
+            },
+            {
+                "commandId": "ksly5kqx1eunxafq5xj-1",
+                "sqlString": "SELECT series_id, invoice_no, identity customer_id, &AO.Customer_Info_API.Get_Name(identity) customer_name FROM &AO.invoice WHERE party_type_db = 'CUSTOMER' AND invoice_id = :invoice_id",
+                "method": "SQL",
+                "bindingsObject": {
+                    "invoice_id": 100022
+                },
+                "bindingsSendObject": {
+                    "invoice_id": {
+                        "direction": "IN",
+                        "value": "100022",
+                        "type": "I"
+                    }
+                }
+            },
+            {
+                "commandId": "ksly5kqx1eunxafq5xj-2",
+                "sqlString": "SELECT series_id, invoice_no, identity customer_id, &AO.Customer_Info_API.Get_Name(identity) customer_name FROM &AO.invoice WHERE party_type_db = 'CUSTOMER' AND invoice_id = :invoice_id",
+                "method": "SQL",
+                "bindingsObject": {
+                    "invoice_id": 100023
+                },
+                "bindingsSendObject": {
+                    "invoice_id": {
+                        "direction": "IN",
+                        "value": "100023",
+                        "type": "I"
+                    }
+                }
+            },
+            {
+                "commandId": "ksly5kqwsl9d8pc3n30",
+                "sqlString": "BEGIN :name := ifsapp.Customer_Info_API.Get_name('BP1'); END;",
+                "method": "PL_SQL",
+                "bindingsObject": {
+                    "name": null
+                },
+                "bindingsSendObject": {
+                    "name": {
+                        "direction": "OUT",
+                        "value": null,
+                        "type": "LPT"
+                    }
+                }
+            },
+            {
+                "commandId": "ksly5kqwp7x0wey4tj0-0",
+                "sqlString": "DECLARE customer_id_  VARCHAR2(50) := :customer_id; BEGIN :name := &AO.Customer_Info_API.Get_Name(customer_id_); END;",
+                "method": "PL_SQL",
+                "bindingsObject": {
+                    "customer_id": "BP1",
+                    "name": null
+                },
+                "bindingsSendObject": {
+                    "customer_id": {
+                        "direction": "IN",
+                        "value": "BP1",
+                        "type": "LPT"
+                    },
+                    "name": {
+                        "direction": "OUT",
+                        "value": null,
+                        "type": "LPT"
+                    }
+                }
+            },
+            {
+                "commandId": "ksly5kqwp7x0wey4tj0-1",
+                "sqlString": "DECLARE customer_id_  VARCHAR2(50) := :customer_id; BEGIN :name := &AO.Customer_Info_API.Get_Name(customer_id_); END;",
+                "method": "PL_SQL",
+                "bindingsObject": {
+                    "customer_id": "BP2",
+                    "name": null
+                },
+                "bindingsSendObject": {
+                    "customer_id": {
+                        "direction": "IN",
+                        "value": "BP2",
+                        "type": "LPT"
+                    },
+                    "name": {
+                        "direction": "OUT",
+                        "value": null,
+                        "type": "LPT"
+                    }
+                }
+            },
+            {
+                "commandId": "ksly5kqwp7x0wey4tj0-2",
+                "sqlString": "DECLARE customer_id_  VARCHAR2(50) := :customer_id; BEGIN :name := &AO.Customer_Info_API.Get_Name(customer_id_); END;",
+                "method": "PL_SQL",
+                "bindingsObject": {
+                    "customer_id": "BP3",
+                    "name": null
+                },
+                "bindingsSendObject": {
+                    "customer_id": {
+                        "direction": "IN",
+                        "value": "BP3",
+                        "type": "LPT"
+                    },
+                    "name": {
+                        "direction": "OUT",
+                        "value": null,
+                        "type": "LPT"
+                    }
+                }
+            },
+            {
+                "commandId": "ksly5kqwp7x0wey4tj0-3",
+                "sqlString": "DECLARE customer_id_  VARCHAR2(50) := :customer_id; BEGIN :name := &AO.Customer_Info_API.Get_Name(customer_id_); END;",
+                "method": "PL_SQL",
+                "bindingsObject": {
+                    "customer_id": "NULL",
+                    "name": null
+                },
+                "bindingsSendObject": {
+                    "customer_id": {
+                        "direction": "IN",
+                        "value": "NULL",
+                        "type": "LPT"
+                    },
+                    "name": {
+                        "direction": "OUT",
+                        "value": null,
+                        "type": "LPT"
+                    }
+                }
+            }
+        ],
+        "message": [
+            [
+                {
+                    "name": "FND_CONTEXT",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "name": "CLIENT_ID",
+                            "value": "IFS.Node.AP"
+                        },
+                        {
+                            "name": "REQUEST_ID",
+                            "value": "ksly5kqw6sl3kp2wp1m"
+                        },
+                        {
+                            "name": "LOCALE",
+                            "value": "en-US"
+                        },
+                        {
+                            "name": "ENCODE_BINARY_VALUE",
+                            "value": "FALSE"
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "PLSQL_INVOCATION",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "delimiter": 14,
+                            "name": "DATA",
+                            "type": "PLSQL_INVOCATION",
+                            "status": "Create",
+                            "value": "ksly5kqxxlfajb6r330"
+                        },
+                        {
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqx2rf9hogenyq"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "STATEMENT",
+                                                    "type": "LPA",
+                                                    "value": "SELECT count(*) num FROM &AO.customer_info"
+                                                },
+                                                {
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "value": ""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqx1eunxafq5xj-0"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "STATEMENT",
+                                                    "type": "LPA",
+                                                    "value": "SELECT series_id, invoice_no, identity customer_id, &AO.Customer_Info_API.Get_Name(identity) customer_name FROM &AO.invoice WHERE party_type_db = 'CUSTOMER' AND invoice_id = :invoice_id"
+                                                },
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "invoice_id",
+                                                            "type": "I",
+                                                            "status": "IN",
+                                                            "value": "100021"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "value": ""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqx1eunxafq5xj-1"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "STATEMENT",
+                                                    "type": "LPA",
+                                                    "value": "SELECT series_id, invoice_no, identity customer_id, &AO.Customer_Info_API.Get_Name(identity) customer_name FROM &AO.invoice WHERE party_type_db = 'CUSTOMER' AND invoice_id = :invoice_id"
+                                                },
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "invoice_id",
+                                                            "type": "I",
+                                                            "status": "IN",
+                                                            "value": "100022"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "value": ""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqx1eunxafq5xj-2"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "STATEMENT",
+                                                    "type": "LPA",
+                                                    "value": "SELECT series_id, invoice_no, identity customer_id, &AO.Customer_Info_API.Get_Name(identity) customer_name FROM &AO.invoice WHERE party_type_db = 'CUSTOMER' AND invoice_id = :invoice_id"
+                                                },
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "invoice_id",
+                                                            "type": "I",
+                                                            "status": "IN",
+                                                            "value": "100023"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "value": ""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqwsl9d8pc3n30"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "STATEMENT",
+                                                    "type": "LPA",
+                                                    "value": "BEGIN :name := ifsapp.Customer_Info_API.Get_name('BP1'); END;"
+                                                },
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "delimiter": 20,
+                                                            "name": "name",
+                                                            "type": "LPT",
+                                                            "status": "OUT",
+                                                            "isNull": true,
+                                                            "value": null
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "value": ""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqwp7x0wey4tj0-0"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "STATEMENT",
+                                                    "type": "LPA",
+                                                    "value": "DECLARE customer_id_  VARCHAR2(50) := :customer_id; BEGIN :name := &AO.Customer_Info_API.Get_Name(customer_id_); END;"
+                                                },
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "customer_id",
+                                                            "type": "LPT",
+                                                            "status": "IN",
+                                                            "value": "BP1"
+                                                        },
+                                                        {
+                                                            "delimiter": 20,
+                                                            "name": "name",
+                                                            "type": "LPT",
+                                                            "status": "OUT",
+                                                            "isNull": true,
+                                                            "value": null
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "value": ""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqwp7x0wey4tj0-1"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "STATEMENT",
+                                                    "type": "LPA",
+                                                    "value": "DECLARE customer_id_  VARCHAR2(50) := :customer_id; BEGIN :name := &AO.Customer_Info_API.Get_Name(customer_id_); END;"
+                                                },
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "customer_id",
+                                                            "type": "LPT",
+                                                            "status": "IN",
+                                                            "value": "BP2"
+                                                        },
+                                                        {
+                                                            "delimiter": 20,
+                                                            "name": "name",
+                                                            "type": "LPT",
+                                                            "status": "OUT",
+                                                            "isNull": true,
+                                                            "value": null
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "value": ""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqwp7x0wey4tj0-2"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "STATEMENT",
+                                                    "type": "LPA",
+                                                    "value": "DECLARE customer_id_  VARCHAR2(50) := :customer_id; BEGIN :name := &AO.Customer_Info_API.Get_Name(customer_id_); END;"
+                                                },
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "customer_id",
+                                                            "type": "LPT",
+                                                            "status": "IN",
+                                                            "value": "BP3"
+                                                        },
+                                                        {
+                                                            "delimiter": 20,
+                                                            "name": "name",
+                                                            "type": "LPT",
+                                                            "status": "OUT",
+                                                            "isNull": true,
+                                                            "value": null
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "value": ""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqwp7x0wey4tj0-3"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "STATEMENT",
+                                                    "type": "LPA",
+                                                    "value": "DECLARE customer_id_  VARCHAR2(50) := :customer_id; BEGIN :name := &AO.Customer_Info_API.Get_Name(customer_id_); END;"
+                                                },
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "customer_id",
+                                                            "type": "LPT",
+                                                            "status": "IN",
+                                                            "value": "NULL"
+                                                        },
+                                                        {
+                                                            "delimiter": 20,
+                                                            "name": "name",
+                                                            "type": "LPT",
+                                                            "status": "OUT",
+                                                            "isNull": true,
+                                                            "value": null
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "value": ""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        ]
+    },
+    "response": {
+        "status": "DONE",
+        "clientId": "IFS.Node.AP",
+        "requestId": "ksly5kqw6sl3kp2wp1m",
+        "locale": "en-US",
+        "language": "en",
+        "debug": false,
+        "transactionId": "",
+        "commands": [
+            {
+                "commandId": "ksly5kqx2rf9hogenyq",
+                "rowCount": "1",
+                "partialResult": "FALSE",
+                "cursorId": null,
+                "bindingsObject": {},
+                "bindingsSendObject": {},
+                "result": [
+                    {
+                        "NUM": 295
+                    }
+                ]
+            },
+            {
+                "commandId": "ksly5kqx1eunxafq5xj-0",
+                "rowCount": "1",
+                "partialResult": "FALSE",
+                "cursorId": null,
+                "bindingsObject": {
+                    "invoice_id": 100021
+                },
+                "bindingsSendObject": {
+                    "invoice_id": {
+                        "direction": "IN",
+                        "value": "100021",
+                        "type": "I"
+                    }
+                },
+                "result": [
+                    {
+                        "SERIES_ID": "CD",
+                        "INVOICE_NO": "970000001",
+                        "CUSTOMER_ID": "BP1",
+                        "CUSTOMER_NAME": "Team Rahal"
+                    }
+                ]
+            },
+            {
+                "commandId": "ksly5kqx1eunxafq5xj-1",
+                "rowCount": "1",
+                "partialResult": "FALSE",
+                "cursorId": null,
+                "bindingsObject": {
+                    "invoice_id": 100022
+                },
+                "bindingsSendObject": {
+                    "invoice_id": {
+                        "direction": "IN",
+                        "value": "100022",
+                        "type": "I"
+                    }
+                },
+                "result": [
+                    {
+                        "SERIES_ID": "CD",
+                        "INVOICE_NO": "970000002",
+                        "CUSTOMER_ID": "BP2",
+                        "CUSTOMER_NAME": "Newman/Haas Racing"
+                    }
+                ]
+            },
+            {
+                "commandId": "ksly5kqx1eunxafq5xj-2",
+                "rowCount": "1",
+                "partialResult": "FALSE",
+                "cursorId": null,
+                "bindingsObject": {
+                    "invoice_id": 100023
+                },
+                "bindingsSendObject": {
+                    "invoice_id": {
+                        "direction": "IN",
+                        "value": "100023",
+                        "type": "I"
+                    }
+                },
+                "result": [
+                    {
+                        "SERIES_ID": "CD",
+                        "INVOICE_NO": "970000003",
+                        "CUSTOMER_ID": "BP6",
+                        "CUSTOMER_NAME": "Ferrari"
+                    }
+                ]
+            },
+            {
+                "commandId": "ksly5kqwsl9d8pc3n30",
+                "bindingsObject": {
+                    "name": "Team Rahal"
+                },
+                "bindingsSendObject": {
+                    "name": {
+                        "direction": "OUT",
+                        "value": "Team Rahal",
+                        "type": "LPT"
+                    }
+                }
+            },
+            {
+                "commandId": "ksly5kqwp7x0wey4tj0-0",
+                "bindingsObject": {
+                    "customer_id": "BP1",
+                    "name": "Team Rahal"
+                },
+                "bindingsSendObject": {
+                    "customer_id": {
+                        "direction": "IN",
+                        "value": "BP1",
+                        "type": "LPT"
+                    },
+                    "name": {
+                        "direction": "OUT",
+                        "value": "Team Rahal",
+                        "type": "LPT"
+                    }
+                }
+            },
+            {
+                "commandId": "ksly5kqwp7x0wey4tj0-1",
+                "bindingsObject": {
+                    "customer_id": "BP2",
+                    "name": "Newman/Haas Racing"
+                },
+                "bindingsSendObject": {
+                    "customer_id": {
+                        "direction": "IN",
+                        "value": "BP2",
+                        "type": "LPT"
+                    },
+                    "name": {
+                        "direction": "OUT",
+                        "value": "Newman/Haas Racing",
+                        "type": "LPT"
+                    }
+                }
+            },
+            {
+                "commandId": "ksly5kqwp7x0wey4tj0-2",
+                "bindingsObject": {
+                    "customer_id": "BP3",
+                    "name": "Hendrick Motorsports"
+                },
+                "bindingsSendObject": {
+                    "customer_id": {
+                        "direction": "IN",
+                        "value": "BP3",
+                        "type": "LPT"
+                    },
+                    "name": {
+                        "direction": "OUT",
+                        "value": "Hendrick Motorsports",
+                        "type": "LPT"
+                    }
+                }
+            },
+            {
+                "commandId": "ksly5kqwp7x0wey4tj0-3",
+                "bindingsObject": {
+                    "customer_id": "NULL",
+                    "name": null
+                },
+                "bindingsSendObject": {
+                    "customer_id": {
+                        "direction": "IN",
+                        "value": "NULL",
+                        "type": "LPT"
+                    },
+                    "name": {
+                        "direction": "OUT",
+                        "value": null,
+                        "type": "LPT"
+                    }
+                }
+            }
+        ],
+        "message": [
+            [
+                {
+                    "name": "STATUS",
+                    "type": "T",
+                    "status": "Q",
+                    "value": "DONE"
+                },
+                {
+                    "name": "FND_CONTEXT",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "name": "CLIENT_ID",
+                            "value": "IFS.Node.AP"
+                        },
+                        {
+                            "name": "REQUEST_ID",
+                            "value": "ksly5kqw6sl3kp2wp1m"
+                        },
+                        {
+                            "name": "LOCALE",
+                            "status": "*",
+                            "value": "en-US"
+                        },
+                        {
+                            "name": "ENCODE_BINARY_VALUE",
+                            "value": "FALSE"
+                        },
+                        {
+                            "name": "LANGUAGE",
+                            "type": "T",
+                            "status": "*",
+                            "value": "en"
+                        }
+                    ]
+                },
+                {
+                    "name": "APP_CONTEXT",
+                    "buffer": true,
+                    "value": []
+                }
+            ],
+            [
+                {
+                    "name": "PLSQL_INVOCATION",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "delimiter": 14,
+                            "name": "DATA",
+                            "type": "PLSQL_SERVER.PLSQL_INVOCATION",
+                            "status": "Create",
+                            "value": "ksly5kqxxlfajb6r330"
+                        },
+                        {
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "delimiter": 20,
+                                    "name": "TRANSACTION_ID",
+                                    "type": "T",
+                                    "status": "*",
+                                    "isNull": true,
+                                    "value": null
+                                },
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "PLSQL_SERVER.COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqx2rf9hogenyq"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "PARTIAL_RESULT",
+                                                    "type": "B",
+                                                    "status": "*",
+                                                    "value": "FALSE"
+                                                },
+                                                {
+                                                    "name": "RESULT",
+                                                    "type": "R.B64",
+                                                    "status": "*",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "NUM",
+                                                                    "type": "N",
+                                                                    "value": "295"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "A",
+                                                    "status": "Q",
+                                                    "isNull": true,
+                                                    "value": null
+                                                },
+                                                {
+                                                    "name": "ROW_COUNT",
+                                                    "type": "I",
+                                                    "status": "*",
+                                                    "value": "1"
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "CURSOR_ID",
+                                                    "type": "T",
+                                                    "status": "*",
+                                                    "isNull": true,
+                                                    "value": null
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "PLSQL_SERVER.COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqx1eunxafq5xj-0"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "status": "Q",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "invoice_id",
+                                                            "type": "I",
+                                                            "status": "IN",
+                                                            "value": "100021"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "PARTIAL_RESULT",
+                                                    "type": "B",
+                                                    "status": "*",
+                                                    "value": "FALSE"
+                                                },
+                                                {
+                                                    "name": "RESULT",
+                                                    "type": "R.B64",
+                                                    "status": "*",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "SERIES_ID",
+                                                                    "type": "T",
+                                                                    "value": "CD"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "T",
+                                                                    "value": "970000001"
+                                                                },
+                                                                {
+                                                                    "name": "CUSTOMER_ID",
+                                                                    "type": "T",
+                                                                    "value": "BP1"
+                                                                },
+                                                                {
+                                                                    "name": "CUSTOMER_NAME",
+                                                                    "type": "T",
+                                                                    "value": "Team Rahal"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "A",
+                                                    "status": "Q",
+                                                    "isNull": true,
+                                                    "value": null
+                                                },
+                                                {
+                                                    "name": "ROW_COUNT",
+                                                    "type": "I",
+                                                    "status": "*",
+                                                    "value": "1"
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "CURSOR_ID",
+                                                    "type": "T",
+                                                    "status": "*",
+                                                    "isNull": true,
+                                                    "value": null
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "PLSQL_SERVER.COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqx1eunxafq5xj-1"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "status": "Q",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "invoice_id",
+                                                            "type": "I",
+                                                            "status": "IN",
+                                                            "value": "100022"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "PARTIAL_RESULT",
+                                                    "type": "B",
+                                                    "status": "*",
+                                                    "value": "FALSE"
+                                                },
+                                                {
+                                                    "name": "RESULT",
+                                                    "type": "R.B64",
+                                                    "status": "*",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "SERIES_ID",
+                                                                    "type": "T",
+                                                                    "value": "CD"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "T",
+                                                                    "value": "970000002"
+                                                                },
+                                                                {
+                                                                    "name": "CUSTOMER_ID",
+                                                                    "type": "T",
+                                                                    "value": "BP2"
+                                                                },
+                                                                {
+                                                                    "name": "CUSTOMER_NAME",
+                                                                    "type": "T",
+                                                                    "value": "Newman/Haas Racing"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "A",
+                                                    "status": "Q",
+                                                    "isNull": true,
+                                                    "value": null
+                                                },
+                                                {
+                                                    "name": "ROW_COUNT",
+                                                    "type": "I",
+                                                    "status": "*",
+                                                    "value": "1"
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "CURSOR_ID",
+                                                    "type": "T",
+                                                    "status": "*",
+                                                    "isNull": true,
+                                                    "value": null
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "PLSQL_SERVER.COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqx1eunxafq5xj-2"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "status": "Q",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "invoice_id",
+                                                            "type": "I",
+                                                            "status": "IN",
+                                                            "value": "100023"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "PARTIAL_RESULT",
+                                                    "type": "B",
+                                                    "status": "*",
+                                                    "value": "FALSE"
+                                                },
+                                                {
+                                                    "name": "RESULT",
+                                                    "type": "R.B64",
+                                                    "status": "*",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "SERIES_ID",
+                                                                    "type": "T",
+                                                                    "value": "CD"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "T",
+                                                                    "value": "970000003"
+                                                                },
+                                                                {
+                                                                    "name": "CUSTOMER_ID",
+                                                                    "type": "T",
+                                                                    "value": "BP6"
+                                                                },
+                                                                {
+                                                                    "name": "CUSTOMER_NAME",
+                                                                    "type": "T",
+                                                                    "value": "Ferrari"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "A",
+                                                    "status": "Q",
+                                                    "isNull": true,
+                                                    "value": null
+                                                },
+                                                {
+                                                    "name": "ROW_COUNT",
+                                                    "type": "I",
+                                                    "status": "*",
+                                                    "value": "1"
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "CURSOR_ID",
+                                                    "type": "T",
+                                                    "status": "*",
+                                                    "isNull": true,
+                                                    "value": null
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "PLSQL_SERVER.COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqwsl9d8pc3n30"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "status": "*",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "name",
+                                                            "type": "LPT",
+                                                            "status": "OUT",
+                                                            "value": "Team Rahal"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "A",
+                                                    "status": "Q",
+                                                    "isNull": true,
+                                                    "value": null
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "PLSQL_SERVER.COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqwp7x0wey4tj0-0"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "status": "*",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "customer_id",
+                                                            "type": "LPT",
+                                                            "status": "IN",
+                                                            "value": "BP1"
+                                                        },
+                                                        {
+                                                            "name": "name",
+                                                            "type": "LPT",
+                                                            "status": "OUT",
+                                                            "value": "Team Rahal"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "A",
+                                                    "status": "Q",
+                                                    "isNull": true,
+                                                    "value": null
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "PLSQL_SERVER.COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqwp7x0wey4tj0-1"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "status": "*",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "customer_id",
+                                                            "type": "LPT",
+                                                            "status": "IN",
+                                                            "value": "BP2"
+                                                        },
+                                                        {
+                                                            "name": "name",
+                                                            "type": "LPT",
+                                                            "status": "OUT",
+                                                            "value": "Newman/Haas Racing"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "A",
+                                                    "status": "Q",
+                                                    "isNull": true,
+                                                    "value": null
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "PLSQL_SERVER.COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqwp7x0wey4tj0-2"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "status": "*",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "customer_id",
+                                                            "type": "LPT",
+                                                            "status": "IN",
+                                                            "value": "BP3"
+                                                        },
+                                                        {
+                                                            "name": "name",
+                                                            "type": "LPT",
+                                                            "status": "OUT",
+                                                            "value": "Hendrick Motorsports"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "A",
+                                                    "status": "Q",
+                                                    "isNull": true,
+                                                    "value": null
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "PLSQL_SERVER.COMMAND",
+                                            "status": "Create",
+                                            "value": "ksly5kqwp7x0wey4tj0-3"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "status": "*",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "customer_id",
+                                                            "type": "LPT",
+                                                            "status": "IN",
+                                                            "value": "NULL"
+                                                        },
+                                                        {
+                                                            "delimiter": 20,
+                                                            "name": "name",
+                                                            "type": "LPT",
+                                                            "status": "OUT",
+                                                            "isNull": true,
+                                                            "value": null
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "A",
+                                                    "status": "Q",
+                                                    "isNull": true,
+                                                    "value": null
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        ]
+    },
+    "method": "CMD_BLOCK"
+}

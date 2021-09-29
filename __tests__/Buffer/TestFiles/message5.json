@@ -1,0 +1,390 @@
+{
+    "requestFile": "message5_Request.dat",
+    "responseFile": "message5_Response.dat",
+    "request": {
+        "clientId": "SYJUPL2-WIA-CONSOLE-33924",
+        "requestId": "1908badc-bbb5-4928-9aaa-2b86f34dac78",
+        "locale": "en-US",
+        "debug": true,
+        "invocationId": "ecc9ba2e-902f-46ea-b97e-f4ac1b5f0c8e",
+        "transactionId": "",
+        "commands": [
+            {
+                "commandId": "9678a362-a586-457b-9174-2c5ca1ed1250",
+                "sqlString": "SELECT 'test' \"TEST aaa ąęć\"\r\nFROM dual",
+                "method": "SQL",
+                "maxRows": "103",
+                "debugContextName": "frmDynamicSelect",
+                "debugAppStackFrame": "Module: Ifs.Application.Fndadm.SQLQueryTool.dll\rNamespace: Ifs.Application.Fndadm.SQLQueryTool\rObject: frmDynamicSelect\rMethod: Execute",
+                "bindingsObject": {},
+                "bindingsSendObject": {}
+            }
+        ],
+        "message": [
+            [
+                {
+                    "name": "FND_CONTEXT",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "name": "CLIENT_ID",
+                            "value": "SYJUPL2-WIA-CONSOLE-33924"
+                        },
+                        {
+                            "name": "REQUEST_ID",
+                            "value": "1908badc-bbb5-4928-9aaa-2b86f34dac78"
+                        },
+                        {
+                            "name": "LOCALE",
+                            "value": "en-US"
+                        },
+                        {
+                            "name": "ENCODE_BINARY_VALUE",
+                            "value": "FALSE"
+                        },
+                        {
+                            "name": "DEBUG",
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "CALL_SEQUENCE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "DB_ACCESS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "SKELETON_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "STUB_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "APPLICATION_CODE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "OUTPUT",
+                                    "value": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "PLSQL_INVOCATION",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "delimiter": 14,
+                            "name": "DATA",
+                            "type": "PLSQL_INVOCATION",
+                            "status": "Create",
+                            "value": "ecc9ba2e-902f-46ea-b97e-f4ac1b5f0c8e"
+                        },
+                        {
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "COMMAND",
+                                            "status": "Create",
+                                            "value": "9678a362-a586-457b-9174-2c5ca1ed1250"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "STATEMENT",
+                                                    "type": "LPA",
+                                                    "value": "SELECT 'test' \"TEST aaa ąęć\"\r\nFROM dual"
+                                                },
+                                                {
+                                                    "name": "DEBUG_CONTEXT_NAME",
+                                                    "type": "LPA",
+                                                    "value": "frmDynamicSelect"
+                                                },
+                                                {
+                                                    "name": "DEBUG_APP_STACK_FRAME",
+                                                    "type": "LPA",
+                                                    "value": "Module: Ifs.Application.Fndadm.SQLQueryTool.dll\rNamespace: Ifs.Application.Fndadm.SQLQueryTool\rObject: frmDynamicSelect\rMethod: Execute"
+                                                },
+                                                {
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "value": ""
+                                                },
+                                                {
+                                                    "name": "MAX_ROWS",
+                                                    "type": "I",
+                                                    "value": "103"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        ]
+    },
+    "response": {
+        "status": "DONE",
+        "clientId": "SYJUPL2-WIA-CONSOLE-33924",
+        "requestId": "1908badc-bbb5-4928-9aaa-2b86f34dac78",
+        "locale": "en-US",
+        "language": "en",
+        "debug": true,
+        "invocationId": "ecc9ba2e-902f-46ea-b97e-f4ac1b5f0c8e",
+        "transactionId": "",
+        "commands": [
+            {
+                "commandId": "9678a362-a586-457b-9174-2c5ca1ed1250",
+                "maxRows": "103",
+                "rowCount": "1",
+                "partialResult": "FALSE",
+                "cursorId": null,
+                "debugContextName": "frmDynamicSelect",
+                "debugAppStackFrame": "Module: Ifs.Application.Fndadm.SQLQueryTool.dll\rNamespace: Ifs.Application.Fndadm.SQLQueryTool\rObject: frmDynamicSelect\rMethod: Execute",
+                "bindingsObject": {},
+                "bindingsSendObject": {},
+                "result": [
+                    {
+                        "TEST aaa ąęć": "test"
+                    }
+                ]
+            }
+        ],
+        "message": [
+            [
+                {
+                    "name": "STATUS",
+                    "type": "LPT",
+                    "status": "Q",
+                    "value": "DONE"
+                },
+                {
+                    "name": "FND_CONTEXT",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "name": "CLIENT_ID",
+                            "value": "SYJUPL2-WIA-CONSOLE-33924"
+                        },
+                        {
+                            "name": "REQUEST_ID",
+                            "value": "1908badc-bbb5-4928-9aaa-2b86f34dac78"
+                        },
+                        {
+                            "name": "LOCALE",
+                            "status": "*",
+                            "value": "en-US"
+                        },
+                        {
+                            "name": "ENCODE_BINARY_VALUE",
+                            "value": "FALSE"
+                        },
+                        {
+                            "name": "LANGUAGE",
+                            "type": "LPT",
+                            "status": "*",
+                            "value": "en"
+                        },
+                        {
+                            "name": "DEBUG",
+                            "type": "DEBUG",
+                            "status": "Modify",
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "CALL_SEQUENCE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "DB_ACCESS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "SKELETON_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "STUB_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "APPLICATION_CODE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "OUTPUT",
+                                    "status": "*",
+                                    "value": "07:30:56,221 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.debugRequestHeader(): PlsqlProxy Request Header\r\n07:30:56,221 ??? ifs.fnd.base.FndDebug$Instance.debugContext(): \r\n   1:$FND_CONTEXT=\r\n      1:$SERIALIZATION_TARGET:T = SERVER\r\n      2:$JAVA_LOCALE:T = en_US\r\n      3:$DIRECTORY_ID:T = IFSAPP\r\n      4:$EXTERNAL_BODY_TYPE:I = 0\r\n      5:$STORAGE_TYPE:T = STANDARD_STORAGE\r\n      6:$IMPLEMENTATION_MODE:I = 3\r\n      7:$FND_CONTEXT=\r\n         1:$CLIENT_ID = SYJUPL2-WIA-CONSOLE-33924\r\n         2:$REQUEST_ID = 1908badc-bbb5-4928-9aaa-2b86f34dac78\r\n         3:$LOCALE = en-US\r\n         4:$ENCODE_BINARY_VALUE = FALSE\r\n         5:$LANGUAGE:T = en\r\n         6:$DEBUG=\r\n            1:$CALL_SEQUENCE = DEBUG\r\n            2:$DB_ACCESS = DEBUG\r\n            3:$SKELETON_ARGUMENTS = DEBUG\r\n            4:$STUB_ARGUMENTS = DEBUG\r\n            5:$APPLICATION_CODE = DEBUG\r\n            6:$OUTPUT = \r\n         7:$COUNTERS=\r\n            1:$SQL_STATEMENT:I = 0\r\n            2:$SQL_FETCH:I = 0\r\n            3:$CORBA_CALL:I = -1\r\n      8:$APP_CONTEXT=\r\n   2:$FND_SERVER_CONTEXT=\r\n      1:$CONNECTION_MGR:T = ifs.fnd.sf.storage.FndTaggedConnectionManager@72383355\r\n      2:$INSIDE_ACTIVITY:B = false\r\n      3:$BASE_SERVER_METHOD_SECURITY_ENABLED:B = true\r\n      4:$SUPPORTED_CAPABILITIES:T = [LPTEXT]\r\n      5:$INIT_FND_SESSION_COUNT:I = 0\r\n      6:$INIT_FND_SESSION_DB_COUNT:I = 0\r\n      7:$VALIDATING_REAUTHENTICATION_RESPONSE:B = false\r\n   3:$FND_J2EE_CONTEXT=\r\n      1:$INSIDE_FND_ENTITY_BEAN:B = false\r\n      2:$CURRENT_METHODS:T = []\r\n\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Started initialization of connection {null}\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.getConnectionImpl(): Getting tagged connection from pool\r\n07:30:56,221 ??? ifs.fnd.plsql.pool.TaggedConnection.reuseOwnSession(): Entered state transition method: \r\n07:30:56,221 ??? ifs.fnd.plsql.pool.TaggedConnection.reuseOwnSession(): Reused own connection: \r\n\t{nr=47 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=704 fndUser=IFSAPP dbUser=IFSAPP directoryId=IFSAPP clientId=SYJUPL2-WIA-CONSOLE-33924 clientSessionId=5090bf1f-ad2f-4f78-803c-e928636fd61f/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false} inUse=true language=en-US transactionId=null AUDSID=299103093\r\n\t\tInitializedSession(nr=47):  close=86399907 (2021-08-03 07:30:56)\r\n\t\tDedicatedSession(5090bf1f-ad2f-4f78-803c-e928636fd61f/IFSAPP)\r\n\t\t\r\n07:30:56,221 ??? ifs.fnd.plsql.pool.TaggedConnectionPoolManager.getConnection(): Got connection from pool in 0 ms: {nr=47 USED auto-commit=false key=0 timestamp=0 SID=704 fndUser=IFSAPP dbUser=IFSAPP directoryId=IFSAPP}\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndConnectionList.add(): Adding connection: ifs.fnd.sf.storage.FndTaggedConnection@3560bf7a COUNT=1\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndConnection.<init>(): Created connection ifs.fnd.sf.storage.FndTaggedConnection@3560bf7a(oracle.jdbc.driver.T4CConnection@47a99f87)\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [REQUEST_ID]\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [LOCALE]\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [ENCODE_BINARY_VALUE]\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [LANGUAGE]\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Value [SYJUPL2-WIA-CONSOLE-33924] for context attribute [CLIENT_ID] has not been changed.\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Initializing connection\r\n\t{nr=47 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=704 fndUser=IFSAPP dbUser=IFSAPP directoryId=IFSAPP clientId=SYJUPL2-WIA-CONSOLE-33924 clientSessionId=5090bf1f-ad2f-4f78-803c-e928636fd61f/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false}\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initPlsqlGatewaySession(): Initializing Plsql connection: initClientSession=false f1Context=true appContext=false\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@577475eb\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001STMT>\r\nbegin\r\n   IFSAPP.Fnd_Context_SYS.Init_Request_(:1 , :2 );\r\nend;\r\n</PLSQL\u0001STMT>\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001BIND>\r\n [1] F1_CONTEXT:TEXT/IN=!F1_CONTEXT\r\n$DEBUG=!DEBUG\r\n-$DB_ACCESS=DEBUG\r\n\r\n [2] APP_CONTEXT:TEXT/IN=null\r\n</PLSQL\u0001BIND>\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@577475eb\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@577475eb executed\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@30a4dc55\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001RECURSIVE\u0001STMT>\r\nbegin IFSAPP.Client_SYS.Get_Trace(:1 ); end;\r\n</PLSQL\u0001RECURSIVE\u0001STMT>\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001RECURSIVE\u0001BIND>\r\n [1] TEXT:LONG_TEXT/IN_OUT=null\r\n</PLSQL\u0001RECURSIVE\u0001BIND>\r\n07:30:56,221 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@30a4dc55\r\n07:30:56,221 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@30a4dc55' on request '1908badc-bbb5-4928-9aaa-2b86f34dac78'\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@30a4dc55 executed\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.closePlsqlResultLog(): \r\n<PLSQL\u0001RECURSIVE\u0001RESULT>\r\n [1] TEXT:LONG_TEXT/IN_OUT=null\r\n</PLSQL\u0001RECURSIVE\u0001RESULT>\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@30a4dc55\r\n07:30:56,237 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@30a4dc55' on request '1908badc-bbb5-4928-9aaa-2b86f34dac78'\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@577475eb\r\n07:30:56,237 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@577475eb' on request '1908badc-bbb5-4928-9aaa-2b86f34dac78'\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Finished initialization of connection\r\n\t{nr=47 USED auto-commit=false key=-16 timestamp=-16 usedByRequest=true SID=704 fndUser=IFSAPP dbUser=IFSAPP directoryId=IFSAPP clientId=SYJUPL2-WIA-CONSOLE-33924 clientSessionId=5090bf1f-ad2f-4f78-803c-e928636fd61f/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false}\r\n07:30:56,237 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): Calling AccessPlsql.invoke\r\n07:30:56,237 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): PlsqlProxy Request Body\r\n07:30:56,237 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): PLSQL_INVOCATION (Fnd_View) Create  identity=ecc9ba2e-902f-46ea-b97e-f4ac1b5f0c8e\r\n   SYSTEM_NAME/Q (Alpha) Non_Existent\r\n   TRANSACTION_ID/Q (Text) Non_Existent\r\n   USER_SESSION/Q (Boolean) Non_Existent\r\n   COMMANDS/* (Array (DIRTY)) (1 elements):\r\n      1:COMMAND (Fnd_View) Create element of PLSQL_INVOCATION.COMMANDS  identity=9678a362-a586-457b-9174-2c5ca1ed1250\r\n         BIND_VARIABLES/Q (Binary) Non_Existent\r\n         COUNT_ROWS/Q (Boolean) Non_Existent\r\n         CURSOR_ID/Q (Text) Non_Existent\r\n         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Fndadm.SQLQueryTool.dllNamespace: Ifs.Application.Fndadm.SQLQueryToolObject: frmDynamicSelectMethod: Execute\r\n         DEBUG_CONTEXT_NAME/Q (Alpha) = frmDynamicSelect\r\n         GENERATE_OUTER_BLOCK/Q (Boolean) Non_Existent\r\n         MAX_ROWS/Q (Integer) = 103\r\n         PARTIAL_RESULT/Q (Boolean) Non_Existent\r\n         RESULT/Q (Binary) Non_Existent\r\n         RESULT_RECORD_TYPE/Q (Alpha) Null\r\n         ROW_COUNT/Q (Integer) Non_Existent\r\n         SELECT_COLUMNS/Q (Alpha) Non_Existent\r\n         SKIP_ROWS/Q (Integer) Non_Existent\r\n         STATEMENT/Q (Alpha) = SELECT 'test' \"TEST aaa ąęć\"\r\nFROM dual\r\n         PROPAGATED_VARIABLES/Q (Array) Non_Existent\r\n\r\n07:30:56,237 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(): Invocation input: onlySelect=false oneCmdOnly=false returnRefCursor=false\r\n07:30:56,237 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(): PLSQL_INVOCATION (Fnd_View) Create  identity=ecc9ba2e-902f-46ea-b97e-f4ac1b5f0c8e\r\n   SYSTEM_NAME/Q (Alpha) Non_Existent\r\n   TRANSACTION_ID/Q (Text) Non_Existent\r\n   USER_SESSION/Q (Boolean) Non_Existent\r\n   COMMANDS/* (Array (DIRTY)) (1 elements):\r\n      1:COMMAND (Fnd_View) Create element of PLSQL_INVOCATION.COMMANDS  identity=9678a362-a586-457b-9174-2c5ca1ed1250\r\n         BIND_VARIABLES/Q (Binary) Non_Existent\r\n         COUNT_ROWS/Q (Boolean) Non_Existent\r\n         CURSOR_ID/Q (Text) Non_Existent\r\n         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Fndadm.SQLQueryTool.dllNamespace: Ifs.Application.Fndadm.SQLQueryToolObject: frmDynamicSelectMethod: Execute\r\n         DEBUG_CONTEXT_NAME/Q (Alpha) = frmDynamicSelect\r\n         GENERATE_OUTER_BLOCK/Q (Boolean) Non_Existent\r\n         MAX_ROWS/Q (Integer) = 103\r\n         PARTIAL_RESULT/Q (Boolean) Non_Existent\r\n         RESULT/Q (Binary) Non_Existent\r\n         RESULT_RECORD_TYPE/Q (Alpha) Null\r\n         ROW_COUNT/Q (Integer) Non_Existent\r\n         SELECT_COLUMNS/Q (Alpha) Non_Existent\r\n         SKIP_ROWS/Q (Integer) Non_Existent\r\n         STATEMENT/Q (Alpha) = SELECT 'test' \"TEST aaa ąęć\"\r\nFROM dual\r\n         PROPAGATED_VARIABLES/Q (Array) Non_Existent\r\n\r\n07:30:56,237 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationContext.<init>(): Called FndServerContext.setLanguageAndLocale(): language=en locale=en_US\r\n07:30:56,237 ??? ifs.fnd.service.SQLRecognizer.<init>(): Rocognizing SQL: 'SELECT 'test' \"TEST aaa ąęć\"\r\nFROM dual'\r\n07:30:56,237 ??? ifs.fnd.service.SQLRecognizer.getSQLText(): SQL text: SELECT 'test' \"TEST aaa ąęć\"\r\nFROM dual\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@335e38f\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.prepareStatement(): Preparing statement:\r\n<PLSQL\u0001STMT>\r\nSELECT 'test' \"TEST aaa ąęć\"\r\nFROM dual\r\n</PLSQL\u0001STMT>\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.executeQuery(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@335e38f\r\n07:30:56,237 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@335e38f' on request '1908badc-bbb5-4928-9aaa-2b86f34dac78'\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.executeQuery(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@335e38f executed\r\n07:30:56,237 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 1 fetched (8/8 bytes)\r\n07:30:56,237 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Closing tagged cursor [118ff2d0-b580-4a2f-90fb-daed8d02ce08] because fetchCount=1 < maxRows=103\r\n07:30:56,237 ??? ifs.fnd.plsql.pool.TaggedConnection.closeCursorImpl(): Closing cursor [118ff2d0-b580-4a2f-90fb-daed8d02ce08] in connection {nr=47 USED auto-commit=false key=-16 timestamp=-16 SID=704 fndUser=IFSAPP dbUser=IFSAPP directoryId=IFSAPP}\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.closeDatabaseCursor(): Closing cursor ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@335e38f\r\n07:30:56,237 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@335e38f' on request '1908badc-bbb5-4928-9aaa-2b86f34dac78'\r\n07:30:56,237 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Fetched 8 bytes from database.\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@339e17fc\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001RECURSIVE\u0001STMT>\r\nbegin IFSAPP.Client_SYS.Get_Trace(:1 ); end;\r\n</PLSQL\u0001RECURSIVE\u0001STMT>\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001RECURSIVE\u0001BIND>\r\n [1] TEXT:LONG_TEXT/IN_OUT=null\r\n</PLSQL\u0001RECURSIVE\u0001BIND>\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@339e17fc\r\n07:30:56,237 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@339e17fc' on request '1908badc-bbb5-4928-9aaa-2b86f34dac78'\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@339e17fc executed\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.closePlsqlResultLog(): \r\n<PLSQL\u0001RECURSIVE\u0001RESULT>\r\n [1] TEXT:LONG_TEXT/IN_OUT=null\r\n</PLSQL\u0001RECURSIVE\u0001RESULT>\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@339e17fc\r\n07:30:56,237 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@339e17fc' on request '1908badc-bbb5-4928-9aaa-2b86f34dac78'\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@4731e749\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001STMT>\r\nbegin IFSAPP.Fnd_Context_SYS.End_Request_(:1 , :2 , :3 ); end;\r\n</PLSQL\u0001STMT>\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001BIND>\r\n [1] TRANSACTION_ID:TEXT/OUT=null\r\n [2] TRACE:LONG_TEXT/OUT=null\r\n [3] ERROR_MSG:LONG_TEXT/OUT=null\r\n</PLSQL\u0001BIND>\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@4731e749\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@4731e749 executed\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@4731e749\r\n07:30:56,237 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@4731e749' on request '1908badc-bbb5-4928-9aaa-2b86f34dac78'\r\n07:30:56,237 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PlsqlProxy Response Header\r\n07:30:56,237 ??? ifs.fnd.base.FndDebug$Instance.debugContext(): \r\n   1:$FND_CONTEXT=\r\n      1:$STATUS:T = DONE\r\n      2:$SERIALIZATION_TARGET:T = CLIENT\r\n      3:$JAVA_LOCALE:T = en_US\r\n      4:$DIRECTORY_ID:T = IFSAPP\r\n      5:$EXTERNAL_BODY_TYPE:I = 0\r\n      6:$STORAGE_TYPE:T = STANDARD_STORAGE\r\n      7:$IMPLEMENTATION_MODE:I = 3\r\n      8:$FND_CONTEXT=\r\n         1:$CLIENT_ID = SYJUPL2-WIA-CONSOLE-33924\r\n         2:$REQUEST_ID = 1908badc-bbb5-4928-9aaa-2b86f34dac78\r\n         3:$LOCALE = en-US\r\n         4:$ENCODE_BINARY_VALUE = FALSE\r\n         5:$LANGUAGE:T = en\r\n         6:$DEBUG=\r\n            1:$CALL_SEQUENCE = DEBUG\r\n            2:$DB_ACCESS = DEBUG\r\n            3:$SKELETON_ARGUMENTS = DEBUG\r\n            4:$STUB_ARGUMENTS = DEBUG\r\n            5:$APPLICATION_CODE = DEBUG\r\n            6:$OUTPUT =             07:30:56,221 ??? ifs ......[Size=15623]\r\n\r\n         7:$COUNTERS=\r\n            1:$SQL_STATEMENT:I = 5\r\n            2:$SQL_FETCH:I = 0\r\n            3:$CORBA_CALL:I = -1\r\n      9:$APP_CONTEXT=\r\n   2:$FND_SERVER_CONTEXT=\r\n      1:$CONNECTION_MGR:T = ifs.fnd.sf.storage.FndTaggedConnectionManager@72383355\r\n      2:$CONNECTION_LIST:T = [ifs.fnd.sf.storage.FndTaggedConnection@3560bf7a]\r\n      3:$INSIDE_ACTIVITY:B = false\r\n      4:$BASE_SERVER_METHOD_SECURITY_ENABLED:B = true\r\n      5:$SUPPORTED_CAPABILITIES:T = [LPTEXT]\r\n      6:$INIT_FND_SESSION_COUNT:I = 0\r\n      7:$INIT_FND_SESSION_DB_COUNT:I = 0\r\n      8:$VALIDATING_REAUTHENTICATION_RESPONSE:B = false\r\n   3:$FND_J2EE_CONTEXT=\r\n      1:$INSIDE_FND_ENTITY_BEAN:B = false\r\n      2:$DEBUGGER_ROLE_GRANTED:B = true\r\n      3:$CURRENT_METHODS:T = []\r\n\r\n07:30:56,237 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PlsqlProxy Response Body\r\n07:30:56,237 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PLSQL_INVOCATION (Fnd_View) (DIRTY) Create  identity=ecc9ba2e-902f-46ea-b97e-f4ac1b5f0c8e\r\n   SYSTEM_NAME/Q (Alpha) Non_Existent\r\n   TRANSACTION_ID/* (Text (DIRTY)) Null\r\n   USER_SESSION/Q (Boolean) Non_Existent\r\n   COMMANDS/* (Array (DIRTY)) (1 elements):\r\n      1:COMMAND (Fnd_View) (DIRTY) Create element of PLSQL_INVOCATION.COMMANDS  identity=9678a362-a586-457b-9174-2c5ca1ed1250\r\n         BIND_VARIABLES/Q (Binary) Non_Existent\r\n         COUNT_ROWS/Q (Boolean) Non_Existent\r\n         CURSOR_ID/* (Text (DIRTY)) Null\r\n         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Fndadm.SQLQueryTool.dllNamespace: Ifs.Application.Fndadm.SQLQueryToolObject: frmDynamicSelectMethod: Execute\r\n         DEBUG_CONTEXT_NAME/Q (Alpha) = frmDynamicSelect\r\n         GENERATE_OUTER_BLOCK/Q (Boolean) Non_Existent\r\n         MAX_ROWS/Q (Integer) = 103\r\n         PARTIAL_RESULT/* (Boolean (DIRTY)) = false\r\n         RESULT/* (Binary (DIRTY)) = 35 bytes: !\r\n0:$DATA=:\r\n   !\r\n   0:$TEST aaa ...:LPT=test\r\n\r\n         RESULT_RECORD_TYPE/Q (Alpha) Null\r\n         ROW_COUNT/* (Integer (DIRTY)) = 1\r\n         SELECT_COLUMNS/Q (Alpha) Non_Existent\r\n         SKIP_ROWS/Q (Integer) Non_Existent\r\n         STATEMENT/Q (Alpha) Non_Existent\r\n         PROPAGATED_VARIABLES/Q (Array) Non_Existent\r\n\r\n07:30:56,237 ??? ifs.fnd.sf.admin.FndProcessList.debug(): Registered abortable processes: {701829e1-bd93-4a1c-9893-cb0eab27a2cf=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@75a3dae0], 2326db39-4aa8-49ad-91f8-74b539b050ba=[], b433c43a-1095-42fb-a01e-23d202bf81b1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@4e2e4461], 1b2b4663-6c4b-491d-9803-c3f26f40188a=[], 6a10a379-78c4-4745-9008-6a1f7068fe31=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2093afa0], ac3be920-ba38-4b1c-ab30-3d3ccb6f0664=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2493241d], cf54cb03-c274-4916-af06-25e6ca34be1f=[], 68c6f088-b640-4df3-90e8-be04b3922599=[], 3a387445-ca2b-4c47-8145-be1f74ad45c4=[], 148675fc-9bf4-4b99-9c85-09237a698d8b=[], 56ad5863-ad77-4ff5-acbe-abc623ef21b4=[], b57cf0f6-9361-4ff1-8884-158609ecd0ec=[], 23ac2c5d-1b43-4f31-b3b2-5072156674a6=[], 5a698302-663d-4205-9747-fe460fdafac3=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@49ffb198], 2178ee37-4800-48db-b315-72878060a3d2=[], 7494a504-d31c-4af7-b003-4a37d150d684=[], d137ab42-ba9a-4b3a-9270-5ca397ab5413=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@383796ee], e94b12f6-8b5d-48f0-8578-360f510be1c8=[], 308c0783-fb59-4bad-8f74-26a4108fa20b=[], ba005d84-ec98-4a32-a034-1de8bacb51f4=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6fe2eade], e5cbe1df-2a66-41e5-b6f6-ad4cc63c86ab=[], b7b79402-d5a9-4b88-9700-fddcde7fbce1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@53a83fd2], 5fdc2c3b-d45d-40d0-9dac-e0e82a8b26bc=[], 220f0791-2520-41c8-8ad9-413f1f002e03=[], 7c9465bd-3fe8-4628-b925-39e5b0022f54=[], fc08fb5b-a713-4876-a189-0cf66380fbff=[], ecdceaae-8683-4e7a-bef7-c952005f1e3a=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5f2d022c], 66417d72-4433-4b17-82ed-a5d0893911f1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@631c48e4], af52994d-e185-40ad-9f6a-965228cc321d=[], c2c4c929-72d3-4799-8d0b-4ebbf0c15629=[], 6d904282-c11b-4833-8bf3-23d8374b9038=[], 56e6225a-f576-4eac-a252-72e45a7376c9=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6e7b64a8], f29c0020-adb7-4c70-8cd1-0d8d739404b9=[], 47fe2c62-719d-4fc5-91c7-b1c27b5168a2=[], abda7f03-b2e0-4f8f-885e-96ada15e232a=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@575b466e], 3c9af4b2-1b53-4756-a5f6-f6f1ab42e24f=[], 82450b03-cb3f-488f-8bd4-78d92ebe2d09=[], f842b1f4-d8ce-43f7-84ad-880833f35a63=[], 38a58615-feda-43d5-9924-0ccc799d3419=[], 273991c3-c96b-4107-a567-695b6cd48a09=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@53f506b6]}\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndConnectionList.remove(): Removing connection: ifs.fnd.sf.storage.FndTaggedConnection@3560bf7a REMOVED\r\n07:30:56,237 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.returnConnectionToPool(): Finished request in 16 ms.\r\n07:30:56,237 ??? ifs.fnd.plsql.pool.TaggedConnectionPoolManager.returnConnection(): Returning connection to pool: {nr=47 USED auto-commit=false key=-16 timestamp=-16 SID=704 fndUser=IFSAPP dbUser=IFSAPP directoryId=IFSAPP}\r\n07:30:56,237 ??? ifs.fnd.plsql.pool.TaggedConnection.returnToPool(): Entered state transition method: \r\n07:30:56,237 ??? ifs.fnd.plsql.pool.TaggedConnection.returnToPool(): Returned connection to pool: \r\n\t{nr=47 INITIALIZED auto-commit=false key=0 timestamp=0 usedByRequest=false SID=704 fndUser=IFSAPP dbUser=IFSAPP directoryId=IFSAPP clientId=SYJUPL2-WIA-CONSOLE-33924 clientSessionId=null securityCheckpointAuth=null refreshSessionRoles=false} inUse=false language=en-US transactionId=null AUDSID=299103093\r\n\t\tInitializedSession(nr=47):  close=86399984 (2021-08-03 07:30:56)\r\n\t\t\r\n"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "COUNTERS",
+                            "type": "COUNTERS",
+                            "status": "Modify",
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "SQL_STATEMENT",
+                                    "type": "I",
+                                    "status": "*",
+                                    "value": "5"
+                                },
+                                {
+                                    "name": "SQL_FETCH",
+                                    "type": "I",
+                                    "status": "Q",
+                                    "value": "0"
+                                },
+                                {
+                                    "name": "CORBA_CALL",
+                                    "type": "I",
+                                    "status": "Q",
+                                    "value": "-1"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "APP_CONTEXT",
+                    "buffer": true,
+                    "value": []
+                }
+            ],
+            [
+                {
+                    "name": "PLSQL_INVOCATION",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "delimiter": 14,
+                            "name": "DATA",
+                            "type": "PLSQL_INVOCATION",
+                            "status": "Create",
+                            "value": "ecc9ba2e-902f-46ea-b97e-f4ac1b5f0c8e"
+                        },
+                        {
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "PLSQL_SERVER.COMMAND",
+                                            "status": "Create",
+                                            "value": "9678a362-a586-457b-9174-2c5ca1ed1250"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "MAX_ROWS",
+                                                    "type": "I",
+                                                    "status": "Q",
+                                                    "value": "103"
+                                                },
+                                                {
+                                                    "name": "PARTIAL_RESULT",
+                                                    "type": "B",
+                                                    "status": "*",
+                                                    "value": "FALSE"
+                                                },
+                                                {
+                                                    "name": "RESULT",
+                                                    "type": "R.B64",
+                                                    "status": "*",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "TEST aaa ąęć",
+                                                                    "type": "LPT",
+                                                                    "value": "test"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "isNull": true,
+                                                    "value": null
+                                                },
+                                                {
+                                                    "name": "ROW_COUNT",
+                                                    "type": "I",
+                                                    "status": "*",
+                                                    "value": "1"
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "CURSOR_ID",
+                                                    "type": "LPT",
+                                                    "status": "*",
+                                                    "isNull": true,
+                                                    "value": null
+                                                },
+                                                {
+                                                    "name": "DEBUG_CONTEXT_NAME",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "value": "frmDynamicSelect"
+                                                },
+                                                {
+                                                    "name": "DEBUG_APP_STACK_FRAME",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "value": "Module: Ifs.Application.Fndadm.SQLQueryTool.dll\rNamespace: Ifs.Application.Fndadm.SQLQueryTool\rObject: frmDynamicSelect\rMethod: Execute"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "delimiter": 20,
+                                    "name": "TRANSACTION_ID",
+                                    "type": "LPT",
+                                    "status": "*",
+                                    "isNull": true,
+                                    "value": null
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        ]
+    },
+    "method": "SQL"
+}

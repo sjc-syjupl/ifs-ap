@@ -1,0 +1,271 @@
+STATUSLPTQERRORFND_CONTEXTCLIENT_IDSYJUPL2-WIA-CONSOLE-39308REQUEST_IDe523d8f5-00fb-4172-8ceb-8e48bc8a2ee7LOCALE*en-USENCODE_BINARY_VALUEFALSELANGUAGELPT*enDEBUGDEBUGModifyCALL_SEQUENCEDEBUGDB_ACCESSDEBUGSKELETON_ARGUMENTSDEBUGSTUB_ARGUMENTSDEBUGAPPLICATION_CODEDEBUGOUTPUT*08:10:35,072 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.debugRequestHeader(): PlsqlProxy Request Header
+08:10:35,088 ??? ifs.fnd.base.FndDebug$Instance.debugContext(): 
+   1:$FND_CONTEXT=
+      1:$SERIALIZATION_TARGET:T = SERVER
+      2:$JAVA_LOCALE:T = en_US
+      3:$DIRECTORY_ID:T = IFSAPP
+      4:$EXTERNAL_BODY_TYPE:I = 0
+      5:$STORAGE_TYPE:T = STANDARD_STORAGE
+      6:$IMPLEMENTATION_MODE:I = 3
+      7:$FND_CONTEXT=
+         1:$CLIENT_ID = SYJUPL2-WIA-CONSOLE-39308
+         2:$REQUEST_ID = e523d8f5-00fb-4172-8ceb-8e48bc8a2ee7
+         3:$LOCALE = en-US
+         4:$ENCODE_BINARY_VALUE = FALSE
+         5:$LANGUAGE:T = en
+         6:$DEBUG=
+            1:$CALL_SEQUENCE = DEBUG
+            2:$DB_ACCESS = DEBUG
+            3:$SKELETON_ARGUMENTS = DEBUG
+            4:$STUB_ARGUMENTS = DEBUG
+            5:$APPLICATION_CODE = DEBUG
+            6:$OUTPUT = 
+         7:$COUNTERS=
+            1:$SQL_STATEMENT:I = 0
+            2:$SQL_FETCH:I = 0
+            3:$CORBA_CALL:I = -1
+      8:$APP_CONTEXT=
+   2:$FND_SERVER_CONTEXT=
+      1:$CONNECTION_MGR:T = ifs.fnd.sf.storage.FndTaggedConnectionManager@d7d1a86
+      2:$INSIDE_ACTIVITY:B = false
+      3:$BASE_SERVER_METHOD_SECURITY_ENABLED:B = true
+      4:$SUPPORTED_CAPABILITIES:T = [LPTEXT]
+      5:$INIT_FND_SESSION_COUNT:I = 0
+      6:$INIT_FND_SESSION_DB_COUNT:I = 0
+      7:$VALIDATING_REAUTHENTICATION_RESPONSE:B = false
+   3:$FND_J2EE_CONTEXT=
+      1:$INSIDE_FND_ENTITY_BEAN:B = false
+      2:$CURRENT_METHODS:T = []
+
+08:10:35,088 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Started initialization of connection {null}
+08:10:35,088 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.getConnectionImpl(): Getting tagged connection from pool
+08:10:35,088 ??? ifs.fnd.plsql.pool.TaggedConnection.reuseOwnSession(): Entered state transition method: 
+08:10:35,088 ??? ifs.fnd.plsql.pool.TaggedConnection.reuseOwnSession(): Reused own connection: 
+	{nr=3 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-39308 clientSessionId=3e875dc1-9d07-4f77-9f08-43aca81d9bfb/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false} inUse=true language=en-US transactionId=null AUDSID=299103035
+		InitializedSession(nr=3):  close=86380562 (2021-08-07 08:10:15)
+		DedicatedSession(3e875dc1-9d07-4f77-9f08-43aca81d9bfb/IFSAPP)
+		
+08:10:35,088 ??? ifs.fnd.plsql.pool.TaggedConnectionPoolManager.getConnection(): Got connection from pool in 0 ms: {nr=3 USED auto-commit=false key=0 timestamp=0 SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp}
+08:10:35,088 ??? ifs.fnd.sf.storage.FndConnectionList.add(): Adding connection: ifs.fnd.sf.storage.FndTaggedConnection@7d23cbde COUNT=1
+08:10:35,088 ??? ifs.fnd.sf.storage.FndConnection.<init>(): Created connection ifs.fnd.sf.storage.FndTaggedConnection@7d23cbde(oracle.jdbc.driver.T4CConnection@5f188f01)
+08:10:35,088 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [REQUEST_ID]
+08:10:35,088 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [LOCALE]
+08:10:35,088 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [ENCODE_BINARY_VALUE]
+08:10:35,088 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [LANGUAGE]
+08:10:35,088 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Value [SYJUPL2-WIA-CONSOLE-39308] for context attribute [CLIENT_ID] has not been changed.
+08:10:35,088 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Initializing connection
+	{nr=3 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-39308 clientSessionId=3e875dc1-9d07-4f77-9f08-43aca81d9bfb/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false}
+08:10:35,088 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initPlsqlGatewaySession(): Initializing Plsql connection: initClientSession=false f1Context=true appContext=false
+08:10:35,088 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@26422d05
+08:10:35,088 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:
+<PLSQLSTMT>
+begin
+   IFSAPP.Fnd_Context_SYS.Init_Request_(:1 , :2 );
+end;
+</PLSQLSTMT>
+08:10:35,088 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): 
+<PLSQLBIND>
+ [1] F1_CONTEXT:TEXT/IN=!F1_CONTEXT
+$DEBUG=!DEBUG
+-$DB_ACCESS=DEBUG
+
+ [2] APP_CONTEXT:TEXT/IN=null
+</PLSQLBIND>
+08:10:35,088 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@26422d05
+08:10:35,088 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@26422d05 executed
+08:10:35,088 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1451748c
+08:10:35,088 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:
+<PLSQLRECURSIVESTMT>
+begin IFSAPP.Client_SYS.Get_Trace(:1 ); end;
+</PLSQLRECURSIVESTMT>
+08:10:35,088 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): 
+<PLSQLRECURSIVEBIND>
+ [1] TEXT:LONG_TEXT/IN_OUT=null
+</PLSQLRECURSIVEBIND>
+08:10:35,088 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1451748c
+08:10:35,088 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1451748c' on request 'e523d8f5-00fb-4172-8ceb-8e48bc8a2ee7'
+08:10:35,088 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1451748c executed
+08:10:35,088 ??? ifs.fnd.sf.storage.FndStatement.closePlsqlResultLog(): 
+<PLSQLRECURSIVERESULT>
+ [1] TEXT:LONG_TEXT/IN_OUT=null
+</PLSQLRECURSIVERESULT>
+08:10:35,088 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1451748c
+08:10:35,088 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1451748c' on request 'e523d8f5-00fb-4172-8ceb-8e48bc8a2ee7'
+08:10:35,088 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@26422d05
+08:10:35,088 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@26422d05' on request 'e523d8f5-00fb-4172-8ceb-8e48bc8a2ee7'
+08:10:35,088 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Finished initialization of connection
+	{nr=3 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-39308 clientSessionId=3e875dc1-9d07-4f77-9f08-43aca81d9bfb/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false}
+08:10:35,088 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): Calling AccessPlsql.invoke
+08:10:35,088 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): PlsqlProxy Request Body
+08:10:35,088 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): PLSQL_INVOCATION (Fnd_View) Create  identity=2e2c1073-1b11-408b-95aa-322d314bb0bc
+   SYSTEM_NAME/Q (Alpha) Non_Existent
+   TRANSACTION_ID/Q (Text) Non_Existent
+   USER_SESSION/Q (Boolean) Non_Existent
+   COMMANDS/* (Array (DIRTY)) (1 elements):
+      1:COMMAND (Fnd_View) Create element of PLSQL_INVOCATION.COMMANDS  identity=1f50fed4-ba54-43ab-bd32-7cc56ade5ccc
+         BIND_VARIABLES/Q (Binary) Non_Existent
+         COUNT_ROWS/Q (Boolean) Non_Existent
+         CURSOR_ID/Q (Text) Non_Existent
+         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Enterp.dllNamespace: Ifs.Application.EnterpObject: frmCustomerInfoMethod: frmCustomerInfo_OnPM_DataSourcePopulate
+         DEBUG_CONTEXT_NAME/Q (Alpha) = frmCustomerInfo
+         DEBUG_INTO_INFO/Q (Alpha) = i_hWndFrame.frmCustomerInfo.cmbCustomerId.__sRecordObjidTmp,i_hWndFrame.frmCustomerInfo.cmbCustomerId.i_sMyValue,i_hWndFrame.frmCustomerInfo.dfsName,i_hWndFrame.frmCustomerInfo.dfsAssociationNo,i_hWndFrame.frmCustomerInfo.cmbCustomerCategory.i_sMyValue
+         GENERATE_OUTER_BLOCK/Q (Boolean) Non_Existent
+         MAX_ROWS/Q (Integer) = 103
+         PARTIAL_RESULT/Q (Boolean) Non_Existent
+         RESULT/Q (Binary) Non_Existent
+         RESULT_RECORD_TYPE/Q (Alpha) Null
+         ROW_COUNT/Q (Integer) Non_Existent
+         SELECT_COLUMNS/Q (Alpha) = LPT^-1,LPT^-1,LPT^32767,LPT^50,LPT^-1
+         SKIP_ROWS/Q (Integer) Non_Existent
+         STATEMENT/Q (Alpha) = select objid, CUSTOMER_ID, NAME, ASSOCIATION_NO, CUSTOMER_CATEGORY                                                                                                                                                                                                                                                                            from &AO.CUSTOMER_INFO where (CUSTOMER_ID_ERROR = '1010')
+         PROPAGATED_VARIABLES/Q (Array) Non_Existent
+
+08:10:35,088 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(): Invocation input: onlySelect=false oneCmdOnly=false returnRefCursor=false
+08:10:35,088 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(): PLSQL_INVOCATION (Fnd_View) Create  identity=2e2c1073-1b11-408b-95aa-322d314bb0bc
+   SYSTEM_NAME/Q (Alpha) Non_Existent
+   TRANSACTION_ID/Q (Text) Non_Existent
+   USER_SESSION/Q (Boolean) Non_Existent
+   COMMANDS/* (Array (DIRTY)) (1 elements):
+      1:COMMAND (Fnd_View) Create element of PLSQL_INVOCATION.COMMANDS  identity=1f50fed4-ba54-43ab-bd32-7cc56ade5ccc
+         BIND_VARIABLES/Q (Binary) Non_Existent
+         COUNT_ROWS/Q (Boolean) Non_Existent
+         CURSOR_ID/Q (Text) Non_Existent
+         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Enterp.dllNamespace: Ifs.Application.EnterpObject: frmCustomerInfoMethod: frmCustomerInfo_OnPM_DataSourcePopulate
+         DEBUG_CONTEXT_NAME/Q (Alpha) = frmCustomerInfo
+         DEBUG_INTO_INFO/Q (Alpha) = i_hWndFrame.frmCustomerInfo.cmbCustomerId.__sRecordObjidTmp,i_hWndFrame.frmCustomerInfo.cmbCustomerId.i_sMyValue,i_hWndFrame.frmCustomerInfo.dfsName,i_hWndFrame.frmCustomerInfo.dfsAssociationNo,i_hWndFrame.frmCustomerInfo.cmbCustomerCategory.i_sMyValue
+         GENERATE_OUTER_BLOCK/Q (Boolean) Non_Existent
+         MAX_ROWS/Q (Integer) = 103
+         PARTIAL_RESULT/Q (Boolean) Non_Existent
+         RESULT/Q (Binary) Non_Existent
+         RESULT_RECORD_TYPE/Q (Alpha) Null
+         ROW_COUNT/Q (Integer) Non_Existent
+         SELECT_COLUMNS/Q (Alpha) = LPT^-1,LPT^-1,LPT^32767,LPT^50,LPT^-1
+         SKIP_ROWS/Q (Integer) Non_Existent
+         STATEMENT/Q (Alpha) = select objid, CUSTOMER_ID, NAME, ASSOCIATION_NO, CUSTOMER_CATEGORY                                                                                                                                                                                                                                                                            from &AO.CUSTOMER_INFO where (CUSTOMER_ID_ERROR = '1010')
+         PROPAGATED_VARIABLES/Q (Array) Non_Existent
+
+08:10:35,088 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationContext.<init>(): Called FndServerContext.setLanguageAndLocale(): language=en locale=en_US
+08:10:35,088 ??? ifs.fnd.service.SQLRecognizer.<init>(): Rocognizing SQL: 'select objid, CUSTOMER_ID, NAME, ASSOCIATION_NO, CUSTOMER_CATEGORY                                                                                                                                                                                                                                                                            from IFSAPP.CUSTOMER_INFO where (CUSTOMER_ID_ERROR = '1010')'
+08:10:35,088 ??? ifs.fnd.service.SQLRecognizer.getSQLText(): SQL text: select objid, CUSTOMER_ID, NAME, ASSOCIATION_NO, CUSTOMER_CATEGORY                                                                                                                                                                                                                                                                            from IFSAPP.CUSTOMER_INFO where (CUSTOMER_ID_ERROR = '1010')
+08:10:35,088 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@719de5aa
+08:10:35,088 ??? ifs.fnd.sf.storage.FndStatement.prepareStatement(): Preparing statement:
+<PLSQLSTMT>
+select objid, CUSTOMER_ID, NAME, ASSOCIATION_NO, CUSTOMER_CATEGORY                                                                                                                                                                                                                                                                            from IFSAPP.CUSTOMER_INFO where (CUSTOMER_ID_ERROR = '1010')
+</PLSQLSTMT>
+08:10:35,088 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes(): PlsqlProcessor.defineColumnTypes(): selectColumns: LPT^-1,LPT^-1,LPT^32767,LPT^50,LPT^-1
+08:10:35,088 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [1] TEXT -1
+08:10:35,088 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [2] TEXT -1
+08:10:35,088 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [3] TEXT 32767
+08:10:35,088 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [4] TEXT 50
+08:10:35,088 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [5] TEXT -1
+08:10:35,088 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes(): PlsqlProcessor.defineColumnTypes(): columnTypes: [TEXT, TEXT, TEXT, TEXT, TEXT]
+08:10:35,088 ??? ifs.fnd.sf.storage.FndStatement.executeQuery(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@719de5aa
+08:10:35,088 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@719de5aa' on request 'e523d8f5-00fb-4172-8ceb-8e48bc8a2ee7'
+08:10:35,229 ??? ifs.fnd.sf.storage.FndStandardStatement.reportSqlError(): ifs.fnd.sf.storage.FndStatement: SQL exception caught:
+ Current database user:
+    IFSAPP
+ Error message:
+    ORA-00904: "CUSTOMER_ID_ERROR": invalid identifier
+
+ SQL statement:
+    select objid, CUSTOMER_ID, NAME, ASSOCIATION_NO, CUSTOMER_CATEGORY                                                                                                                                                                                                                                                                            from IFSAPP.CUSTOMER_INFO where (CUSTOMER_ID_ERROR = '1010')
+ Bind parameters:
+
+ [Error GUID:d299a24e-eb7f-4d5c-94f6-fad82f315f55]
+08:10:35,229 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@719de5aa
+08:10:35,229 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@719de5aa' on request 'e523d8f5-00fb-4172-8ceb-8e48bc8a2ee7'
+08:10:35,229 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1283bd7c
+08:10:35,229 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:
+<PLSQLSTMT>
+begin IFSAPP.Fnd_Context_SYS.End_Request_(:1 , :2 , :3 ); end;
+</PLSQLSTMT>
+08:10:35,229 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): 
+<PLSQLBIND>
+ [1] TRANSACTION_ID:TEXT/OUT=null
+ [2] TRACE:LONG_TEXT/OUT=null
+ [3] ERROR_MSG:LONG_TEXT/OUT=null
+</PLSQLBIND>
+08:10:35,229 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1283bd7c
+08:10:35,229 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1283bd7c executed
+08:10:35,229 ??? ifs.fnd.sf.storage.FndStatement.closePlsqlResultLog(): 
+<PLSQLRESULT>
+ [1] TRANSACTION_ID:TEXT/OUT=null
+ [2] TRACE:LONG_TEXT/OUT=null
+ [3] ERROR_MSG:LONG_TEXT/OUT=null
+</PLSQLRESULT>
+08:10:35,229 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1283bd7c
+08:10:35,229 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1283bd7c' on request 'e523d8f5-00fb-4172-8ceb-8e48bc8a2ee7'
+08:10:35,229 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.convertError():  Error in invoke:
+ifs.fnd.base.SystemException: Failed executing query (ORA-00904: "CUSTOMER_ID_ERROR": invalid identifier)
+	at ifs.fnd.sf.storage.FndStatement.executeQuery(FndStatement.java:653)
+	at ifs.fnd.sf.storage.FndStatement.executeQuery(FndStatement.java:613)
+	at ifs.fnd.services.plsqlserver.service.PlsqlProcessor.query(PlsqlProcessor.java:121)
+	at ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.executeQuery(PlsqlInvocationProcessor.java:141)
+	at ifs.fnd.services.plsqlserver.service.PlsqlGatewayInvocationProcessor.executeQuery(PlsqlGatewayInvocationProcessor.java:182)
+	at ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(PlsqlInvocationProcessor.java:203)
+	at ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invoke(PlsqlInvocationProcessor.java:86)
+	at ifs.fnd.services.plsqlserver.service.PlsqlProxy.invoke(PlsqlProxy.java:122)
+	at ifs.fnd.services.plsqlserver.service.PlsqlProxy.invoke(PlsqlProxy.java:87)
+	at ifs.fnd.services.plsqlserver.service.PlsqlProxy.invoke(PlsqlProxy.java:70)
+	at ifs.fnd.gateway.client.AccessPlsqlInvokeManager.doInvoke(AccessPlsqlInvokeManager.java:40)
+	at ifs.fnd.gateway.client.IfsClientGateway.doPostImpl(IfsClientGateway.java:410)
+	at ifs.fnd.gateway.IfsAbstractGateway.doPost(IfsAbstractGateway.java:431)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at ifs.fnd.gateway.IfsAbstractGateway.service(IfsAbstractGateway.java:134)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:286)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:260)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:137)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:350)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:247)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3705)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3672)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:328)
+	at weblogic.security.service.SecurityManager.runAsForUserCode(SecurityManager.java:197)
+	at weblogic.servlet.provider.WlsSecurityProvider.runAsForUserCode(WlsSecurityProvider.java:203)
+	at weblogic.servlet.provider.WlsSubjectHandle.run(WlsSubjectHandle.java:71)
+	at weblogic.servlet.internal.WebAppServletContext.doSecuredExecute(WebAppServletContext.java:2443)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2291)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2269)
+	at weblogic.servlet.internal.ServletRequestImpl.runInternal(ServletRequestImpl.java:1705)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1665)
+	at weblogic.servlet.provider.ContainerSupportProviderImpl$WlsRequestExecutor.run(ContainerSupportProviderImpl.java:272)
+	at weblogic.invocation.ComponentInvocationContextManager._runAs(ComponentInvocationContextManager.java:352)
+	at weblogic.invocation.ComponentInvocationContextManager.runAs(ComponentInvocationContextManager.java:337)
+	at weblogic.work.LivePartitionUtility.doRunWorkUnderContext(LivePartitionUtility.java:57)
+	at weblogic.work.PartitionUtility.runWorkUnderContext(PartitionUtility.java:41)
+	at weblogic.work.SelfTuningWorkManagerImpl.runWorkUnderContext(SelfTuningWorkManagerImpl.java:652)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:420)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:360)
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "CUSTOMER_ID_ERROR": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:494)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:446)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1054)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:623)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:252)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:612)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:226)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:59)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:747)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:904)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1082)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3780)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1343)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3822)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1165)
+	at ifs.fnd.sf.storage.FndStatement.executeQuery(FndStatement.java:636)
+	... 39 more
+Caused by: Error : 904, Position : 367, Sql = select objid, CUSTOMER_ID, NAME, ASSOCIATION_NO, CUSTOMER_CATEGORY                                                                                                                                                                                                                                                                            from IFSAPP.CUSTOMER_INFO where (CUSTOMER_ID_ERROR = '1010'), OriginalSql = select objid, CUSTOMER_ID, NAME, ASSOCIATION_NO, CUSTOMER_CATEGORY                                                                                                                                                                                                                                                                            from IFSAPP.CUSTOMER_INFO where (CUSTOMER_ID_ERROR = '1010'), Error Msg = ORA-00904: "CUSTOMER_ID_ERROR": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:498)
+	... 54 more
+08:10:35,229 ??? ifs.fnd.sf.storage.FndConnectionList.remove(): Removing connection: ifs.fnd.sf.storage.FndTaggedConnection@7d23cbde REMOVED
+08:10:35,229 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.returnConnectionToPool(): Finished request in 157 ms.
+08:10:35,229 ??? ifs.fnd.plsql.pool.TaggedConnectionPoolManager.returnConnection(): Returning connection to pool: {nr=3 USED auto-commit=false key=-141 timestamp=-141 SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp}
+08:10:35,229 ??? ifs.fnd.plsql.pool.TaggedConnection.returnToPool(): Entered state transition method: 
+08:10:35,229 ??? ifs.fnd.plsql.pool.TaggedConnection.returnToPool(): Returned connection to pool: 
+	{nr=3 INITIALIZED auto-commit=false key=0 timestamp=0 usedByRequest=false SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-39308 clientSessionId=null securityCheckpointAuth=null refreshSessionRoles=false} inUse=false language=en-US transactionId=null AUDSID=299103035
+		InitializedSession(nr=3):  close=86399859 (2021-08-07 08:10:35)
+		
+COUNTERSCOUNTERSModifySQL_STATEMENTI*3SQL_FETCHIQ0CORBA_CALLIQ-1APP_CONTEXTERRORCATEGORYLPTQ	SYS_ERRORMESSAGELPTQ2ORA-00904: "CUSTOMER_ID_ERROR": invalid identifierNAMELPTQ SEVERITYLPTQ1EXTRAINFOLPTQTRANSLATIONIDLPTQ CAUSELPTQAFailed executing query (ORA-00904: "CUSTOMER_ID_ERROR": invalid identifier)

@@ -1,0 +1,1016 @@
+{
+    "requestFile": "message4_Request.dat",
+    "responseFile": "message4_Response.dat",
+    "request": {
+        "clientId": "SYJUPL2-WIA-CONSOLE-37464",
+        "requestId": "afa0c06b-609d-4fe1-b934-e19963a7fc89",
+        "locale": "en-US",
+        "debug": true,
+        "invocationId": "4bf4cce3-643e-4302-ba6c-30dec4dd0fff",
+        "transactionId": "",
+        "commands": [
+            {
+                "commandId": "3703870e-02c3-484a-9365-8f6c3cba88d1",
+                "sqlString": "SELECT invoice_id, invoice_no, creation_date, to_char(creation_date,'yyyy-mm-dd hh24:mi:ss') datestr FROM invoice a WHERE rownum <= 20",
+                "method": "SQL",
+                "maxRows": "103",
+                "debugContextName": "frmDynamicSelect",
+                "debugAppStackFrame": "Module: Ifs.Application.Fndadm.SQLQueryTool.dll\rNamespace: Ifs.Application.Fndadm.SQLQueryTool\rObject: frmDynamicSelect\rMethod: Execute",
+                "bindingsObject": {},
+                "bindingsSendObject": {}
+            }
+        ],
+        "message": [
+            [
+                {
+                    "name": "FND_CONTEXT",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "name": "CLIENT_ID",
+                            "value": "SYJUPL2-WIA-CONSOLE-37464"
+                        },
+                        {
+                            "name": "REQUEST_ID",
+                            "value": "afa0c06b-609d-4fe1-b934-e19963a7fc89"
+                        },
+                        {
+                            "name": "LOCALE",
+                            "value": "en-US"
+                        },
+                        {
+                            "name": "ENCODE_BINARY_VALUE",
+                            "value": "FALSE"
+                        },
+                        {
+                            "name": "DEBUG",
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "CALL_SEQUENCE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "DB_ACCESS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "SKELETON_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "STUB_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "APPLICATION_CODE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "OUTPUT",
+                                    "value": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "PLSQL_INVOCATION",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "delimiter": 14,
+                            "name": "DATA",
+                            "type": "PLSQL_INVOCATION",
+                            "status": "Create",
+                            "value": "4bf4cce3-643e-4302-ba6c-30dec4dd0fff"
+                        },
+                        {
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "COMMAND",
+                                            "status": "Create",
+                                            "value": "3703870e-02c3-484a-9365-8f6c3cba88d1"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "STATEMENT",
+                                                    "type": "LPA",
+                                                    "value": "SELECT invoice_id, invoice_no, creation_date, to_char(creation_date,'yyyy-mm-dd hh24:mi:ss') datestr FROM invoice a WHERE rownum <= 20"
+                                                },
+                                                {
+                                                    "name": "DEBUG_CONTEXT_NAME",
+                                                    "type": "LPA",
+                                                    "value": "frmDynamicSelect"
+                                                },
+                                                {
+                                                    "name": "DEBUG_APP_STACK_FRAME",
+                                                    "type": "LPA",
+                                                    "value": "Module: Ifs.Application.Fndadm.SQLQueryTool.dll\rNamespace: Ifs.Application.Fndadm.SQLQueryTool\rObject: frmDynamicSelect\rMethod: Execute"
+                                                },
+                                                {
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "value": ""
+                                                },
+                                                {
+                                                    "name": "MAX_ROWS",
+                                                    "type": "I",
+                                                    "value": "103"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        ]
+    },
+    "response": {
+        "status": "DONE",
+        "clientId": "SYJUPL2-WIA-CONSOLE-37464",
+        "requestId": "afa0c06b-609d-4fe1-b934-e19963a7fc89",
+        "locale": "en-US",
+        "language": "en",
+        "debug": true,
+        "invocationId": "4bf4cce3-643e-4302-ba6c-30dec4dd0fff",
+        "transactionId": "",
+        "commands": [
+            {
+                "commandId": "3703870e-02c3-484a-9365-8f6c3cba88d1",
+                "maxRows": "103",
+                "rowCount": "20",
+                "partialResult": "FALSE",
+                "cursorId": null,
+                "debugContextName": "frmDynamicSelect",
+                "debugAppStackFrame": "Module: Ifs.Application.Fndadm.SQLQueryTool.dll\rNamespace: Ifs.Application.Fndadm.SQLQueryTool\rObject: frmDynamicSelect\rMethod: Execute",
+                "bindingsObject": {},
+                "bindingsSendObject": {},
+                "result": [
+                    {
+                        "INVOICE_ID": 100081,
+                        "INVOICE_NO": "970000061",
+                        "CREATION_DATE": "2000-09-29T02:09:37.000Z",
+                        "DATESTR": "2000-09-29 04:09:37"
+                    },
+                    {
+                        "INVOICE_ID": 100082,
+                        "INVOICE_NO": "970000062",
+                        "CREATION_DATE": "2000-09-29T02:14:06.000Z",
+                        "DATESTR": "2000-09-29 04:14:06"
+                    },
+                    {
+                        "INVOICE_ID": 100084,
+                        "INVOICE_NO": "970000064",
+                        "CREATION_DATE": "2000-10-13T02:18:38.000Z",
+                        "DATESTR": "2000-10-13 04:18:38"
+                    },
+                    {
+                        "INVOICE_ID": 100086,
+                        "INVOICE_NO": "970000066",
+                        "CREATION_DATE": "2000-10-23T02:22:55.000Z",
+                        "DATESTR": "2000-10-23 04:22:55"
+                    },
+                    {
+                        "INVOICE_ID": 100090,
+                        "INVOICE_NO": "970000070",
+                        "CREATION_DATE": "2000-11-11T03:33:45.000Z",
+                        "DATESTR": "2000-11-11 04:33:45"
+                    },
+                    {
+                        "INVOICE_ID": 100093,
+                        "INVOICE_NO": "970000073",
+                        "CREATION_DATE": "2000-12-08T18:05:03.000Z",
+                        "DATESTR": "2000-12-08 19:05:03"
+                    },
+                    {
+                        "INVOICE_ID": 100094,
+                        "INVOICE_NO": "970000074",
+                        "CREATION_DATE": "2000-12-13T18:08:10.000Z",
+                        "DATESTR": "2000-12-13 19:08:10"
+                    },
+                    {
+                        "INVOICE_ID": 100095,
+                        "INVOICE_NO": "970000075",
+                        "CREATION_DATE": "2000-12-14T18:09:56.000Z",
+                        "DATESTR": "2000-12-14 19:09:56"
+                    },
+                    {
+                        "INVOICE_ID": 100097,
+                        "INVOICE_NO": "970000077",
+                        "CREATION_DATE": "2000-12-19T18:15:15.000Z",
+                        "DATESTR": "2000-12-19 19:15:15"
+                    },
+                    {
+                        "INVOICE_ID": 100098,
+                        "INVOICE_NO": "970000078",
+                        "CREATION_DATE": "2000-12-22T18:17:41.000Z",
+                        "DATESTR": "2000-12-22 19:17:41"
+                    },
+                    {
+                        "INVOICE_ID": 100099,
+                        "INVOICE_NO": "970000079",
+                        "CREATION_DATE": "2000-12-22T18:19:12.000Z",
+                        "DATESTR": "2000-12-22 19:19:12"
+                    },
+                    {
+                        "INVOICE_ID": 100101,
+                        "INVOICE_NO": "970000081",
+                        "CREATION_DATE": "2000-12-28T18:24:40.000Z",
+                        "DATESTR": "2000-12-28 19:24:40"
+                    },
+                    {
+                        "INVOICE_ID": 100103,
+                        "INVOICE_NO": "970000083",
+                        "CREATION_DATE": "2000-12-30T18:39:06.000Z",
+                        "DATESTR": "2000-12-30 19:39:06"
+                    },
+                    {
+                        "INVOICE_ID": 100104,
+                        "INVOICE_NO": "970000084",
+                        "CREATION_DATE": "2001-01-03T18:42:54.000Z",
+                        "DATESTR": "2001-01-03 19:42:54"
+                    },
+                    {
+                        "INVOICE_ID": 100106,
+                        "INVOICE_NO": "970000086",
+                        "CREATION_DATE": "2001-01-12T18:47:20.000Z",
+                        "DATESTR": "2001-01-12 19:47:20"
+                    },
+                    {
+                        "INVOICE_ID": 100108,
+                        "INVOICE_NO": "970000088",
+                        "CREATION_DATE": "2001-01-15T18:59:48.000Z",
+                        "DATESTR": "2001-01-15 19:59:48"
+                    },
+                    {
+                        "INVOICE_ID": 100111,
+                        "INVOICE_NO": "970000091",
+                        "CREATION_DATE": "2001-02-07T19:06:54.000Z",
+                        "DATESTR": "2001-02-07 20:06:54"
+                    },
+                    {
+                        "INVOICE_ID": 100114,
+                        "INVOICE_NO": "970000094",
+                        "CREATION_DATE": "2001-02-26T19:16:06.000Z",
+                        "DATESTR": "2001-02-26 20:16:06"
+                    },
+                    {
+                        "INVOICE_ID": 100116,
+                        "INVOICE_NO": "970000096",
+                        "CREATION_DATE": "2001-03-08T19:19:37.000Z",
+                        "DATESTR": "2001-03-08 20:19:37"
+                    },
+                    {
+                        "INVOICE_ID": 100118,
+                        "INVOICE_NO": "970000098",
+                        "CREATION_DATE": "2001-03-16T19:23:43.000Z",
+                        "DATESTR": "2001-03-16 20:23:43"
+                    }
+                ]
+            }
+        ],
+        "message": [
+            [
+                {
+                    "name": "STATUS",
+                    "type": "LPT",
+                    "status": "Q",
+                    "value": "DONE"
+                },
+                {
+                    "name": "FND_CONTEXT",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "name": "CLIENT_ID",
+                            "value": "SYJUPL2-WIA-CONSOLE-37464"
+                        },
+                        {
+                            "name": "REQUEST_ID",
+                            "value": "afa0c06b-609d-4fe1-b934-e19963a7fc89"
+                        },
+                        {
+                            "name": "LOCALE",
+                            "status": "*",
+                            "value": "en-US"
+                        },
+                        {
+                            "name": "ENCODE_BINARY_VALUE",
+                            "value": "FALSE"
+                        },
+                        {
+                            "name": "LANGUAGE",
+                            "type": "LPT",
+                            "status": "*",
+                            "value": "en"
+                        },
+                        {
+                            "name": "DEBUG",
+                            "type": "DEBUG",
+                            "status": "Modify",
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "CALL_SEQUENCE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "DB_ACCESS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "SKELETON_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "STUB_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "APPLICATION_CODE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "OUTPUT",
+                                    "status": "*",
+                                    "value": "17:20:27,583 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.debugRequestHeader(): PlsqlProxy Request Header\r\n17:20:27,583 ??? ifs.fnd.base.FndDebug$Instance.debugContext(): \r\n   1:$FND_CONTEXT=\r\n      1:$SERIALIZATION_TARGET:T = SERVER\r\n      2:$JAVA_LOCALE:T = en_US\r\n      3:$DIRECTORY_ID:T = IFSAPP\r\n      4:$EXTERNAL_BODY_TYPE:I = 0\r\n      5:$STORAGE_TYPE:T = STANDARD_STORAGE\r\n      6:$IMPLEMENTATION_MODE:I = 3\r\n      7:$FND_CONTEXT=\r\n         1:$CLIENT_ID = SYJUPL2-WIA-CONSOLE-37464\r\n         2:$REQUEST_ID = afa0c06b-609d-4fe1-b934-e19963a7fc89\r\n         3:$LOCALE = en-US\r\n         4:$ENCODE_BINARY_VALUE = FALSE\r\n         5:$LANGUAGE:T = en\r\n         6:$DEBUG=\r\n            1:$CALL_SEQUENCE = DEBUG\r\n            2:$DB_ACCESS = DEBUG\r\n            3:$SKELETON_ARGUMENTS = DEBUG\r\n            4:$STUB_ARGUMENTS = DEBUG\r\n            5:$APPLICATION_CODE = DEBUG\r\n            6:$OUTPUT = \r\n         7:$COUNTERS=\r\n            1:$SQL_STATEMENT:I = 0\r\n            2:$SQL_FETCH:I = 0\r\n            3:$CORBA_CALL:I = -1\r\n      8:$APP_CONTEXT=\r\n   2:$FND_SERVER_CONTEXT=\r\n      1:$CONNECTION_MGR:T = ifs.fnd.sf.storage.FndTaggedConnectionManager@5f0bd577\r\n      2:$INSIDE_ACTIVITY:B = false\r\n      3:$BASE_SERVER_METHOD_SECURITY_ENABLED:B = true\r\n      4:$SUPPORTED_CAPABILITIES:T = [LPTEXT]\r\n      5:$INIT_FND_SESSION_COUNT:I = 0\r\n      6:$INIT_FND_SESSION_DB_COUNT:I = 0\r\n      7:$VALIDATING_REAUTHENTICATION_RESPONSE:B = false\r\n   3:$FND_J2EE_CONTEXT=\r\n      1:$INSIDE_FND_ENTITY_BEAN:B = false\r\n      2:$CURRENT_METHODS:T = []\r\n\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Started initialization of connection {null}\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.getConnectionImpl(): Getting tagged connection from pool\r\n17:20:27,583 ??? ifs.fnd.plsql.pool.TaggedConnection.reuseOwnSession(): Entered state transition method: \r\n17:20:27,583 ??? ifs.fnd.plsql.pool.TaggedConnection.reuseOwnSession(): Reused own connection: \r\n\t{nr=15 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=597 fndUser=IFSAPP dbUser=IFSAPP directoryId=IFSAPP clientId=SYJUPL2-WIA-CONSOLE-37464 clientSessionId=d4818e4d-bd9e-4967-8114-dbdacffa97b7/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false} inUse=true language=en-US transactionId=null AUDSID=299103057\r\n\t\tInitializedSession(nr=15):  close=86398516 (2021-08-06 17:20:26)\r\n\t\tDedicatedSession(d4818e4d-bd9e-4967-8114-dbdacffa97b7/IFSAPP)\r\n\t\t\r\n17:20:27,583 ??? ifs.fnd.plsql.pool.TaggedConnectionPoolManager.getConnection(): Got connection from pool in 0 ms: {nr=15 USED auto-commit=false key=0 timestamp=0 SID=597 fndUser=IFSAPP dbUser=IFSAPP directoryId=IFSAPP}\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndConnectionList.add(): Adding connection: ifs.fnd.sf.storage.FndTaggedConnection@66e2cc0c COUNT=1\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndConnection.<init>(): Created connection ifs.fnd.sf.storage.FndTaggedConnection@66e2cc0c(oracle.jdbc.driver.T4CConnection@48f2fc3e)\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [REQUEST_ID]\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [LOCALE]\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [ENCODE_BINARY_VALUE]\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [LANGUAGE]\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Value [SYJUPL2-WIA-CONSOLE-37464] for context attribute [CLIENT_ID] has not been changed.\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Initializing connection\r\n\t{nr=15 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=597 fndUser=IFSAPP dbUser=IFSAPP directoryId=IFSAPP clientId=SYJUPL2-WIA-CONSOLE-37464 clientSessionId=d4818e4d-bd9e-4967-8114-dbdacffa97b7/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false}\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initPlsqlGatewaySession(): Initializing Plsql connection: initClientSession=false f1Context=true appContext=false\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@262dd7ff\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001STMT>\r\nbegin\r\n   IFSAPP.Fnd_Context_SYS.Init_Request_(:1 , :2 );\r\nend;\r\n</PLSQL\u0001STMT>\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001BIND>\r\n [1] F1_CONTEXT:TEXT/IN=!F1_CONTEXT\r\n$DEBUG=!DEBUG\r\n-$DB_ACCESS=DEBUG\r\n\r\n [2] APP_CONTEXT:TEXT/IN=null\r\n</PLSQL\u0001BIND>\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@262dd7ff\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@262dd7ff executed\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6d8d970b\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001RECURSIVE\u0001STMT>\r\nbegin IFSAPP.Client_SYS.Get_Trace(:1 ); end;\r\n</PLSQL\u0001RECURSIVE\u0001STMT>\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001RECURSIVE\u0001BIND>\r\n [1] TEXT:LONG_TEXT/IN_OUT=null\r\n</PLSQL\u0001RECURSIVE\u0001BIND>\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6d8d970b\r\n17:20:27,583 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6d8d970b' on request 'afa0c06b-609d-4fe1-b934-e19963a7fc89'\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6d8d970b executed\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndStatement.closePlsqlResultLog(): \r\n<PLSQL\u0001RECURSIVE\u0001RESULT>\r\n [1] TEXT:LONG_TEXT/IN_OUT=null\r\n</PLSQL\u0001RECURSIVE\u0001RESULT>\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6d8d970b\r\n17:20:27,583 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6d8d970b' on request 'afa0c06b-609d-4fe1-b934-e19963a7fc89'\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@262dd7ff\r\n17:20:27,583 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@262dd7ff' on request 'afa0c06b-609d-4fe1-b934-e19963a7fc89'\r\n17:20:27,583 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Finished initialization of connection\r\n\t{nr=15 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=597 fndUser=IFSAPP dbUser=IFSAPP directoryId=IFSAPP clientId=SYJUPL2-WIA-CONSOLE-37464 clientSessionId=d4818e4d-bd9e-4967-8114-dbdacffa97b7/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false}\r\n17:20:27,583 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): Calling AccessPlsql.invoke\r\n17:20:27,583 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): PlsqlProxy Request Body\r\n17:20:27,583 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): PLSQL_INVOCATION (Fnd_View) Create  identity=4bf4cce3-643e-4302-ba6c-30dec4dd0fff\r\n   SYSTEM_NAME/Q (Alpha) Non_Existent\r\n   TRANSACTION_ID/Q (Text) Non_Existent\r\n   USER_SESSION/Q (Boolean) Non_Existent\r\n   COMMANDS/* (Array (DIRTY)) (1 elements):\r\n      1:COMMAND (Fnd_View) Create element of PLSQL_INVOCATION.COMMANDS  identity=3703870e-02c3-484a-9365-8f6c3cba88d1\r\n         BIND_VARIABLES/Q (Binary) Non_Existent\r\n         COUNT_ROWS/Q (Boolean) Non_Existent\r\n         CURSOR_ID/Q (Text) Non_Existent\r\n         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Fndadm.SQLQueryTool.dllNamespace: Ifs.Application.Fndadm.SQLQueryToolObject: frmDynamicSelectMethod: Execute\r\n         DEBUG_CONTEXT_NAME/Q (Alpha) = frmDynamicSelect\r\n         GENERATE_OUTER_BLOCK/Q (Boolean) Non_Existent\r\n         MAX_ROWS/Q (Integer) = 103\r\n         PARTIAL_RESULT/Q (Boolean) Non_Existent\r\n         RESULT/Q (Binary) Non_Existent\r\n         RESULT_RECORD_TYPE/Q (Alpha) Null\r\n         ROW_COUNT/Q (Integer) Non_Existent\r\n         SELECT_COLUMNS/Q (Alpha) Non_Existent\r\n         SKIP_ROWS/Q (Integer) Non_Existent\r\n         STATEMENT/Q (Alpha) = SELECT invoice_id, invoice_no, creation_date, to_char(creation_date,'yyyy-mm-dd hh24:mi:ss') datestr FROM invoice a WHERE rownum <= 20\r\n         PROPAGATED_VARIABLES/Q (Array) Non_Existent\r\n\r\n17:20:27,583 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(): Invocation input: onlySelect=false oneCmdOnly=false returnRefCursor=false\r\n17:20:27,599 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(): PLSQL_INVOCATION (Fnd_View) Create  identity=4bf4cce3-643e-4302-ba6c-30dec4dd0fff\r\n   SYSTEM_NAME/Q (Alpha) Non_Existent\r\n   TRANSACTION_ID/Q (Text) Non_Existent\r\n   USER_SESSION/Q (Boolean) Non_Existent\r\n   COMMANDS/* (Array (DIRTY)) (1 elements):\r\n      1:COMMAND (Fnd_View) Create element of PLSQL_INVOCATION.COMMANDS  identity=3703870e-02c3-484a-9365-8f6c3cba88d1\r\n         BIND_VARIABLES/Q (Binary) Non_Existent\r\n         COUNT_ROWS/Q (Boolean) Non_Existent\r\n         CURSOR_ID/Q (Text) Non_Existent\r\n         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Fndadm.SQLQueryTool.dllNamespace: Ifs.Application.Fndadm.SQLQueryToolObject: frmDynamicSelectMethod: Execute\r\n         DEBUG_CONTEXT_NAME/Q (Alpha) = frmDynamicSelect\r\n         GENERATE_OUTER_BLOCK/Q (Boolean) Non_Existent\r\n         MAX_ROWS/Q (Integer) = 103\r\n         PARTIAL_RESULT/Q (Boolean) Non_Existent\r\n         RESULT/Q (Binary) Non_Existent\r\n         RESULT_RECORD_TYPE/Q (Alpha) Null\r\n         ROW_COUNT/Q (Integer) Non_Existent\r\n         SELECT_COLUMNS/Q (Alpha) Non_Existent\r\n         SKIP_ROWS/Q (Integer) Non_Existent\r\n         STATEMENT/Q (Alpha) = SELECT invoice_id, invoice_no, creation_date, to_char(creation_date,'yyyy-mm-dd hh24:mi:ss') datestr FROM invoice a WHERE rownum <= 20\r\n         PROPAGATED_VARIABLES/Q (Array) Non_Existent\r\n\r\n17:20:27,599 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationContext.<init>(): Called FndServerContext.setLanguageAndLocale(): language=en locale=en_US\r\n17:20:27,599 ??? ifs.fnd.service.SQLRecognizer.<init>(): Rocognizing SQL: 'SELECT invoice_id, invoice_no, creation_date, to_char(creation_date,'yyyy-mm-dd hh24:mi:ss') datestr FROM invoice a WHERE rownum <= 20'\r\n17:20:27,599 ??? ifs.fnd.service.SQLRecognizer.getSQLText(): SQL text: SELECT invoice_id, invoice_no, creation_date, to_char(creation_date,'yyyy-mm-dd hh24:mi:ss') datestr FROM IFSAPP.invoice a WHERE rownum <= 20\r\n17:20:27,599 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6cac57a0\r\n17:20:27,599 ??? ifs.fnd.sf.storage.FndStatement.prepareStatement(): Preparing statement:\r\n<PLSQL\u0001STMT>\r\nSELECT invoice_id, invoice_no, creation_date, to_char(creation_date,'yyyy-mm-dd hh24:mi:ss') datestr FROM IFSAPP.invoice a WHERE rownum <= 20\r\n</PLSQL\u0001STMT>\r\n17:20:27,599 ??? ifs.fnd.sf.storage.FndStatement.executeQuery(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6cac57a0\r\n17:20:27,599 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6cac57a0' on request 'afa0c06b-609d-4fe1-b934-e19963a7fc89'\r\n17:20:28,912 ??? ifs.fnd.sf.storage.FndStatement.executeQuery(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6cac57a0 executed\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 1 fetched (72/72 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 2 fetched (72/144 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 3 fetched (72/216 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 4 fetched (72/288 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 5 fetched (72/360 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 6 fetched (72/432 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 7 fetched (72/504 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 8 fetched (72/576 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 9 fetched (72/648 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 10 fetched (72/720 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 11 fetched (72/792 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 12 fetched (72/864 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 13 fetched (72/936 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 14 fetched (72/1008 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 15 fetched (72/1080 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 16 fetched (72/1152 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 17 fetched (72/1224 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 18 fetched (72/1296 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 19 fetched (72/1368 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 20 fetched (72/1440 bytes)\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Closing tagged cursor [3caf4dab-b6a8-4453-a9fb-63397f2a9784] because fetchCount=20 < maxRows=103\r\n17:20:28,912 ??? ifs.fnd.plsql.pool.TaggedConnection.closeCursorImpl(): Closing cursor [3caf4dab-b6a8-4453-a9fb-63397f2a9784] in connection {nr=15 USED auto-commit=false key=-1329 timestamp=-1329 SID=597 fndUser=IFSAPP dbUser=IFSAPP directoryId=IFSAPP}\r\n17:20:28,912 ??? ifs.fnd.sf.storage.FndStatement.closeDatabaseCursor(): Closing cursor ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6cac57a0\r\n17:20:28,912 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6cac57a0' on request 'afa0c06b-609d-4fe1-b934-e19963a7fc89'\r\n17:20:28,912 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Fetched 1440 bytes from database.\r\n17:20:28,912 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1c5e6495\r\n17:20:28,912 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001RECURSIVE\u0001STMT>\r\nbegin IFSAPP.Client_SYS.Get_Trace(:1 ); end;\r\n</PLSQL\u0001RECURSIVE\u0001STMT>\r\n17:20:28,912 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001RECURSIVE\u0001BIND>\r\n [1] TEXT:LONG_TEXT/IN_OUT=null\r\n</PLSQL\u0001RECURSIVE\u0001BIND>\r\n17:20:28,912 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1c5e6495\r\n17:20:28,912 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1c5e6495' on request 'afa0c06b-609d-4fe1-b934-e19963a7fc89'\r\n17:20:28,912 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1c5e6495 executed\r\n17:20:28,912 ??? ifs.fnd.sf.storage.FndStatement.closePlsqlResultLog(): \r\n<PLSQL\u0001RECURSIVE\u0001RESULT>\r\n [1] TEXT:LONG_TEXT/IN_OUT=6^2024770103^CALLSTACK^INFORMA... (223 characters)\r\n</PLSQL\u0001RECURSIVE\u0001RESULT>\r\n17:20:28,912 ??? ifs.fnd.sf.storage.FndStandardStatement.spoolPlSqlTrace(): \r\n<PLSQL\u0001TRACE>\r\n6^2024770103^CALLSTACK^INFORMATION^^Rm_Acc_Filter_Util_API.Skip_Security\r\n8^2024770173^CALLSTACK^INFORMATION^^Rm_Acc_Usage_API.Is_Security_Enabled\r\n8^2024770173^CALLSTACK^INFORMATION^^Rm_Acc_Filter_Util_API.Filter_Not_Active\r\n</PLSQL\u0001TRACE>\r\n17:20:28,912 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1c5e6495\r\n17:20:28,912 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1c5e6495' on request 'afa0c06b-609d-4fe1-b934-e19963a7fc89'\r\n17:20:28,927 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5484cace\r\n17:20:28,927 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001STMT>\r\nbegin IFSAPP.Fnd_Context_SYS.End_Request_(:1 , :2 , :3 ); end;\r\n</PLSQL\u0001STMT>\r\n17:20:28,927 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001BIND>\r\n [1] TRANSACTION_ID:TEXT/OUT=null\r\n [2] TRACE:LONG_TEXT/OUT=null\r\n [3] ERROR_MSG:LONG_TEXT/OUT=null\r\n</PLSQL\u0001BIND>\r\n17:20:28,927 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5484cace\r\n17:20:28,927 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5484cace executed\r\n17:20:28,927 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5484cace\r\n17:20:28,927 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5484cace' on request 'afa0c06b-609d-4fe1-b934-e19963a7fc89'\r\n17:20:28,927 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PlsqlProxy Response Header\r\n17:20:28,927 ??? ifs.fnd.base.FndDebug$Instance.debugContext(): \r\n   1:$FND_CONTEXT=\r\n      1:$STATUS:T = DONE\r\n      2:$SERIALIZATION_TARGET:T = CLIENT\r\n      3:$JAVA_LOCALE:T = en_US\r\n      4:$DIRECTORY_ID:T = IFSAPP\r\n      5:$EXTERNAL_BODY_TYPE:I = 0\r\n      6:$STORAGE_TYPE:T = STANDARD_STORAGE\r\n      7:$IMPLEMENTATION_MODE:I = 3\r\n      8:$FND_CONTEXT=\r\n         1:$CLIENT_ID = SYJUPL2-WIA-CONSOLE-37464\r\n         2:$REQUEST_ID = afa0c06b-609d-4fe1-b934-e19963a7fc89\r\n         3:$LOCALE = en-US\r\n         4:$ENCODE_BINARY_VALUE = FALSE\r\n         5:$LANGUAGE:T = en\r\n         6:$DEBUG=\r\n            1:$CALL_SEQUENCE = DEBUG\r\n            2:$DB_ACCESS = DEBUG\r\n            3:$SKELETON_ARGUMENTS = DEBUG\r\n            4:$STUB_ARGUMENTS = DEBUG\r\n            5:$APPLICATION_CODE = DEBUG\r\n            6:$OUTPUT =             17:20:27,583 ??? ifs ......[Size=18803]\r\n\r\n         7:$COUNTERS=\r\n            1:$SQL_STATEMENT:I = 5\r\n            2:$SQL_FETCH:I = 0\r\n            3:$CORBA_CALL:I = -1\r\n      9:$APP_CONTEXT=\r\n   2:$FND_SERVER_CONTEXT=\r\n      1:$CONNECTION_MGR:T = ifs.fnd.sf.storage.FndTaggedConnectionManager@5f0bd577\r\n      2:$CONNECTION_LIST:T = [ifs.fnd.sf.storage.FndTaggedConnection@66e2cc0c]\r\n      3:$INSIDE_ACTIVITY:B = false\r\n      4:$BASE_SERVER_METHOD_SECURITY_ENABLED:B = true\r\n      5:$SUPPORTED_CAPABILITIES:T = [LPTEXT]\r\n      6:$INIT_FND_SESSION_COUNT:I = 0\r\n      7:$INIT_FND_SESSION_DB_COUNT:I = 0\r\n      8:$VALIDATING_REAUTHENTICATION_RESPONSE:B = false\r\n   3:$FND_J2EE_CONTEXT=\r\n      1:$INSIDE_FND_ENTITY_BEAN:B = false\r\n      2:$DEBUGGER_ROLE_GRANTED:B = true\r\n      3:$CURRENT_METHODS:T = []\r\n\r\n17:20:28,927 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PlsqlProxy Response Body\r\n17:20:28,927 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PLSQL_INVOCATION (Fnd_View) (DIRTY) Create  identity=4bf4cce3-643e-4302-ba6c-30dec4dd0fff\r\n   SYSTEM_NAME/Q (Alpha) Non_Existent\r\n   TRANSACTION_ID/* (Text (DIRTY)) Null\r\n   USER_SESSION/Q (Boolean) Non_Existent\r\n   COMMANDS/* (Array (DIRTY)) (1 elements):\r\n      1:COMMAND (Fnd_View) (DIRTY) Create element of PLSQL_INVOCATION.COMMANDS  identity=3703870e-02c3-484a-9365-8f6c3cba88d1\r\n         BIND_VARIABLES/Q (Binary) Non_Existent\r\n         COUNT_ROWS/Q (Boolean) Non_Existent\r\n         CURSOR_ID/* (Text (DIRTY)) Null\r\n         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Fndadm.SQLQueryTool.dllNamespace: Ifs.Application.Fndadm.SQLQueryToolObject: frmDynamicSelectMethod: Execute\r\n         DEBUG_CONTEXT_NAME/Q (Alpha) = frmDynamicSelect\r\n         GENERATE_OUTER_BLOCK/Q (Boolean) Non_Existent\r\n         MAX_ROWS/Q (Integer) = 103\r\n         PARTIAL_RESULT/* (Boolean (DIRTY)) = false\r\n         RESULT/* (Binary (DIRTY)) = 2482 bytes: !\r\n0:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100081\r\n   1:$INVOICE_NO:LPT=970000061\r\n   2:$CREATION_DATE:DTS=2000-09-29-04.09.37\r\n   3:$DATESTR:LPT=2000-09-29 04:09:37\r\n1:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100082\r\n   1:$INVOICE_NO:LPT=970000062\r\n   2:$CREATION_DATE:DTS=2000-09-29-04.14.06\r\n   3:$DATESTR:LPT=2000-09-29 04:14:06\r\n2:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100084\r\n   1:$INVOICE_NO:LPT=970000064\r\n   2:$CREATION_DATE:DTS=2000-10-13-04.18.38\r\n   3:$DATESTR:LPT=2000-10-13 04:18:38\r\n3:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100086\r\n   1:$INVOICE_NO:LPT=970000066\r\n   2:$CREATION_DATE:DTS=2000-10-23-04.22.55\r\n   3:$DATESTR:LPT=2000-10-23 04:22:55\r\n4:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100090\r\n   1:$INVOICE_NO:LPT=970000070\r\n   2:$CREATION_DATE:DTS=2000-11-11-04.33.45\r\n   3:$DATESTR:LPT=2000-11-11 04:33:45\r\n5:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100093\r\n   1:$INVOICE_NO:LPT=970000073\r\n   2:$CREATION_DATE:DTS=2000-12-08-19.05.03\r\n   3:$DATESTR:LPT=2000-12-08 19:05:03\r\n6:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100094\r\n   1:$INVOICE_NO:LPT=970000074\r\n   2:$CREATION_DATE:DTS=2000-12-13-19.08.10\r\n   3:$DATESTR:LPT=2000-12-13 19:08:10\r\n7:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100095\r\n   1:$INVOICE_NO:LPT=970000075\r\n   2:$CREATION_DATE:DTS=2000-12-14-19.09.56\r\n   3:$DATESTR:LPT=2000-12-14 19:09:56\r\n8:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100097\r\n   1:$INVOICE_NO:LPT=970000077\r\n   2:$CREATION_DATE:DTS=2000-12-19-19.15.15\r\n   3:$DATESTR:LPT=2000-12-19 19:15:15\r\n9:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100098\r\n   1:$INVOICE_NO:LPT=970000078\r\n   2:$CREATION_DATE:DTS=2000-12-22-19.17.41\r\n   3:$DATESTR:LPT=2000-12-22 19:17:41\r\n10:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100099\r\n   1:$INVOICE_NO:LPT=970000079\r\n   2:$CREATION_DATE:DTS=2000-12-22-19.19.12\r\n   3:$DATESTR:LPT=2000-12-22 19:19:12\r\n11:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100101\r\n   1:$INVOICE_NO:LPT=970000081\r\n   2:$CREATION_DATE:DTS=2000-12-28-19.24.40\r\n   3:$DATESTR:LPT=2000-12-28 19:24:40\r\n12:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100103\r\n   1:$INVOICE_NO:LPT=970000083\r\n   2:$CREATION_DATE:DTS=2000-12-30-19.39.06\r\n   3:$DATESTR:LPT=2000-12-30 19:39:06\r\n13:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100104\r\n   1:$INVOICE_NO:LPT=970000084\r\n   2:$CREATION_DATE:DTS=2001-01-03-19.42.54\r\n   3:$DATESTR:LPT=2001-01-03 19:42:54\r\n14:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100106\r\n   1:$INVOICE_NO:LPT=970000086\r\n   2:$CREATION_DATE:DTS=2001-01-12-19.47.20\r\n   3:$DATESTR:LPT=2001-01-12 19:47:20\r\n15:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100108\r\n   1:$INVOICE_NO:LPT=970000088\r\n   2:$CREATION_DATE:DTS=2001-01-15-19.59.48\r\n   3:$DATESTR:LPT=2001-01-15 19:59:48\r\n16:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100111\r\n   1:$INVOICE_NO:LPT=970000091\r\n   2:$CREATION_DATE:DTS=2001-02-07-20.06.54\r\n   3:$DATESTR:LPT=2001-02-07 20:06:54\r\n17:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100114\r\n   1:$INVOICE_NO:LPT=970000094\r\n   2:$CREATION_DATE:DTS=2001-02-26-20.16.06\r\n   3:$DATESTR:LPT=2001-02-26 20:16:06\r\n18:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100116\r\n   1:$INVOICE_NO:LPT=970000096\r\n   2:$CREATION_DATE:DTS=2001-03-08-20.19.37\r\n   3:$DATESTR:LPT=2001-03-08 20:19:37\r\n19:$DATA=:\r\n   !\r\n   0:$INVOICE_ID:N=100118\r\n   1:$INVOICE_NO:LPT=970000098\r\n   2:$CREATION_DATE:DTS=2001-03-16-20.23.43\r\n   3:$DATESTR:LPT=2001-03-16 20:23:43\r\n\r\n         RESULT_RECORD_TYPE/Q (Alpha) Null\r\n         ROW_COUNT/* (Integer (DIRTY)) = 20\r\n         SELECT_COLUMNS/Q (Alpha) Non_Existent\r\n         SKIP_ROWS/Q (Integer) Non_Existent\r\n         STATEMENT/Q (Alpha) Non_Existent\r\n         PROPAGATED_VARIABLES/Q (Array) Non_Existent\r\n\r\n17:20:28,927 ??? ifs.fnd.sf.admin.FndProcessList.debug(): Registered abortable processes: {701829e1-bd93-4a1c-9893-cb0eab27a2cf=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@75a3dae0], 2326db39-4aa8-49ad-91f8-74b539b050ba=[], b433c43a-1095-42fb-a01e-23d202bf81b1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@4e2e4461], 1b2b4663-6c4b-491d-9803-c3f26f40188a=[], 6a10a379-78c4-4745-9008-6a1f7068fe31=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2093afa0], ac3be920-ba38-4b1c-ab30-3d3ccb6f0664=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2493241d], cf54cb03-c274-4916-af06-25e6ca34be1f=[], 68c6f088-b640-4df3-90e8-be04b3922599=[], 3a387445-ca2b-4c47-8145-be1f74ad45c4=[], 148675fc-9bf4-4b99-9c85-09237a698d8b=[], 56ad5863-ad77-4ff5-acbe-abc623ef21b4=[], b57cf0f6-9361-4ff1-8884-158609ecd0ec=[], 23ac2c5d-1b43-4f31-b3b2-5072156674a6=[], 5a698302-663d-4205-9747-fe460fdafac3=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@49ffb198], 2178ee37-4800-48db-b315-72878060a3d2=[], 7494a504-d31c-4af7-b003-4a37d150d684=[], d137ab42-ba9a-4b3a-9270-5ca397ab5413=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@383796ee], e94b12f6-8b5d-48f0-8578-360f510be1c8=[], 308c0783-fb59-4bad-8f74-26a4108fa20b=[], ba005d84-ec98-4a32-a034-1de8bacb51f4=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6fe2eade], e5cbe1df-2a66-41e5-b6f6-ad4cc63c86ab=[], b7b79402-d5a9-4b88-9700-fddcde7fbce1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@53a83fd2], 5fdc2c3b-d45d-40d0-9dac-e0e82a8b26bc=[], 220f0791-2520-41c8-8ad9-413f1f002e03=[], 7c9465bd-3fe8-4628-b925-39e5b0022f54=[], fc08fb5b-a713-4876-a189-0cf66380fbff=[], ecdceaae-8683-4e7a-bef7-c952005f1e3a=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5f2d022c], 66417d72-4433-4b17-82ed-a5d0893911f1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@631c48e4], af52994d-e185-40ad-9f6a-965228cc321d=[], c2c4c929-72d3-4799-8d0b-4ebbf0c15629=[], 6d904282-c11b-4833-8bf3-23d8374b9038=[], 56e6225a-f576-4eac-a252-72e45a7376c9=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6e7b64a8], f29c0020-adb7-4c70-8cd1-0d8d739404b9=[], 47fe2c62-719d-4fc5-91c7-b1c27b5168a2=[], abda7f03-b2e0-4f8f-885e-96ada15e232a=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@575b466e], 3c9af4b2-1b53-4756-a5f6-f6f1ab42e24f=[], 82450b03-cb3f-488f-8bd4-78d92ebe2d09=[], f842b1f4-d8ce-43f7-84ad-880833f35a63=[], 38a58615-feda-43d5-9924-0ccc799d3419=[], 273991c3-c96b-4107-a567-695b6cd48a09=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@53f506b6]}\r\n17:20:28,927 ??? ifs.fnd.sf.storage.FndConnectionList.remove(): Removing connection: ifs.fnd.sf.storage.FndTaggedConnection@66e2cc0c REMOVED\r\n17:20:28,927 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.returnConnectionToPool(): Finished request in 1344 ms.\r\n17:20:28,927 ??? ifs.fnd.plsql.pool.TaggedConnectionPoolManager.returnConnection(): Returning connection to pool: {nr=15 USED auto-commit=false key=-1344 timestamp=-1344 SID=597 fndUser=IFSAPP dbUser=IFSAPP directoryId=IFSAPP}\r\n17:20:28,927 ??? ifs.fnd.plsql.pool.TaggedConnection.returnToPool(): Entered state transition method: \r\n17:20:28,927 ??? ifs.fnd.plsql.pool.TaggedConnection.returnToPool(): Returned connection to pool: \r\n\t{nr=15 INITIALIZED auto-commit=false key=0 timestamp=0 usedByRequest=false SID=597 fndUser=IFSAPP dbUser=IFSAPP directoryId=IFSAPP clientId=SYJUPL2-WIA-CONSOLE-37464 clientSessionId=null securityCheckpointAuth=null refreshSessionRoles=false} inUse=false language=en-US transactionId=null AUDSID=299103057\r\n\t\tInitializedSession(nr=15):  close=86398656 (2021-08-06 17:20:27)\r\n\t\t\r\n"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "COUNTERS",
+                            "type": "COUNTERS",
+                            "status": "Modify",
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "SQL_STATEMENT",
+                                    "type": "I",
+                                    "status": "*",
+                                    "value": "5"
+                                },
+                                {
+                                    "name": "SQL_FETCH",
+                                    "type": "I",
+                                    "status": "Q",
+                                    "value": "0"
+                                },
+                                {
+                                    "name": "CORBA_CALL",
+                                    "type": "I",
+                                    "status": "Q",
+                                    "value": "-1"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "APP_CONTEXT",
+                    "buffer": true,
+                    "value": []
+                }
+            ],
+            [
+                {
+                    "name": "PLSQL_INVOCATION",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "delimiter": 14,
+                            "name": "DATA",
+                            "type": "PLSQL_INVOCATION",
+                            "status": "Create",
+                            "value": "4bf4cce3-643e-4302-ba6c-30dec4dd0fff"
+                        },
+                        {
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "PLSQL_SERVER.COMMAND",
+                                            "status": "Create",
+                                            "value": "3703870e-02c3-484a-9365-8f6c3cba88d1"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "MAX_ROWS",
+                                                    "type": "I",
+                                                    "status": "Q",
+                                                    "value": "103"
+                                                },
+                                                {
+                                                    "name": "PARTIAL_RESULT",
+                                                    "type": "B",
+                                                    "status": "*",
+                                                    "value": "FALSE"
+                                                },
+                                                {
+                                                    "name": "RESULT",
+                                                    "type": "R.B64",
+                                                    "status": "*",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100081"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000061"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2000-09-29-04.09.37"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2000-09-29 04:09:37"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100082"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000062"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2000-09-29-04.14.06"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2000-09-29 04:14:06"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100084"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000064"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2000-10-13-04.18.38"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2000-10-13 04:18:38"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100086"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000066"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2000-10-23-04.22.55"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2000-10-23 04:22:55"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100090"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000070"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2000-11-11-04.33.45"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2000-11-11 04:33:45"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100093"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000073"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2000-12-08-19.05.03"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2000-12-08 19:05:03"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100094"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000074"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2000-12-13-19.08.10"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2000-12-13 19:08:10"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100095"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000075"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2000-12-14-19.09.56"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2000-12-14 19:09:56"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100097"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000077"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2000-12-19-19.15.15"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2000-12-19 19:15:15"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100098"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000078"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2000-12-22-19.17.41"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2000-12-22 19:17:41"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100099"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000079"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2000-12-22-19.19.12"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2000-12-22 19:19:12"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100101"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000081"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2000-12-28-19.24.40"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2000-12-28 19:24:40"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100103"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000083"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2000-12-30-19.39.06"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2000-12-30 19:39:06"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100104"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000084"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2001-01-03-19.42.54"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2001-01-03 19:42:54"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100106"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000086"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2001-01-12-19.47.20"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2001-01-12 19:47:20"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100108"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000088"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2001-01-15-19.59.48"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2001-01-15 19:59:48"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100111"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000091"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2001-02-07-20.06.54"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2001-02-07 20:06:54"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100114"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000094"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2001-02-26-20.16.06"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2001-02-26 20:16:06"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100116"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000096"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2001-03-08-20.19.37"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2001-03-08 20:19:37"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "DATA",
+                                                            "buffer": true,
+                                                            "value": [
+                                                                {
+                                                                    "name": "INVOICE_ID",
+                                                                    "type": "N",
+                                                                    "value": "100118"
+                                                                },
+                                                                {
+                                                                    "name": "INVOICE_NO",
+                                                                    "type": "LPT",
+                                                                    "value": "970000098"
+                                                                },
+                                                                {
+                                                                    "name": "CREATION_DATE",
+                                                                    "type": "DTS",
+                                                                    "value": "2001-03-16-20.23.43"
+                                                                },
+                                                                {
+                                                                    "name": "DATESTR",
+                                                                    "type": "LPT",
+                                                                    "value": "2001-03-16 20:23:43"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "isNull": true,
+                                                    "value": null
+                                                },
+                                                {
+                                                    "name": "ROW_COUNT",
+                                                    "type": "I",
+                                                    "status": "*",
+                                                    "value": "20"
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "CURSOR_ID",
+                                                    "type": "LPT",
+                                                    "status": "*",
+                                                    "isNull": true,
+                                                    "value": null
+                                                },
+                                                {
+                                                    "name": "DEBUG_CONTEXT_NAME",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "value": "frmDynamicSelect"
+                                                },
+                                                {
+                                                    "name": "DEBUG_APP_STACK_FRAME",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "value": "Module: Ifs.Application.Fndadm.SQLQueryTool.dll\rNamespace: Ifs.Application.Fndadm.SQLQueryTool\rObject: frmDynamicSelect\rMethod: Execute"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "delimiter": 20,
+                                    "name": "TRANSACTION_ID",
+                                    "type": "LPT",
+                                    "status": "*",
+                                    "isNull": true,
+                                    "value": null
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        ]
+    },
+    "method": "SQL"
+}

@@ -1,0 +1,299 @@
+STATUSLPTQDONEFND_CONTEXTCLIENT_IDSYJUPL2-WIA-CONSOLE-39308REQUEST_ID9b08c79e-bc8c-455d-bada-0bb7bfea49c4LOCALE*en-USENCODE_BINARY_VALUEFALSELANGUAGELPT*enDEBUGDEBUGModifyCALL_SEQUENCEDEBUGDB_ACCESSDEBUGSKELETON_ARGUMENTSDEBUGSTUB_ARGUMENTSDEBUGAPPLICATION_CODEDEBUGOUTPUT*08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.debugRequestHeader(): PlsqlProxy Request Header
+08:08:16,022 ??? ifs.fnd.base.FndDebug$Instance.debugContext(): 
+   1:$FND_CONTEXT=
+      1:$SERIALIZATION_TARGET:T = SERVER
+      2:$JAVA_LOCALE:T = en_US
+      3:$DIRECTORY_ID:T = IFSAPP
+      4:$EXTERNAL_BODY_TYPE:I = 0
+      5:$STORAGE_TYPE:T = STANDARD_STORAGE
+      6:$IMPLEMENTATION_MODE:I = 3
+      7:$FND_CONTEXT=
+         1:$CLIENT_ID = SYJUPL2-WIA-CONSOLE-39308
+         2:$REQUEST_ID = 9b08c79e-bc8c-455d-bada-0bb7bfea49c4
+         3:$LOCALE = en-US
+         4:$ENCODE_BINARY_VALUE = FALSE
+         5:$LANGUAGE:T = en
+         6:$DEBUG=
+            1:$CALL_SEQUENCE = DEBUG
+            2:$DB_ACCESS = DEBUG
+            3:$SKELETON_ARGUMENTS = DEBUG
+            4:$STUB_ARGUMENTS = DEBUG
+            5:$APPLICATION_CODE = DEBUG
+            6:$OUTPUT = 
+         7:$COUNTERS=
+            1:$SQL_STATEMENT:I = 0
+            2:$SQL_FETCH:I = 0
+            3:$CORBA_CALL:I = -1
+      8:$APP_CONTEXT=
+   2:$FND_SERVER_CONTEXT=
+      1:$CONNECTION_MGR:T = ifs.fnd.sf.storage.FndTaggedConnectionManager@24de62f2
+      2:$INSIDE_ACTIVITY:B = false
+      3:$BASE_SERVER_METHOD_SECURITY_ENABLED:B = true
+      4:$SUPPORTED_CAPABILITIES:T = [LPTEXT]
+      5:$INIT_FND_SESSION_COUNT:I = 0
+      6:$INIT_FND_SESSION_DB_COUNT:I = 0
+      7:$VALIDATING_REAUTHENTICATION_RESPONSE:B = false
+   3:$FND_J2EE_CONTEXT=
+      1:$INSIDE_FND_ENTITY_BEAN:B = false
+      2:$CURRENT_METHODS:T = []
+
+08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Started initialization of connection {null}
+08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.getConnectionImpl(): Getting tagged connection from pool
+08:08:16,022 ??? ifs.fnd.plsql.pool.TaggedConnection.reuseOwnSession(): Entered state transition method: 
+08:08:16,022 ??? ifs.fnd.plsql.pool.TaggedConnection.reuseOwnSession(): Reused own connection: 
+	{nr=3 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-39308 clientSessionId=3e875dc1-9d07-4f77-9f08-43aca81d9bfb/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false} inUse=true language=en-US transactionId=null AUDSID=299103035
+		InitializedSession(nr=3):  close=86394610 (2021-08-07 08:08:10)
+		DedicatedSession(3e875dc1-9d07-4f77-9f08-43aca81d9bfb/IFSAPP)
+		
+08:08:16,022 ??? ifs.fnd.plsql.pool.TaggedConnectionPoolManager.getConnection(): Got connection from pool in 0 ms: {nr=3 USED auto-commit=false key=0 timestamp=0 SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp}
+08:08:16,022 ??? ifs.fnd.sf.storage.FndConnectionList.add(): Adding connection: ifs.fnd.sf.storage.FndTaggedConnection@7a50e7a2 COUNT=1
+08:08:16,022 ??? ifs.fnd.sf.storage.FndConnection.<init>(): Created connection ifs.fnd.sf.storage.FndTaggedConnection@7a50e7a2(oracle.jdbc.driver.T4CConnection@5f188f01)
+08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [REQUEST_ID]
+08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [LOCALE]
+08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [ENCODE_BINARY_VALUE]
+08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [LANGUAGE]
+08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Value [SYJUPL2-WIA-CONSOLE-39308] for context attribute [CLIENT_ID] has not been changed.
+08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Initializing connection
+	{nr=3 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-39308 clientSessionId=3e875dc1-9d07-4f77-9f08-43aca81d9bfb/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false}
+08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initPlsqlGatewaySession(): Initializing Plsql connection: initClientSession=false f1Context=true appContext=false
+08:08:16,022 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@705ebfcd
+08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:
+<PLSQLSTMT>
+begin
+   IFSAPP.Fnd_Context_SYS.Init_Request_(:1 , :2 );
+end;
+</PLSQLSTMT>
+08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): 
+<PLSQLBIND>
+ [1] F1_CONTEXT:TEXT/IN=!F1_CONTEXT
+$DEBUG=!DEBUG
+-$DB_ACCESS=DEBUG
+
+ [2] APP_CONTEXT:TEXT/IN=null
+</PLSQLBIND>
+08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@705ebfcd
+08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@705ebfcd executed
+08:08:16,022 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@da87c3b
+08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:
+<PLSQLRECURSIVESTMT>
+begin IFSAPP.Client_SYS.Get_Trace(:1 ); end;
+</PLSQLRECURSIVESTMT>
+08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): 
+<PLSQLRECURSIVEBIND>
+ [1] TEXT:LONG_TEXT/IN_OUT=null
+</PLSQLRECURSIVEBIND>
+08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@da87c3b
+08:08:16,022 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@da87c3b' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'
+08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@da87c3b executed
+08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.closePlsqlResultLog(): 
+<PLSQLRECURSIVERESULT>
+ [1] TEXT:LONG_TEXT/IN_OUT=null
+</PLSQLRECURSIVERESULT>
+08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@da87c3b
+08:08:16,022 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@da87c3b' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'
+08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@705ebfcd
+08:08:16,022 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@705ebfcd' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'
+08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Finished initialization of connection
+	{nr=3 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-39308 clientSessionId=3e875dc1-9d07-4f77-9f08-43aca81d9bfb/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false}
+08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): Calling AccessPlsql.invoke
+08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): PlsqlProxy Request Body
+08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): PLSQL_INVOCATION (Fnd_View) Create  identity=5fa1b302-4d94-42d4-9405-38617e7c55ed
+   SYSTEM_NAME/Q (Alpha) Non_Existent
+   TRANSACTION_ID/Q (Text) Non_Existent
+   USER_SESSION/Q (Boolean) Non_Existent
+   COMMANDS/* (Array (DIRTY)) (1 elements):
+      1:COMMAND (Fnd_View) Create element of PLSQL_INVOCATION.COMMANDS  identity=8b35e604-1a24-478a-b99b-c16fd30ed609
+         BIND_VARIABLES/Q (Binary) = 16 bytes: !
+0:$p0:LPA/IN=10
+
+         COUNT_ROWS/Q (Boolean) Non_Existent
+         CURSOR_ID/Q (Text) Non_Existent
+         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Invoic_.dllNamespace: Ifs.Application.Invoic_Object: frmInstantInvoiceMethod: DataSourcePopulateIt
+         DEBUG_BIND_INFO/Q (Alpha) = i_hWndFrame.frmInstantInvoice.sCompany
+         DEBUG_CONTEXT_NAME/Q (Alpha) = frmInstantInvoice
+         DEBUG_INTO_INFO/Q (Alpha) = i_hWndFrame.frmInstantInvoice.cmbIdentity.__sRecordObjidTmp,i_hWndFrame.frmInstantInvoice.cmbIdentity.i_sMyValue,i_hWndFrame.frmInstantInvoice.dfName,i_hWndFrame.frmInstantInvoice.dfSeriesId,i_hWndFrame.frmInstantInvoice.dfInvoiceNo
+         GENERATE_OUTER_BLOCK/Q (Boolean) = true
+         MAX_ROWS/Q (Integer) = 103
+         PARTIAL_RESULT/Q (Boolean) Non_Existent
+         RESULT/Q (Binary) Non_Existent
+         RESULT_RECORD_TYPE/Q (Alpha) Null
+         ROW_COUNT/Q (Integer) Non_Existent
+         SELECT_COLUMNS/Q (Alpha) = LPT^-1,LPT^-1,LPT^200,LPT^20,LPT^50
+         SKIP_ROWS/Q (Integer) Non_Existent
+         STATEMENT/Q (Alpha) = select objid, IDENTITY, NAME, SERIES_ID, INVOICE_NO                                                                                                                                                                                                                                                        from &AO.INSTANT_INVOICE where COMPANY=:p0                                    
+         PROPAGATED_VARIABLES/Q (Array) Non_Existent
+
+08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(): Invocation input: onlySelect=false oneCmdOnly=false returnRefCursor=false
+08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(): PLSQL_INVOCATION (Fnd_View) Create  identity=5fa1b302-4d94-42d4-9405-38617e7c55ed
+   SYSTEM_NAME/Q (Alpha) Non_Existent
+   TRANSACTION_ID/Q (Text) Non_Existent
+   USER_SESSION/Q (Boolean) Non_Existent
+   COMMANDS/* (Array (DIRTY)) (1 elements):
+      1:COMMAND (Fnd_View) Create element of PLSQL_INVOCATION.COMMANDS  identity=8b35e604-1a24-478a-b99b-c16fd30ed609
+         BIND_VARIABLES/Q (Binary) = 16 bytes: !
+0:$p0:LPA/IN=10
+
+         COUNT_ROWS/Q (Boolean) Non_Existent
+         CURSOR_ID/Q (Text) Non_Existent
+         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Invoic_.dllNamespace: Ifs.Application.Invoic_Object: frmInstantInvoiceMethod: DataSourcePopulateIt
+         DEBUG_BIND_INFO/Q (Alpha) = i_hWndFrame.frmInstantInvoice.sCompany
+         DEBUG_CONTEXT_NAME/Q (Alpha) = frmInstantInvoice
+         DEBUG_INTO_INFO/Q (Alpha) = i_hWndFrame.frmInstantInvoice.cmbIdentity.__sRecordObjidTmp,i_hWndFrame.frmInstantInvoice.cmbIdentity.i_sMyValue,i_hWndFrame.frmInstantInvoice.dfName,i_hWndFrame.frmInstantInvoice.dfSeriesId,i_hWndFrame.frmInstantInvoice.dfInvoiceNo
+         GENERATE_OUTER_BLOCK/Q (Boolean) = true
+         MAX_ROWS/Q (Integer) = 103
+         PARTIAL_RESULT/Q (Boolean) Non_Existent
+         RESULT/Q (Binary) Non_Existent
+         RESULT_RECORD_TYPE/Q (Alpha) Null
+         ROW_COUNT/Q (Integer) Non_Existent
+         SELECT_COLUMNS/Q (Alpha) = LPT^-1,LPT^-1,LPT^200,LPT^20,LPT^50
+         SKIP_ROWS/Q (Integer) Non_Existent
+         STATEMENT/Q (Alpha) = select objid, IDENTITY, NAME, SERIES_ID, INVOICE_NO                                                                                                                                                                                                                                                        from &AO.INSTANT_INVOICE where COMPANY=:p0                                    
+         PROPAGATED_VARIABLES/Q (Array) Non_Existent
+
+08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationContext.<init>(): Called FndServerContext.setLanguageAndLocale(): language=en locale=en_US
+08:08:16,022 ??? ifs.fnd.service.SQLRecognizer.<init>(): Rocognizing SQL: 'select objid, IDENTITY, NAME, SERIES_ID, INVOICE_NO                                                                                                                                                                                                                                                        from IFSAPP.INSTANT_INVOICE where COMPANY=:p0                                    '
+08:08:16,022 ??? ifs.fnd.service.SQLRecognizer.getSQLText(): SQL text: select objid, IDENTITY, NAME, SERIES_ID, INVOICE_NO                                                                                                                                                                                                                                                        from IFSAPP.INSTANT_INVOICE where COMPANY=?                                    
+08:08:16,022 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5a36468e
+08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.prepareStatement(): Preparing statement:
+<PLSQLSTMT>
+select objid, IDENTITY, NAME, SERIES_ID, INVOICE_NO                                                                                                                                                                                                                                                        from IFSAPP.INSTANT_INVOICE where COMPANY=:1
+</PLSQLSTMT>
+08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes(): PlsqlProcessor.defineColumnTypes(): selectColumns: LPT^-1,LPT^-1,LPT^200,LPT^20,LPT^50
+08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [1] TEXT -1
+08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [2] TEXT -1
+08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [3] TEXT 200
+08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [4] TEXT 20
+08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [5] TEXT 50
+08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes(): PlsqlProcessor.defineColumnTypes(): columnTypes: [TEXT, TEXT, TEXT, TEXT, TEXT]
+08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): 
+<PLSQLBIND>
+ [1] p0:TEXT/IN=10
+</PLSQLBIND>
+08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.executeQuery(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5a36468e
+08:08:16,022 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5a36468e' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'
+08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.executeQuery(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5a36468e executed
+08:08:18,460 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Closing tagged cursor [3323c691-cbed-4f9f-ac4e-7b26416a79b5] because fetchCount=0 < maxRows=103
+08:08:18,460 ??? ifs.fnd.plsql.pool.TaggedConnection.closeCursorImpl(): Closing cursor [3323c691-cbed-4f9f-ac4e-7b26416a79b5] in connection {nr=3 USED auto-commit=false key=-2438 timestamp=-2438 SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp}
+08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.closeDatabaseCursor(): Closing cursor ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5a36468e
+08:08:18,460 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5a36468e' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'
+08:08:18,460 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Fetched 0 bytes from database.
+08:08:18,460 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@27a6d79d
+08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:
+<PLSQLRECURSIVESTMT>
+begin IFSAPP.Client_SYS.Get_Trace(:1 ); end;
+</PLSQLRECURSIVESTMT>
+08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): 
+<PLSQLRECURSIVEBIND>
+ [1] TEXT:LONG_TEXT/IN_OUT=null
+</PLSQLRECURSIVEBIND>
+08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@27a6d79d
+08:08:18,460 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@27a6d79d' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'
+08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@27a6d79d executed
+08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.closePlsqlResultLog(): 
+<PLSQLRECURSIVERESULT>
+ [1] TEXT:LONG_TEXT/IN_OUT=6^2030097020^CALLSTACK^INFORMA... (223 characters)
+</PLSQLRECURSIVERESULT>
+08:08:18,460 ??? ifs.fnd.sf.storage.FndStandardStatement.spoolPlSqlTrace(): 
+<PLSQLTRACE>
+6^2030097020^CALLSTACK^INFORMATION^^Rm_Acc_Filter_Util_API.Skip_Security
+8^2030097021^CALLSTACK^INFORMATION^^Rm_Acc_Usage_API.Is_Security_Enabled
+8^2030097021^CALLSTACK^INFORMATION^^Rm_Acc_Filter_Util_API.Filter_Not_Active
+</PLSQLTRACE>
+08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@27a6d79d
+08:08:18,460 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@27a6d79d' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'
+08:08:18,460 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2203b473
+08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:
+<PLSQLSTMT>
+begin IFSAPP.Fnd_Context_SYS.End_Request_(:1 , :2 , :3 ); end;
+</PLSQLSTMT>
+08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): 
+<PLSQLBIND>
+ [1] TRANSACTION_ID:TEXT/OUT=null
+ [2] TRACE:LONG_TEXT/OUT=null
+ [3] ERROR_MSG:LONG_TEXT/OUT=null
+</PLSQLBIND>
+08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2203b473
+08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2203b473 executed
+08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2203b473
+08:08:18,460 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2203b473' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'
+08:08:18,460 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PlsqlProxy Response Header
+08:08:18,460 ??? ifs.fnd.base.FndDebug$Instance.debugContext(): 
+   1:$FND_CONTEXT=
+      1:$STATUS:T = DONE
+      2:$SERIALIZATION_TARGET:T = CLIENT
+      3:$JAVA_LOCALE:T = en_US
+      4:$DIRECTORY_ID:T = IFSAPP
+      5:$EXTERNAL_BODY_TYPE:I = 0
+      6:$STORAGE_TYPE:T = STANDARD_STORAGE
+      7:$IMPLEMENTATION_MODE:I = 3
+      8:$FND_CONTEXT=
+         1:$CLIENT_ID = SYJUPL2-WIA-CONSOLE-39308
+         2:$REQUEST_ID = 9b08c79e-bc8c-455d-bada-0bb7bfea49c4
+         3:$LOCALE = en-US
+         4:$ENCODE_BINARY_VALUE = FALSE
+         5:$LANGUAGE:T = en
+         6:$DEBUG=
+            1:$CALL_SEQUENCE = DEBUG
+            2:$DB_ACCESS = DEBUG
+            3:$SKELETON_ARGUMENTS = DEBUG
+            4:$STUB_ARGUMENTS = DEBUG
+            5:$APPLICATION_CODE = DEBUG
+            6:$OUTPUT =             08:08:16,022 ??? ifs ......[Size=19294]
+
+         7:$COUNTERS=
+            1:$SQL_STATEMENT:I = 5
+            2:$SQL_FETCH:I = 0
+            3:$CORBA_CALL:I = -1
+      9:$APP_CONTEXT=
+   2:$FND_SERVER_CONTEXT=
+      1:$CONNECTION_MGR:T = ifs.fnd.sf.storage.FndTaggedConnectionManager@24de62f2
+      2:$CONNECTION_LIST:T = [ifs.fnd.sf.storage.FndTaggedConnection@7a50e7a2]
+      3:$INSIDE_ACTIVITY:B = false
+      4:$BASE_SERVER_METHOD_SECURITY_ENABLED:B = true
+      5:$SUPPORTED_CAPABILITIES:T = [LPTEXT]
+      6:$INIT_FND_SESSION_COUNT:I = 0
+      7:$INIT_FND_SESSION_DB_COUNT:I = 0
+      8:$VALIDATING_REAUTHENTICATION_RESPONSE:B = false
+   3:$FND_J2EE_CONTEXT=
+      1:$INSIDE_FND_ENTITY_BEAN:B = false
+      2:$DEBUGGER_ROLE_GRANTED:B = true
+      3:$CURRENT_METHODS:T = []
+
+08:08:18,460 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PlsqlProxy Response Body
+08:08:18,460 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PLSQL_INVOCATION (Fnd_View) (DIRTY) Create  identity=5fa1b302-4d94-42d4-9405-38617e7c55ed
+   SYSTEM_NAME/Q (Alpha) Non_Existent
+   TRANSACTION_ID/* (Text (DIRTY)) Null
+   USER_SESSION/Q (Boolean) Non_Existent
+   COMMANDS/* (Array (DIRTY)) (1 elements):
+      1:COMMAND (Fnd_View) (DIRTY) Create element of PLSQL_INVOCATION.COMMANDS  identity=8b35e604-1a24-478a-b99b-c16fd30ed609
+         BIND_VARIABLES/Q (Binary) = 16 bytes: !
+0:$p0:LPA/IN=10
+
+         COUNT_ROWS/Q (Boolean) Non_Existent
+         CURSOR_ID/* (Text (DIRTY)) Null
+         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Invoic_.dllNamespace: Ifs.Application.Invoic_Object: frmInstantInvoiceMethod: DataSourcePopulateIt
+         DEBUG_BIND_INFO/Q (Alpha) = i_hWndFrame.frmInstantInvoice.sCompany
+         DEBUG_CONTEXT_NAME/Q (Alpha) = frmInstantInvoice
+         DEBUG_INTO_INFO/Q (Alpha) = i_hWndFrame.frmInstantInvoice.cmbIdentity.__sRecordObjidTmp,i_hWndFrame.frmInstantInvoice.cmbIdentity.i_sMyValue,i_hWndFrame.frmInstantInvoice.dfName,i_hWndFrame.frmInstantInvoice.dfSeriesId,i_hWndFrame.frmInstantInvoice.dfInvoiceNo
+         GENERATE_OUTER_BLOCK/Q (Boolean) = true
+         MAX_ROWS/Q (Integer) = 103
+         PARTIAL_RESULT/* (Boolean (DIRTY)) = false
+         RESULT/* (Binary (DIRTY)) = 2 bytes: !
+
+         RESULT_RECORD_TYPE/Q (Alpha) Null
+         ROW_COUNT/* (Integer (DIRTY)) = 0
+         SELECT_COLUMNS/Q (Alpha) Non_Existent
+         SKIP_ROWS/Q (Integer) Non_Existent
+         STATEMENT/Q (Alpha) Non_Existent
+         PROPAGATED_VARIABLES/Q (Array) Non_Existent
+
+08:08:18,460 ??? ifs.fnd.sf.admin.FndProcessList.debug(): Registered abortable processes: {701829e1-bd93-4a1c-9893-cb0eab27a2cf=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@75a3dae0], 2326db39-4aa8-49ad-91f8-74b539b050ba=[], b433c43a-1095-42fb-a01e-23d202bf81b1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@4e2e4461], 1b2b4663-6c4b-491d-9803-c3f26f40188a=[], 6a10a379-78c4-4745-9008-6a1f7068fe31=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2093afa0], ac3be920-ba38-4b1c-ab30-3d3ccb6f0664=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2493241d], cf54cb03-c274-4916-af06-25e6ca34be1f=[], 68c6f088-b640-4df3-90e8-be04b3922599=[], 3a387445-ca2b-4c47-8145-be1f74ad45c4=[], 148675fc-9bf4-4b99-9c85-09237a698d8b=[], 56ad5863-ad77-4ff5-acbe-abc623ef21b4=[], b57cf0f6-9361-4ff1-8884-158609ecd0ec=[], 23ac2c5d-1b43-4f31-b3b2-5072156674a6=[], 5a698302-663d-4205-9747-fe460fdafac3=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@49ffb198], 2178ee37-4800-48db-b315-72878060a3d2=[], 7494a504-d31c-4af7-b003-4a37d150d684=[], 5cec6fdc-9f71-4185-a73d-fb26aaf16e28=[], d137ab42-ba9a-4b3a-9270-5ca397ab5413=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@383796ee], e94b12f6-8b5d-48f0-8578-360f510be1c8=[], 308c0783-fb59-4bad-8f74-26a4108fa20b=[], ba005d84-ec98-4a32-a034-1de8bacb51f4=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6fe2eade], e5cbe1df-2a66-41e5-b6f6-ad4cc63c86ab=[], b7b79402-d5a9-4b88-9700-fddcde7fbce1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@53a83fd2], 5fdc2c3b-d45d-40d0-9dac-e0e82a8b26bc=[], 220f0791-2520-41c8-8ad9-413f1f002e03=[], 7c9465bd-3fe8-4628-b925-39e5b0022f54=[], fc08fb5b-a713-4876-a189-0cf66380fbff=[], ecdceaae-8683-4e7a-bef7-c952005f1e3a=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5f2d022c], 66417d72-4433-4b17-82ed-a5d0893911f1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@631c48e4], af52994d-e185-40ad-9f6a-965228cc321d=[], c2c4c929-72d3-4799-8d0b-4ebbf0c15629=[], 6d904282-c11b-4833-8bf3-23d8374b9038=[], 56e6225a-f576-4eac-a252-72e45a7376c9=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6e7b64a8], f29c0020-adb7-4c70-8cd1-0d8d739404b9=[], 47fe2c62-719d-4fc5-91c7-b1c27b5168a2=[], abda7f03-b2e0-4f8f-885e-96ada15e232a=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@575b466e], 3c9af4b2-1b53-4756-a5f6-f6f1ab42e24f=[], 82450b03-cb3f-488f-8bd4-78d92ebe2d09=[], f842b1f4-d8ce-43f7-84ad-880833f35a63=[], 38a58615-feda-43d5-9924-0ccc799d3419=[], 273991c3-c96b-4107-a567-695b6cd48a09=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@53f506b6]}
+08:08:18,460 ??? ifs.fnd.sf.storage.FndConnectionList.remove(): Removing connection: ifs.fnd.sf.storage.FndTaggedConnection@7a50e7a2 REMOVED
+08:08:18,460 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.returnConnectionToPool(): Finished request in 2438 ms.
+08:08:18,460 ??? ifs.fnd.plsql.pool.TaggedConnectionPoolManager.returnConnection(): Returning connection to pool: {nr=3 USED auto-commit=false key=-2438 timestamp=-2438 SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp}
+08:08:18,460 ??? ifs.fnd.plsql.pool.TaggedConnection.returnToPool(): Entered state transition method: 
+08:08:18,460 ??? ifs.fnd.plsql.pool.TaggedConnection.returnToPool(): Returned connection to pool: 
+	{nr=3 INITIALIZED auto-commit=false key=0 timestamp=0 usedByRequest=false SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-39308 clientSessionId=null securityCheckpointAuth=null refreshSessionRoles=false} inUse=false language=en-US transactionId=null AUDSID=299103035
+		InitializedSession(nr=3):  close=86397562 (2021-08-07 08:08:16)
+		
+COUNTERSCOUNTERSModifySQL_STATEMENTI*5SQL_FETCHIQ0CORBA_CALLIQ-1APP_CONTEXTPLSQL_INVOCATIONDATAPLSQL_INVOCATIONCreate5fa1b302-4d94-42d4-9405-38617e7c55edCOMMANDSARRAY*DATAPLSQL_SERVER.COMMANDCreate8b35e604-1a24-478a-b99b-c16fd30ed609BIND_VARIABLESR.B64Q!   p0LPAIN10MAX_ROWSIQ103PARTIAL_RESULTB*FALSERESULTR.B64*!   RESULT_RECORD_TYPELPAQROW_COUNTI*0CURSOR_IDLPT*GENERATE_OUTER_BLOCKBQTRUEDEBUG_CONTEXT_NAMELPAQfrmInstantInvoiceDEBUG_APP_STACK_FRAMELPAQA=Module: Ifs.Application.Invoic_.dllNamespace: Ifs.Application.Invoic_Object: frmInstantInvoiceMethod: DataSourcePopulateItDEBUG_BIND_INFOLPAQ&i_hWndFrame.frmInstantInvoice.sCompanyDEBUG_INTO_INFOLPAQC(i_hWndFrame.frmInstantInvoice.cmbIdentity.__sRecordObjidTmp,i_hWndFrame.frmInstantInvoice.cmbIdentity.i_sMyValue,i_hWndFrame.frmInstantInvoice.dfName,i_hWndFrame.frmInstantInvoice.dfSeriesId,i_hWndFrame.frmInstantInvoice.dfInvoiceNoTRANSACTION_IDLPT*

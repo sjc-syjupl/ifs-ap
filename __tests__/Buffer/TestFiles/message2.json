@@ -1,0 +1,872 @@
+{
+    "requestFile": "message2_Request.dat",
+    "responseFile": "message2_Response.dat",
+    "request": {
+        "clientId": "SYJUPL2-WIA-CONSOLE-33924",
+        "requestId": "c8350aa8-aaed-4325-b0f8-3ebb1248c237",
+        "locale": "en-US",
+        "debug": true,
+        "invocationId": "d719f215-1b81-4947-bb9b-688ab5044c05",
+        "transactionId": "",
+        "commands": [
+            {
+                "commandId": "2c8a7cb8-b4f7-4063-878e-fadf0506759e",
+                "sqlString": "BEGIN \nBEGIN &AO.Customer_Order_API.Get_Ord_Line_Totals__(:p0                                      ,:p1                                       ,:p2                                        ,:p3                                      ,:p4                                      ,:p5                                         ,:p6                                        ,:p7                                          ,:p8                                         ,:p9                                   );:p10                                            := &AO.Customer_Order_API.Get_Total_Gross_Weight__(:p9                                   ); :p11                                   := &AO.Customer_Order_API.Exist_Charges__(:p9                                   ); :p12                                                   := &AO.Customer_Order_API.Get_Total_Contribution(:p9                                   ); :p13                                           := &AO.Customer_Order_API.Get_Total_Cost(:p9                                   ); :p14                                           := &AO.Customer_Order_API.Get_Total_Base_Charge__(:p9                                   ); :p15                                       := &AO.Customer_Order_API.Get_Total_Sale_Charge__(:p9                                   ); :p16                                            := &AO.Customer_Order_API.Get_Total_Sale_Charge_Gross__(:p9                                   ); :p17                                       := &AO.Customer_Order_API.Get_Tot_Charge_Sale_Tax_Amt(:p9                                   ); :p18                                             := &AO.Customer_Order_API.Get_Adj_Weight_In_Charges(:p9                                   ); :p19                                              := &AO.Customer_Order_API.Get_Adj_Volume_In_Charges(:p9                                   ); END; \nEXCEPTION \nWHEN &AO.Error_SYS.Err_Security_Checkpoint THEN \nraise; \nWHEN OTHERS THEN \nrollback; \nraise; \nEND;",
+                "method": "PL_SQL",
+                "maxRows": "103",
+                "debugContextName": "frmCustomerOrder",
+                "debugAppStackFrame": "Module: Ifs.Application.Order_.dll\rNamespace: Ifs.Application.Order_\rObject: frmCustomerOrder\rMethod: GetOrderTotals",
+                "debugBindInfo": "i_hWndFrame.frmCustomerOrder.nOrdTotBase,i_hWndFrame.frmCustomerOrder.nOrdTotSales,i_hWndFrame.frmCustomerOrder.nOrdTotWeight,i_hWndFrame.frmCustomerOrder.nOrdTotQnty,i_hWndFrame.frmCustomerOrder.nOrdTotCost,i_hWndFrame.frmCustomerOrder.nOrdTotContrib,i_hWndFrame.frmCustomerOrder.nOrdTotTaxAmt,i_hWndFrame.frmCustomerOrder.nOrdTotGrossAmt,i_hWndFrame.frmCustomerOrder.nOrdTotDiscAmt,i_hWndFrame.frmCustomerOrder.sOrderNo,i_hWndFrame.frmCustomerOrder.nOrderGrossWeight,i_hWndFrame.frmCustomerOrder.nCharges,i_hWndFrame.frmCustomerOrder.nTotalContributionAmount,i_hWndFrame.frmCustomerOrder.nTotalCostAmount,i_hWndFrame.frmCustomerOrder.nTotalChargeBase,i_hWndFrame.frmCustomerOrder.nTotalCharge,i_hWndFrame.frmCustomerOrder.nTotalChargeGross,i_hWndFrame.frmCustomerOrder.nTotalChaTax,i_hWndFrame.frmCustomerOrder.nTotalFreightGross,i_hWndFrame.frmCustomerOrder.nTotalFreightVolume",
+                "generateOuterBlock": "TRUE",
+                "bindingsObject": {
+                    "p0": 0,
+                    "p1": 0,
+                    "p2": 0,
+                    "p3": 0,
+                    "p4": 0,
+                    "p5": 0,
+                    "p6": 0,
+                    "p7": 0,
+                    "p8": 0,
+                    "p9": "BP10111",
+                    "p10": 0,
+                    "p11": 0,
+                    "p12": 0,
+                    "p13": 0,
+                    "p14": 0,
+                    "p15": 0,
+                    "p16": 0,
+                    "p17": 0,
+                    "p18": 0,
+                    "p19": 0
+                },
+                "bindingsSendObject": {
+                    "p0": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p1": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p2": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p3": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p4": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p5": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p6": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p7": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p8": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p9": {
+                        "direction": "IN",
+                        "value": "BP10111",
+                        "type": "LPA"
+                    },
+                    "p10": {
+                        "direction": "IN_OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p11": {
+                        "direction": "IN_OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p12": {
+                        "direction": "IN_OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p13": {
+                        "direction": "IN_OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p14": {
+                        "direction": "IN_OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p15": {
+                        "direction": "IN_OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p16": {
+                        "direction": "IN_OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p17": {
+                        "direction": "IN_OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p18": {
+                        "direction": "IN_OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p19": {
+                        "direction": "IN_OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    }
+                }
+            }
+        ],
+        "message": [
+            [
+                {
+                    "name": "FND_CONTEXT",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "name": "CLIENT_ID",
+                            "value": "SYJUPL2-WIA-CONSOLE-33924"
+                        },
+                        {
+                            "name": "REQUEST_ID",
+                            "value": "c8350aa8-aaed-4325-b0f8-3ebb1248c237"
+                        },
+                        {
+                            "name": "LOCALE",
+                            "value": "en-US"
+                        },
+                        {
+                            "name": "ENCODE_BINARY_VALUE",
+                            "value": "FALSE"
+                        },
+                        {
+                            "name": "DEBUG",
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "CALL_SEQUENCE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "DB_ACCESS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "SKELETON_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "STUB_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "APPLICATION_CODE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "OUTPUT",
+                                    "value": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "PLSQL_INVOCATION",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "delimiter": 14,
+                            "name": "DATA",
+                            "type": "PLSQL_INVOCATION",
+                            "status": "Create",
+                            "value": "d719f215-1b81-4947-bb9b-688ab5044c05"
+                        },
+                        {
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "COMMAND",
+                                            "status": "Create",
+                                            "value": "2c8a7cb8-b4f7-4063-878e-fadf0506759e"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "STATEMENT",
+                                                    "type": "LPA",
+                                                    "value": "BEGIN \nBEGIN &AO.Customer_Order_API.Get_Ord_Line_Totals__(:p0                                      ,:p1                                       ,:p2                                        ,:p3                                      ,:p4                                      ,:p5                                         ,:p6                                        ,:p7                                          ,:p8                                         ,:p9                                   );:p10                                            := &AO.Customer_Order_API.Get_Total_Gross_Weight__(:p9                                   ); :p11                                   := &AO.Customer_Order_API.Exist_Charges__(:p9                                   ); :p12                                                   := &AO.Customer_Order_API.Get_Total_Contribution(:p9                                   ); :p13                                           := &AO.Customer_Order_API.Get_Total_Cost(:p9                                   ); :p14                                           := &AO.Customer_Order_API.Get_Total_Base_Charge__(:p9                                   ); :p15                                       := &AO.Customer_Order_API.Get_Total_Sale_Charge__(:p9                                   ); :p16                                            := &AO.Customer_Order_API.Get_Total_Sale_Charge_Gross__(:p9                                   ); :p17                                       := &AO.Customer_Order_API.Get_Tot_Charge_Sale_Tax_Amt(:p9                                   ); :p18                                             := &AO.Customer_Order_API.Get_Adj_Weight_In_Charges(:p9                                   ); :p19                                              := &AO.Customer_Order_API.Get_Adj_Volume_In_Charges(:p9                                   ); END; \nEXCEPTION \nWHEN &AO.Error_SYS.Err_Security_Checkpoint THEN \nraise; \nWHEN OTHERS THEN \nrollback; \nraise; \nEND;"
+                                                },
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "p0",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p1",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p2",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p3",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p4",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p5",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p6",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p7",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p8",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p9",
+                                                            "type": "LPA",
+                                                            "status": "IN",
+                                                            "value": "BP10111"
+                                                        },
+                                                        {
+                                                            "name": "p10",
+                                                            "type": "DEC",
+                                                            "status": "IN_OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p11",
+                                                            "type": "DEC",
+                                                            "status": "IN_OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p12",
+                                                            "type": "DEC",
+                                                            "status": "IN_OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p13",
+                                                            "type": "DEC",
+                                                            "status": "IN_OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p14",
+                                                            "type": "DEC",
+                                                            "status": "IN_OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p15",
+                                                            "type": "DEC",
+                                                            "status": "IN_OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p16",
+                                                            "type": "DEC",
+                                                            "status": "IN_OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p17",
+                                                            "type": "DEC",
+                                                            "status": "IN_OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p18",
+                                                            "type": "DEC",
+                                                            "status": "IN_OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p19",
+                                                            "type": "DEC",
+                                                            "status": "IN_OUT",
+                                                            "value": "0"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "GENERATE_OUTER_BLOCK",
+                                                    "type": "B",
+                                                    "value": "TRUE"
+                                                },
+                                                {
+                                                    "name": "DEBUG_CONTEXT_NAME",
+                                                    "type": "LPA",
+                                                    "value": "frmCustomerOrder"
+                                                },
+                                                {
+                                                    "name": "DEBUG_APP_STACK_FRAME",
+                                                    "type": "LPA",
+                                                    "value": "Module: Ifs.Application.Order_.dll\rNamespace: Ifs.Application.Order_\rObject: frmCustomerOrder\rMethod: GetOrderTotals"
+                                                },
+                                                {
+                                                    "name": "DEBUG_BIND_INFO",
+                                                    "type": "LPA",
+                                                    "value": "i_hWndFrame.frmCustomerOrder.nOrdTotBase,i_hWndFrame.frmCustomerOrder.nOrdTotSales,i_hWndFrame.frmCustomerOrder.nOrdTotWeight,i_hWndFrame.frmCustomerOrder.nOrdTotQnty,i_hWndFrame.frmCustomerOrder.nOrdTotCost,i_hWndFrame.frmCustomerOrder.nOrdTotContrib,i_hWndFrame.frmCustomerOrder.nOrdTotTaxAmt,i_hWndFrame.frmCustomerOrder.nOrdTotGrossAmt,i_hWndFrame.frmCustomerOrder.nOrdTotDiscAmt,i_hWndFrame.frmCustomerOrder.sOrderNo,i_hWndFrame.frmCustomerOrder.nOrderGrossWeight,i_hWndFrame.frmCustomerOrder.nCharges,i_hWndFrame.frmCustomerOrder.nTotalContributionAmount,i_hWndFrame.frmCustomerOrder.nTotalCostAmount,i_hWndFrame.frmCustomerOrder.nTotalChargeBase,i_hWndFrame.frmCustomerOrder.nTotalCharge,i_hWndFrame.frmCustomerOrder.nTotalChargeGross,i_hWndFrame.frmCustomerOrder.nTotalChaTax,i_hWndFrame.frmCustomerOrder.nTotalFreightGross,i_hWndFrame.frmCustomerOrder.nTotalFreightVolume"
+                                                },
+                                                {
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "value": ""
+                                                },
+                                                {
+                                                    "name": "MAX_ROWS",
+                                                    "type": "I",
+                                                    "value": "103"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        ]
+    },
+    "response": {
+        "status": "DONE",
+        "clientId": "SYJUPL2-WIA-CONSOLE-33924",
+        "requestId": "c8350aa8-aaed-4325-b0f8-3ebb1248c237",
+        "locale": "en-US",
+        "language": "en",
+        "debug": true,
+        "invocationId": "d719f215-1b81-4947-bb9b-688ab5044c05",
+        "transactionId": "",
+        "commands": [
+            {
+                "commandId": "2c8a7cb8-b4f7-4063-878e-fadf0506759e",
+                "maxRows": "103",
+                "debugContextName": "frmCustomerOrder",
+                "debugAppStackFrame": "Module: Ifs.Application.Order_.dll\rNamespace: Ifs.Application.Order_\rObject: frmCustomerOrder\rMethod: GetOrderTotals",
+                "debugBindInfo": "i_hWndFrame.frmCustomerOrder.nOrdTotBase,i_hWndFrame.frmCustomerOrder.nOrdTotSales,i_hWndFrame.frmCustomerOrder.nOrdTotWeight,i_hWndFrame.frmCustomerOrder.nOrdTotQnty,i_hWndFrame.frmCustomerOrder.nOrdTotCost,i_hWndFrame.frmCustomerOrder.nOrdTotContrib,i_hWndFrame.frmCustomerOrder.nOrdTotTaxAmt,i_hWndFrame.frmCustomerOrder.nOrdTotGrossAmt,i_hWndFrame.frmCustomerOrder.nOrdTotDiscAmt,i_hWndFrame.frmCustomerOrder.sOrderNo,i_hWndFrame.frmCustomerOrder.nOrderGrossWeight,i_hWndFrame.frmCustomerOrder.nCharges,i_hWndFrame.frmCustomerOrder.nTotalContributionAmount,i_hWndFrame.frmCustomerOrder.nTotalCostAmount,i_hWndFrame.frmCustomerOrder.nTotalChargeBase,i_hWndFrame.frmCustomerOrder.nTotalCharge,i_hWndFrame.frmCustomerOrder.nTotalChargeGross,i_hWndFrame.frmCustomerOrder.nTotalChaTax,i_hWndFrame.frmCustomerOrder.nTotalFreightGross,i_hWndFrame.frmCustomerOrder.nTotalFreightVolume",
+                "generateOuterBlock": "TRUE",
+                "bindingsObject": {
+                    "p0": 3622502.25,
+                    "p1": 7524425,
+                    "p2": 0,
+                    "p3": 0,
+                    "p4": 1887000,
+                    "p5": 1735502.25,
+                    "p6": 0,
+                    "p7": 7524425,
+                    "p8": 0,
+                    "p9": "BP10111",
+                    "p10": 370,
+                    "p11": 0,
+                    "p12": 1735502.25,
+                    "p13": 1887000,
+                    "p14": 0,
+                    "p15": 0,
+                    "p16": 0,
+                    "p17": 0,
+                    "p18": null,
+                    "p19": null
+                },
+                "bindingsSendObject": {
+                    "p0": {
+                        "direction": "OUT",
+                        "value": "3622502.25",
+                        "type": "DEC"
+                    },
+                    "p1": {
+                        "direction": "OUT",
+                        "value": "7524425",
+                        "type": "DEC"
+                    },
+                    "p2": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p3": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p4": {
+                        "direction": "OUT",
+                        "value": "1887000",
+                        "type": "DEC"
+                    },
+                    "p5": {
+                        "direction": "OUT",
+                        "value": "1735502.25",
+                        "type": "DEC"
+                    },
+                    "p6": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p7": {
+                        "direction": "OUT",
+                        "value": "7524425",
+                        "type": "DEC"
+                    },
+                    "p8": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p9": {
+                        "direction": "IN",
+                        "value": "BP10111",
+                        "type": "LPA"
+                    },
+                    "p10": {
+                        "direction": "OUT",
+                        "value": "370",
+                        "type": "DEC"
+                    },
+                    "p11": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p12": {
+                        "direction": "OUT",
+                        "value": "1735502.25",
+                        "type": "DEC"
+                    },
+                    "p13": {
+                        "direction": "OUT",
+                        "value": "1887000",
+                        "type": "DEC"
+                    },
+                    "p14": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p15": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p16": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p17": {
+                        "direction": "OUT",
+                        "value": "0",
+                        "type": "DEC"
+                    },
+                    "p18": {
+                        "direction": "OUT",
+                        "value": null,
+                        "type": "DEC"
+                    },
+                    "p19": {
+                        "direction": "OUT",
+                        "value": null,
+                        "type": "DEC"
+                    }
+                }
+            }
+        ],
+        "message": [
+            [
+                {
+                    "name": "STATUS",
+                    "type": "LPT",
+                    "status": "Q",
+                    "value": "DONE"
+                },
+                {
+                    "name": "FND_CONTEXT",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "name": "CLIENT_ID",
+                            "value": "SYJUPL2-WIA-CONSOLE-33924"
+                        },
+                        {
+                            "name": "REQUEST_ID",
+                            "value": "c8350aa8-aaed-4325-b0f8-3ebb1248c237"
+                        },
+                        {
+                            "name": "LOCALE",
+                            "status": "*",
+                            "value": "en-US"
+                        },
+                        {
+                            "name": "ENCODE_BINARY_VALUE",
+                            "value": "FALSE"
+                        },
+                        {
+                            "name": "LANGUAGE",
+                            "type": "LPT",
+                            "status": "*",
+                            "value": "en"
+                        },
+                        {
+                            "name": "DEBUG",
+                            "type": "DEBUG",
+                            "status": "Modify",
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "CALL_SEQUENCE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "DB_ACCESS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "SKELETON_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "STUB_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "APPLICATION_CODE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "OUTPUT",
+                                    "status": "*",
+                                    "value": "11:36:43,310 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.debugRequestHeader(): PlsqlProxy Request Header\r\n11:36:43,310 ??? ifs.fnd.base.FndDebug$Instance.debugContext(): \r\n   1:$FND_CONTEXT=\r\n      1:$SERIALIZATION_TARGET:T = SERVER\r\n      2:$JAVA_LOCALE:T = en_US\r\n      3:$DIRECTORY_ID:T = IFSAPP\r\n      4:$EXTERNAL_BODY_TYPE:I = 0\r\n      5:$STORAGE_TYPE:T = STANDARD_STORAGE\r\n      6:$IMPLEMENTATION_MODE:I = 3\r\n      7:$FND_CONTEXT=\r\n         1:$CLIENT_ID = SYJUPL2-WIA-CONSOLE-33924\r\n         2:$REQUEST_ID = c8350aa8-aaed-4325-b0f8-3ebb1248c237\r\n         3:$LOCALE = en-US\r\n         4:$ENCODE_BINARY_VALUE = FALSE\r\n         5:$LANGUAGE:T = en\r\n         6:$DEBUG=\r\n            1:$CALL_SEQUENCE = DEBUG\r\n            2:$DB_ACCESS = DEBUG\r\n            3:$SKELETON_ARGUMENTS = DEBUG\r\n            4:$STUB_ARGUMENTS = DEBUG\r\n            5:$APPLICATION_CODE = DEBUG\r\n            6:$OUTPUT = \r\n         7:$COUNTERS=\r\n            1:$SQL_STATEMENT:I = 0\r\n            2:$SQL_FETCH:I = 0\r\n            3:$CORBA_CALL:I = -1\r\n      8:$APP_CONTEXT=\r\n   2:$FND_SERVER_CONTEXT=\r\n      1:$CONNECTION_MGR:T = ifs.fnd.sf.storage.FndTaggedConnectionManager@1ffe54bd\r\n      2:$INSIDE_ACTIVITY:B = false\r\n      3:$BASE_SERVER_METHOD_SECURITY_ENABLED:B = true\r\n      4:$SUPPORTED_CAPABILITIES:T = [LPTEXT]\r\n      5:$INIT_FND_SESSION_COUNT:I = 0\r\n      6:$INIT_FND_SESSION_DB_COUNT:I = 0\r\n      7:$VALIDATING_REAUTHENTICATION_RESPONSE:B = false\r\n   3:$FND_J2EE_CONTEXT=\r\n      1:$INSIDE_FND_ENTITY_BEAN:B = false\r\n      2:$CURRENT_METHODS:T = []\r\n\r\n11:36:43,310 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Started initialization of connection {null}\r\n11:36:43,310 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.getConnectionImpl(): Getting tagged connection from pool\r\n11:36:43,310 ??? ifs.fnd.plsql.pool.TaggedConnection.reuseOwnSession(): Entered state transition method: \r\n11:36:43,310 ??? ifs.fnd.plsql.pool.TaggedConnection.reuseOwnSession(): Reused own connection: \r\n\t{nr=45 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=486 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-33924 clientSessionId=5090bf1f-ad2f-4f78-803c-e928636fd61f/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false} inUse=true language=en-US transactionId=null AUDSID=299103091\r\n\t\tInitializedSession(nr=45):  close=86387468 (2021-08-03 11:36:30)\r\n\t\tDedicatedSession(5090bf1f-ad2f-4f78-803c-e928636fd61f/IFSAPP)\r\n\t\t\r\n11:36:43,310 ??? ifs.fnd.plsql.pool.TaggedConnectionPoolManager.getConnection(): Got connection from pool in 0 ms: {nr=45 USED auto-commit=false key=0 timestamp=0 SID=486 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp}\r\n11:36:43,310 ??? ifs.fnd.sf.storage.FndConnectionList.add(): Adding connection: ifs.fnd.sf.storage.FndTaggedConnection@4e427bc1 COUNT=1\r\n11:36:43,310 ??? ifs.fnd.sf.storage.FndConnection.<init>(): Created connection ifs.fnd.sf.storage.FndTaggedConnection@4e427bc1(oracle.jdbc.driver.T4CConnection@34022af2)\r\n11:36:43,310 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [REQUEST_ID]\r\n11:36:43,310 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [LOCALE]\r\n11:36:43,310 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [ENCODE_BINARY_VALUE]\r\n11:36:43,310 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [LANGUAGE]\r\n11:36:43,310 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Value [SYJUPL2-WIA-CONSOLE-33924] for context attribute [CLIENT_ID] has not been changed.\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Initializing connection\r\n\t{nr=45 USED auto-commit=false key=-15 timestamp=-15 usedByRequest=true SID=486 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-33924 clientSessionId=5090bf1f-ad2f-4f78-803c-e928636fd61f/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false}\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initPlsqlGatewaySession(): Initializing Plsql connection: initClientSession=false f1Context=true appContext=false\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5e3209fa\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001STMT>\r\nbegin\r\n   IFSAPP.Fnd_Context_SYS.Init_Request_(:1 , :2 );\r\nend;\r\n</PLSQL\u0001STMT>\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001BIND>\r\n [1] F1_CONTEXT:TEXT/IN=!F1_CONTEXT\r\n$DEBUG=!DEBUG\r\n-$DB_ACCESS=DEBUG\r\n\r\n [2] APP_CONTEXT:TEXT/IN=null\r\n</PLSQL\u0001BIND>\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5e3209fa\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5e3209fa executed\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@723e8758\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001RECURSIVE\u0001STMT>\r\nbegin IFSAPP.Client_SYS.Get_Trace(:1 ); end;\r\n</PLSQL\u0001RECURSIVE\u0001STMT>\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001RECURSIVE\u0001BIND>\r\n [1] TEXT:LONG_TEXT/IN_OUT=null\r\n</PLSQL\u0001RECURSIVE\u0001BIND>\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@723e8758\r\n11:36:43,325 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@723e8758' on request 'c8350aa8-aaed-4325-b0f8-3ebb1248c237'\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@723e8758 executed\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndStatement.closePlsqlResultLog(): \r\n<PLSQL\u0001RECURSIVE\u0001RESULT>\r\n [1] TEXT:LONG_TEXT/IN_OUT=null\r\n</PLSQL\u0001RECURSIVE\u0001RESULT>\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@723e8758\r\n11:36:43,325 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@723e8758' on request 'c8350aa8-aaed-4325-b0f8-3ebb1248c237'\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5e3209fa\r\n11:36:43,325 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5e3209fa' on request 'c8350aa8-aaed-4325-b0f8-3ebb1248c237'\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Finished initialization of connection\r\n\t{nr=45 USED auto-commit=false key=-15 timestamp=-15 usedByRequest=true SID=486 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-33924 clientSessionId=5090bf1f-ad2f-4f78-803c-e928636fd61f/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false}\r\n11:36:43,325 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): Calling AccessPlsql.invoke\r\n11:36:43,325 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): PlsqlProxy Request Body\r\n11:36:43,325 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): PLSQL_INVOCATION (Fnd_View) Create  identity=d719f215-1b81-4947-bb9b-688ab5044c05\r\n   SYSTEM_NAME/Q (Alpha) Non_Existent\r\n   TRANSACTION_ID/Q (Text) Non_Existent\r\n   USER_SESSION/Q (Boolean) Non_Existent\r\n   COMMANDS/* (Array (DIRTY)) (1 elements):\r\n      1:COMMAND (Fnd_View) Create element of PLSQL_INVOCATION.COMMANDS  identity=2c8a7cb8-b4f7-4063-878e-fadf0506759e\r\n         BIND_VARIABLES/Q (Binary) = 308 bytes: !\r\n0:$p0:DEC/OUT=0\r\n1:$p1:DEC/OUT=0\r\n2:$p2:DEC/OUT=0\r\n3:$p3:DEC/OUT=0\r\n4:$p4:DEC/OUT=0\r\n5:$p5:DEC/OUT=0\r\n6:$p6:DEC/OUT=0\r\n7:$p7:DEC/OUT=0\r\n8:$p8:DEC/OUT=0\r\n9:$p9:LPA/IN=BP10111\r\n10:$p10:DEC/IN_OUT=0\r\n11:$p11:DEC/IN_OUT=0\r\n12:$p12:DEC/IN_OUT=0\r\n13:$p13:DEC/IN_OUT=0\r\n14:$p14:DEC/IN_OUT=0\r\n15:$p15:DEC/IN_OUT=0\r\n16:$p16:DEC/IN_OUT=0\r\n17:$p17:DEC/IN_OUT=0\r\n18:$p18:DEC/IN_OUT=0\r\n19:$p19:DEC/IN_OUT=0\r\n\r\n         COUNT_ROWS/Q (Boolean) Non_Existent\r\n         CURSOR_ID/Q (Text) Non_Existent\r\n         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Order_.dllNamespace: Ifs.Application.Order_Object: frmCustomerOrderMethod: GetOrderTotals\r\n         DEBUG_BIND_INFO/Q (Alpha) = i_hWndFrame.frmCustomerOrder.nOrdTotBase,i_hWndFrame.frmCustomerOrder.nOrdTotSales,i_hWndFrame.frmCustomerOrder.nOrdTotWeight,i_hWndFrame.frmCustomerOrder.nOrdTotQnty,i_hWndFrame.frmCustomerOrder.nOrdTotCost,i_hWndFrame.frmCustomerOrder.nOrdTotContrib,i_hWndFrame.frmCustomerOrder.nOrdTotTaxAmt,i_hWndFrame.frmCustomerOrder.nOrdTotGrossAmt,i_hWndFrame.frmCustomerOrder.nOrdTotDiscAmt,i_hWndFrame.frmCustomerOrder.sOrderNo,i_hWndFrame.frmCustomerOrder.nOrderGrossWeight,i_hWndFrame.frmCustomerOrder.nCharges,i_hWndFrame.frmCustomerOrder.nTotalContributionAmount,i_hWndFrame.frmCustomerOrder.nTotalCostAmount,i_hWndFrame.frmCustomerOrder.nTotalChargeBase,i_hWndFrame.frmCustomerOrder.nTotalCharge,i_hWndFrame.frmCustomerOrder.nTotalChargeGross,i_hWndFrame.frmCustomerOrder.nTotalChaTax,i_hWndFrame.frmCustomerOrder.nTotalFreightGross,i_hWndFrame.frmCustomerOrder.nTotalFreightVolume\r\n         DEBUG_CONTEXT_NAME/Q (Alpha) = frmCustomerOrder\r\n         GENERATE_OUTER_BLOCK/Q (Boolean) = true\r\n         MAX_ROWS/Q (Integer) = 103\r\n         PARTIAL_RESULT/Q (Boolean) Non_Existent\r\n         RESULT/Q (Binary) Non_Existent\r\n         RESULT_RECORD_TYPE/Q (Alpha) Null\r\n         ROW_COUNT/Q (Integer) Non_Existent\r\n         SELECT_COLUMNS/Q (Alpha) Non_Existent\r\n         SKIP_ROWS/Q (Integer) Non_Existent\r\n         STATEMENT/Q (Alpha) = BEGIN \r\nBEGIN &AO.Customer_Order_API.Get_Ord_Line_Totals__(:p0                                      ,:p1                                       ,:p2                                        ,:p3                                      ,:p4                                      ,:p5                                         ,:p6                                        ,:p7                                          ,:p8                                         ,:p9                                   );:p10                                            := &AO.Customer_Order_API.Get_Total_Gross_Weight__(:p9                                   ); :p11                                   := &AO.Customer_Order_API.Exist_Charges__(:p9                                   ); :p12                                                   := &AO.Customer_Order_API.Get_Total_Contribution(:p9                                   ); :p13                                           := &AO.Customer_Order_API.Get_Total_Cost(:p9                                   ); :p14                                           := &AO.Customer_Order_API.Get_Total_Base_Charge__(:p9                                   ); :p15                                       := &AO.Customer_Order_API.Get_Total_Sale_Charge__(:p9                                   ); :p16                                            := &AO.Customer_Order_API.Get_Total_Sale_Charge_Gross__(:p9                                   ); :p17                                       := &AO.Customer_Order_API.Get_Tot_Charge_Sale_Tax_Amt(:p9                                   ); :p18                                             := &AO.Customer_Order_API.Get_Adj_Weight_In_Charges(:p9                                   ); :p19                                              := &AO.Customer_Order_API.Get_Adj_Volume_In_Charges(:p9                                   ); END; \r\nEXCEPTION \r\nWHEN &AO.Error_SYS.Err_Security_Checkpoint THEN \r\nraise; \r\nWHEN OTHERS THEN \r\nrollback; \r\nraise; \r\nEND;\r\n         PROPAGATED_VARIABLES/Q (Array) Non_Existent\r\n\r\n11:36:43,325 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(): Invocation input: onlySelect=false oneCmdOnly=false returnRefCursor=false\r\n11:36:43,325 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(): PLSQL_INVOCATION (Fnd_View) Create  identity=d719f215-1b81-4947-bb9b-688ab5044c05\r\n   SYSTEM_NAME/Q (Alpha) Non_Existent\r\n   TRANSACTION_ID/Q (Text) Non_Existent\r\n   USER_SESSION/Q (Boolean) Non_Existent\r\n   COMMANDS/* (Array (DIRTY)) (1 elements):\r\n      1:COMMAND (Fnd_View) Create element of PLSQL_INVOCATION.COMMANDS  identity=2c8a7cb8-b4f7-4063-878e-fadf0506759e\r\n         BIND_VARIABLES/Q (Binary) = 308 bytes: !\r\n0:$p0:DEC/OUT=0\r\n1:$p1:DEC/OUT=0\r\n2:$p2:DEC/OUT=0\r\n3:$p3:DEC/OUT=0\r\n4:$p4:DEC/OUT=0\r\n5:$p5:DEC/OUT=0\r\n6:$p6:DEC/OUT=0\r\n7:$p7:DEC/OUT=0\r\n8:$p8:DEC/OUT=0\r\n9:$p9:LPA/IN=BP10111\r\n10:$p10:DEC/IN_OUT=0\r\n11:$p11:DEC/IN_OUT=0\r\n12:$p12:DEC/IN_OUT=0\r\n13:$p13:DEC/IN_OUT=0\r\n14:$p14:DEC/IN_OUT=0\r\n15:$p15:DEC/IN_OUT=0\r\n16:$p16:DEC/IN_OUT=0\r\n17:$p17:DEC/IN_OUT=0\r\n18:$p18:DEC/IN_OUT=0\r\n19:$p19:DEC/IN_OUT=0\r\n\r\n         COUNT_ROWS/Q (Boolean) Non_Existent\r\n         CURSOR_ID/Q (Text) Non_Existent\r\n         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Order_.dllNamespace: Ifs.Application.Order_Object: frmCustomerOrderMethod: GetOrderTotals\r\n         DEBUG_BIND_INFO/Q (Alpha) = i_hWndFrame.frmCustomerOrder.nOrdTotBase,i_hWndFrame.frmCustomerOrder.nOrdTotSales,i_hWndFrame.frmCustomerOrder.nOrdTotWeight,i_hWndFrame.frmCustomerOrder.nOrdTotQnty,i_hWndFrame.frmCustomerOrder.nOrdTotCost,i_hWndFrame.frmCustomerOrder.nOrdTotContrib,i_hWndFrame.frmCustomerOrder.nOrdTotTaxAmt,i_hWndFrame.frmCustomerOrder.nOrdTotGrossAmt,i_hWndFrame.frmCustomerOrder.nOrdTotDiscAmt,i_hWndFrame.frmCustomerOrder.sOrderNo,i_hWndFrame.frmCustomerOrder.nOrderGrossWeight,i_hWndFrame.frmCustomerOrder.nCharges,i_hWndFrame.frmCustomerOrder.nTotalContributionAmount,i_hWndFrame.frmCustomerOrder.nTotalCostAmount,i_hWndFrame.frmCustomerOrder.nTotalChargeBase,i_hWndFrame.frmCustomerOrder.nTotalCharge,i_hWndFrame.frmCustomerOrder.nTotalChargeGross,i_hWndFrame.frmCustomerOrder.nTotalChaTax,i_hWndFrame.frmCustomerOrder.nTotalFreightGross,i_hWndFrame.frmCustomerOrder.nTotalFreightVolume\r\n         DEBUG_CONTEXT_NAME/Q (Alpha) = frmCustomerOrder\r\n         GENERATE_OUTER_BLOCK/Q (Boolean) = true\r\n         MAX_ROWS/Q (Integer) = 103\r\n         PARTIAL_RESULT/Q (Boolean) Non_Existent\r\n         RESULT/Q (Binary) Non_Existent\r\n         RESULT_RECORD_TYPE/Q (Alpha) Null\r\n         ROW_COUNT/Q (Integer) Non_Existent\r\n         SELECT_COLUMNS/Q (Alpha) Non_Existent\r\n         SKIP_ROWS/Q (Integer) Non_Existent\r\n         STATEMENT/Q (Alpha) = BEGIN \r\nBEGIN &AO.Customer_Order_API.Get_Ord_Line_Totals__(:p0                                      ,:p1                                       ,:p2                                        ,:p3                                      ,:p4                                      ,:p5                                         ,:p6                                        ,:p7                                          ,:p8                                         ,:p9                                   );:p10                                            := &AO.Customer_Order_API.Get_Total_Gross_Weight__(:p9                                   ); :p11                                   := &AO.Customer_Order_API.Exist_Charges__(:p9                                   ); :p12                                                   := &AO.Customer_Order_API.Get_Total_Contribution(:p9                                   ); :p13                                           := &AO.Customer_Order_API.Get_Total_Cost(:p9                                   ); :p14                                           := &AO.Customer_Order_API.Get_Total_Base_Charge__(:p9                                   ); :p15                                       := &AO.Customer_Order_API.Get_Total_Sale_Charge__(:p9                                   ); :p16                                            := &AO.Customer_Order_API.Get_Total_Sale_Charge_Gross__(:p9                                   ); :p17                                       := &AO.Customer_Order_API.Get_Tot_Charge_Sale_Tax_Amt(:p9                                   ); :p18                                             := &AO.Customer_Order_API.Get_Adj_Weight_In_Charges(:p9                                   ); :p19                                              := &AO.Customer_Order_API.Get_Adj_Volume_In_Charges(:p9                                   ); END; \r\nEXCEPTION \r\nWHEN &AO.Error_SYS.Err_Security_Checkpoint THEN \r\nraise; \r\nWHEN OTHERS THEN \r\nrollback; \r\nraise; \r\nEND;\r\n         PROPAGATED_VARIABLES/Q (Array) Non_Existent\r\n\r\n11:36:43,325 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationContext.<init>(): Called FndServerContext.setLanguageAndLocale(): language=en locale=en_US\r\n11:36:43,325 ??? ifs.fnd.service.SQLRecognizer.<init>(): Rocognizing SQL: 'BEGIN \r\nBEGIN IFSAPP.Customer_Order_API.Get_Ord_Line_Totals__(:p0                                      ,:p1                                       ,:p2                                        ,:p3                                      ,:p4                                      ,:p5                                         ,:p6                                        ,:p7                                          ,:p8                                         ,:p9                                   );:p10                                            := IFSAPP.Customer_Order_API.Get_Total_Gross_Weight__(:p9                                   ); :p11                                   := IFSAPP.Customer_Order_API.Exist_Charges__(:p9                                   ); :p12                                                   := IFSAPP.Customer_Order_API.Get_Total_Contribution(:p9                                   ); :p13                                           := IFSAPP.Customer_Order_API.Get_Total_Cost(:p9                                   ); :p14                                           := IFSAPP.Customer_Order_API.Get_Total_Base_Charge__(:p9                                   ); :p15                                       := IFSAPP.Customer_Order_API.Get_Total_Sale_Charge__(:p9                                   ); :p16                                            := IFSAPP.Customer_Order_API.Get_Total_Sale_Charge_Gross__(:p9                                   ); :p17                                       := IFSAPP.Customer_Order_API.Get_Tot_Charge_Sale_Tax_Amt(:p9                                   ); :p18                                             := IFSAPP.Customer_Order_API.Get_Adj_Weight_In_Charges(:p9                                   ); :p19                                              := IFSAPP.Customer_Order_API.Get_Adj_Volume_In_Charges(:p9                                   ); END; \r\nEXCEPTION \r\nWHEN IFSAPP.Error_SYS.Err_Security_Checkpoint THEN \r\nraise; \r\nWHEN OTHERS THEN \r\nrollback; \r\nraise; \r\nEND;'\r\n11:36:43,325 ??? ifs.fnd.service.SQLRecognizer.getSQLText(): SQL text: BEGIN \r\nBEGIN IFSAPP.Customer_Order_API.Get_Ord_Line_Totals__(?                                      ,?                                       ,?                                        ,?                                      ,?                                      ,?                                         ,?                                        ,?                                          ,?                                         ,?                                   );?                                            := IFSAPP.Customer_Order_API.Get_Total_Gross_Weight__(?                                   ); ?                                   := IFSAPP.Customer_Order_API.Exist_Charges__(?                                   ); ?                                                   := IFSAPP.Customer_Order_API.Get_Total_Contribution(?                                   ); ?                                           := IFSAPP.Customer_Order_API.Get_Total_Cost(?                                   ); ?                                           := IFSAPP.Customer_Order_API.Get_Total_Base_Charge__(?                                   ); ?                                       := IFSAPP.Customer_Order_API.Get_Total_Sale_Charge__(?                                   ); ?                                            := IFSAPP.Customer_Order_API.Get_Total_Sale_Charge_Gross__(?                                   ); ?                                       := IFSAPP.Customer_Order_API.Get_Tot_Charge_Sale_Tax_Amt(?                                   ); ?                                             := IFSAPP.Customer_Order_API.Get_Adj_Weight_In_Charges(?                                   ); ?                                              := IFSAPP.Customer_Order_API.Get_Adj_Volume_In_Charges(?                                   ); END; \r\nEXCEPTION \r\nWHEN IFSAPP.Error_SYS.Err_Security_Checkpoint THEN \r\nraise; \r\nWHEN OTHERS THEN \r\nrollback; \r\nraise; \r\nEND;\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1f087e1e\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001STMT>\r\ndeclare\r\n p0$_ number := null;\r\n p1$_ number := null;\r\n p2$_ number := null;\r\n p3$_ number := null;\r\n p4$_ number := null;\r\n p5$_ number := null;\r\n p6$_ number := null;\r\n p7$_ number := null;\r\n p8$_ number := null;\r\n p9$_ varchar2(32767) := :1 ;\r\n p10$_ number := :2 ;\r\n p11$_ number := :3 ;\r\n p12$_ number := :4 ;\r\n p13$_ number := :5 ;\r\n p14$_ number := :6 ;\r\n p15$_ number := :7 ;\r\n p16$_ number := :8 ;\r\n p17$_ number := :9 ;\r\n p18$_ number := :10 ;\r\n p19$_ number := :11 ;\r\nbegin\r\nBEGIN \r\nBEGIN IFSAPP.Customer_Order_API.Get_Ord_Line_Totals__(p0$_                                      ,p1$_                                       ,p2$_                                        ,p3$_                                      ,p4$_                                      ,p5$_                                         ,p6$_                                        ,p7$_                                          ,p8$_                                         ,p9$_                                   );p10$_                                            := IFSAPP.Customer_Order_API.Get_Total_Gross_Weight__(p9$_                                   ); p11$_                                   := IFSAPP.Customer_Order_API.Exist_Charges__(p9$_                                   ); p12$_                                                   := IFSAPP.Customer_Order_API.Get_Total_Contribution(p9$_                                   ); p13$_                                           := IFSAPP.Customer_Order_API.Get_Total_Cost(p9$_                                   ); p14$_                                           := IFSAPP.Customer_Order_API.Get_Total_Base_Charge__(p9$_                                   ); p15$_                                       := IFSAPP.Customer_Order_API.Get_Total_Sale_Charge__(p9$_                                   ); p16$_                                            := IFSAPP.Customer_Order_API.Get_Total_Sale_Charge_Gross__(p9$_                                   ); p17$_                                       := IFSAPP.Customer_Order_API.Get_Tot_Charge_Sale_Tax_Amt(p9$_                                   ); p18$_                                             := IFSAPP.Customer_Order_API.Get_Adj_Weight_In_Charges(p9$_                                   ); p19$_                                              := IFSAPP.Customer_Order_API.Get_Adj_Volume_In_Charges(p9$_                                   ); END; \r\nEXCEPTION \r\nWHEN IFSAPP.Error_SYS.Err_Security_Checkpoint THEN \r\nraise; \r\nWHEN OTHERS THEN \r\nrollback; \r\nraise; \r\nEND;\r\n :12  := p0$_;\r\n :13  := p1$_;\r\n :14  := p2$_;\r\n :15  := p3$_;\r\n :16  := p4$_;\r\n :17  := p5$_;\r\n :18  := p6$_;\r\n :19  := p7$_;\r\n :20  := p8$_;\r\n :21  := p10$_;\r\n :22  := p11$_;\r\n :23  := p12$_;\r\n :24  := p13$_;\r\n :25  := p14$_;\r\n :26  := p15$_;\r\n :27  := p16$_;\r\n :28  := p17$_;\r\n :29  := p18$_;\r\n :30  := p19$_;\r\nend;\r\n</PLSQL\u0001STMT>\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001BIND>\r\n [1] p9:TEXT/IN=BP10111\r\n [2] p10:DECIMAL/IN=0\r\n [3] p11:DECIMAL/IN=0\r\n [4] p12:DECIMAL/IN=0\r\n [5] p13:DECIMAL/IN=0\r\n [6] p14:DECIMAL/IN=0\r\n [7] p15:DECIMAL/IN=0\r\n [8] p16:DECIMAL/IN=0\r\n [9] p17:DECIMAL/IN=0\r\n [10] p18:DECIMAL/IN=0\r\n [11] p19:DECIMAL/IN=0\r\n [12] p0:DECIMAL/OUT=null\r\n [13] p1:DECIMAL/OUT=null\r\n [14] p2:DECIMAL/OUT=null\r\n [15] p3:DECIMAL/OUT=null\r\n [16] p4:DECIMAL/OUT=null\r\n [17] p5:DECIMAL/OUT=null\r\n [18] p6:DECIMAL/OUT=null\r\n [19] p7:DECIMAL/OUT=null\r\n [20] p8:DECIMAL/OUT=null\r\n [21] p10:DECIMAL/OUT=null\r\n [22] p11:DECIMAL/OUT=null\r\n [23] p12:DECIMAL/OUT=null\r\n [24] p13:DECIMAL/OUT=null\r\n [25] p14:DECIMAL/OUT=null\r\n [26] p15:DECIMAL/OUT=null\r\n [27] p16:DECIMAL/OUT=null\r\n [28] p17:DECIMAL/OUT=null\r\n [29] p18:DECIMAL/OUT=null\r\n [30] p19:DECIMAL/OUT=null\r\n</PLSQL\u0001BIND>\r\n11:36:43,325 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1f087e1e\r\n11:36:43,325 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1f087e1e' on request 'c8350aa8-aaed-4325-b0f8-3ebb1248c237'\r\n11:36:43,466 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1f087e1e executed\r\n11:36:43,466 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@42c9824d\r\n11:36:43,466 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001RECURSIVE\u0001STMT>\r\nbegin IFSAPP.Client_SYS.Get_Trace(:1 ); end;\r\n</PLSQL\u0001RECURSIVE\u0001STMT>\r\n11:36:43,466 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001RECURSIVE\u0001BIND>\r\n [1] TEXT:LONG_TEXT/IN_OUT=null\r\n</PLSQL\u0001RECURSIVE\u0001BIND>\r\n11:36:43,466 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@42c9824d\r\n11:36:43,466 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@42c9824d' on request 'c8350aa8-aaed-4325-b0f8-3ebb1248c237'\r\n11:36:43,466 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@42c9824d executed\r\n11:36:43,466 ??? ifs.fnd.sf.storage.FndStatement.closePlsqlResultLog(): \r\n<PLSQL\u0001RECURSIVE\u0001RESULT>\r\n [1] TEXT:LONG_TEXT/IN_OUT=null\r\n</PLSQL\u0001RECURSIVE\u0001RESULT>\r\n11:36:43,466 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@42c9824d\r\n11:36:43,466 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@42c9824d' on request 'c8350aa8-aaed-4325-b0f8-3ebb1248c237'\r\n11:36:43,466 ??? ifs.fnd.sf.storage.FndStatement.closePlsqlResultLog(): \r\n<PLSQL\u0001RESULT>\r\n [12] p0:DECIMAL/OUT=3622502.25\r\n [13] p1:DECIMAL/OUT=7524425\r\n [14] p2:DECIMAL/OUT=0\r\n [15] p3:DECIMAL/OUT=0\r\n [16] p4:DECIMAL/OUT=1887000\r\n [17] p5:DECIMAL/OUT=1735502.25\r\n [18] p6:DECIMAL/OUT=0\r\n [19] p7:DECIMAL/OUT=7524425\r\n [20] p8:DECIMAL/OUT=0\r\n [21] p10:DECIMAL/OUT=370\r\n [22] p11:DECIMAL/OUT=0\r\n [23] p12:DECIMAL/OUT=1735502.25\r\n [24] p13:DECIMAL/OUT=1887000\r\n [25] p14:DECIMAL/OUT=0\r\n [26] p15:DECIMAL/OUT=0\r\n [27] p16:DECIMAL/OUT=0\r\n [28] p17:DECIMAL/OUT=0\r\n [29] p18:DECIMAL/OUT=null\r\n [30] p19:DECIMAL/OUT=null\r\n</PLSQL\u0001RESULT>\r\n11:36:43,466 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.call(): Statement performed.\r\n11:36:43,466 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1f087e1e\r\n11:36:43,466 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1f087e1e' on request 'c8350aa8-aaed-4325-b0f8-3ebb1248c237'\r\n11:36:43,482 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@cfa3e37\r\n11:36:43,482 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001STMT>\r\nbegin IFSAPP.Fnd_Context_SYS.End_Request_(:1 , :2 , :3 ); end;\r\n</PLSQL\u0001STMT>\r\n11:36:43,482 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001BIND>\r\n [1] TRANSACTION_ID:TEXT/OUT=null\r\n [2] TRACE:LONG_TEXT/OUT=null\r\n [3] ERROR_MSG:LONG_TEXT/OUT=null\r\n</PLSQL\u0001BIND>\r\n11:36:43,482 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@cfa3e37\r\n11:36:43,482 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@cfa3e37 executed\r\n11:36:43,482 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@cfa3e37\r\n11:36:43,482 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@cfa3e37' on request 'c8350aa8-aaed-4325-b0f8-3ebb1248c237'\r\n11:36:43,482 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PlsqlProxy Response Header\r\n11:36:43,482 ??? ifs.fnd.base.FndDebug$Instance.debugContext(): \r\n   1:$FND_CONTEXT=\r\n      1:$STATUS:T = DONE\r\n      2:$SERIALIZATION_TARGET:T = CLIENT\r\n      3:$JAVA_LOCALE:T = en_US\r\n      4:$DIRECTORY_ID:T = IFSAPP\r\n      5:$EXTERNAL_BODY_TYPE:I = 0\r\n      6:$STORAGE_TYPE:T = STANDARD_STORAGE\r\n      7:$IMPLEMENTATION_MODE:I = 3\r\n      8:$FND_CONTEXT=\r\n         1:$CLIENT_ID = SYJUPL2-WIA-CONSOLE-33924\r\n         2:$REQUEST_ID = c8350aa8-aaed-4325-b0f8-3ebb1248c237\r\n         3:$LOCALE = en-US\r\n         4:$ENCODE_BINARY_VALUE = FALSE\r\n         5:$LANGUAGE:T = en\r\n         6:$DEBUG=\r\n            1:$CALL_SEQUENCE = DEBUG\r\n            2:$DB_ACCESS = DEBUG\r\n            3:$SKELETON_ARGUMENTS = DEBUG\r\n            4:$STUB_ARGUMENTS = DEBUG\r\n            5:$APPLICATION_CODE = DEBUG\r\n            6:$OUTPUT =             11:36:43,310 ??? ifs ......[Size=29744]\r\n\r\n         7:$COUNTERS=\r\n            1:$SQL_STATEMENT:I = 5\r\n            2:$SQL_FETCH:I = 0\r\n            3:$CORBA_CALL:I = -1\r\n      9:$APP_CONTEXT=\r\n   2:$FND_SERVER_CONTEXT=\r\n      1:$CONNECTION_MGR:T = ifs.fnd.sf.storage.FndTaggedConnectionManager@1ffe54bd\r\n      2:$CONNECTION_LIST:T = [ifs.fnd.sf.storage.FndTaggedConnection@4e427bc1]\r\n      3:$INSIDE_ACTIVITY:B = false\r\n      4:$BASE_SERVER_METHOD_SECURITY_ENABLED:B = true\r\n      5:$SUPPORTED_CAPABILITIES:T = [LPTEXT]\r\n      6:$INIT_FND_SESSION_COUNT:I = 0\r\n      7:$INIT_FND_SESSION_DB_COUNT:I = 0\r\n      8:$VALIDATING_REAUTHENTICATION_RESPONSE:B = false\r\n   3:$FND_J2EE_CONTEXT=\r\n      1:$INSIDE_FND_ENTITY_BEAN:B = false\r\n      2:$DEBUGGER_ROLE_GRANTED:B = true\r\n      3:$CURRENT_METHODS:T = []\r\n\r\n11:36:43,482 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PlsqlProxy Response Body\r\n11:36:43,482 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PLSQL_INVOCATION (Fnd_View) (DIRTY) Create  identity=d719f215-1b81-4947-bb9b-688ab5044c05\r\n   SYSTEM_NAME/Q (Alpha) Non_Existent\r\n   TRANSACTION_ID/* (Text (DIRTY)) Null\r\n   USER_SESSION/Q (Boolean) Non_Existent\r\n   COMMANDS/* (Array (DIRTY)) (1 elements):\r\n      1:COMMAND (Fnd_View) (DIRTY) Create element of PLSQL_INVOCATION.COMMANDS  identity=2c8a7cb8-b4f7-4063-878e-fadf0506759e\r\n         BIND_VARIABLES/* (Binary (DIRTY)) = 329 bytes: !\r\n0:$p0:DEC/OUT=3622502.25\r\n1:$p1:DEC/OUT=7524425\r\n2:$p2:DEC/OUT=0\r\n3:$p3:DEC/OUT=0\r\n4:$p4:DEC/OUT=1887000\r\n5:$p5:DEC/OUT=1735502.25\r\n6:$p6:DEC/OUT=0\r\n7:$p7:DEC/OUT=7524425\r\n8:$p8:DEC/OUT=0\r\n9:$p9:LPA/IN=BP10111\r\n10:$p10:DEC/OUT=370\r\n11:$p11:DEC/OUT=0\r\n12:$p12:DEC/OUT=1735502.25\r\n13:$p13:DEC/OUT=1887000\r\n14:$p14:DEC/OUT=0\r\n15:$p15:DEC/OUT=0\r\n16:$p16:DEC/OUT=0\r\n17:$p17:DEC/OUT=0\r\n18:$p18:DEC/OUT*\r\n19:$p19:DEC/OUT*\r\n\r\n         COUNT_ROWS/Q (Boolean) Non_Existent\r\n         CURSOR_ID/Q (Text) Non_Existent\r\n         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Order_.dllNamespace: Ifs.Application.Order_Object: frmCustomerOrderMethod: GetOrderTotals\r\n         DEBUG_BIND_INFO/Q (Alpha) = i_hWndFrame.frmCustomerOrder.nOrdTotBase,i_hWndFrame.frmCustomerOrder.nOrdTotSales,i_hWndFrame.frmCustomerOrder.nOrdTotWeight,i_hWndFrame.frmCustomerOrder.nOrdTotQnty,i_hWndFrame.frmCustomerOrder.nOrdTotCost,i_hWndFrame.frmCustomerOrder.nOrdTotContrib,i_hWndFrame.frmCustomerOrder.nOrdTotTaxAmt,i_hWndFrame.frmCustomerOrder.nOrdTotGrossAmt,i_hWndFrame.frmCustomerOrder.nOrdTotDiscAmt,i_hWndFrame.frmCustomerOrder.sOrderNo,i_hWndFrame.frmCustomerOrder.nOrderGrossWeight,i_hWndFrame.frmCustomerOrder.nCharges,i_hWndFrame.frmCustomerOrder.nTotalContributionAmount,i_hWndFrame.frmCustomerOrder.nTotalCostAmount,i_hWndFrame.frmCustomerOrder.nTotalChargeBase,i_hWndFrame.frmCustomerOrder.nTotalCharge,i_hWndFrame.frmCustomerOrder.nTotalChargeGross,i_hWndFrame.frmCustomerOrder.nTotalChaTax,i_hWndFrame.frmCustomerOrder.nTotalFreightGross,i_hWndFrame.frmCustomerOrder.nTotalFreightVolume\r\n         DEBUG_CONTEXT_NAME/Q (Alpha) = frmCustomerOrder\r\n         GENERATE_OUTER_BLOCK/Q (Boolean) = true\r\n         MAX_ROWS/Q (Integer) = 103\r\n         PARTIAL_RESULT/Q (Boolean) Non_Existent\r\n         RESULT/Q (Binary) Non_Existent\r\n         RESULT_RECORD_TYPE/Q (Alpha) Null\r\n         ROW_COUNT/Q (Integer) Non_Existent\r\n         SELECT_COLUMNS/Q (Alpha) Non_Existent\r\n         SKIP_ROWS/Q (Integer) Non_Existent\r\n         STATEMENT/Q (Alpha) Non_Existent\r\n         PROPAGATED_VARIABLES/Q (Array) Non_Existent\r\n\r\n11:36:43,482 ??? ifs.fnd.sf.admin.FndProcessList.debug(): Registered abortable processes: {701829e1-bd93-4a1c-9893-cb0eab27a2cf=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@75a3dae0], 2326db39-4aa8-49ad-91f8-74b539b050ba=[], b433c43a-1095-42fb-a01e-23d202bf81b1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@4e2e4461], 1b2b4663-6c4b-491d-9803-c3f26f40188a=[], 6a10a379-78c4-4745-9008-6a1f7068fe31=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2093afa0], ac3be920-ba38-4b1c-ab30-3d3ccb6f0664=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2493241d], cf54cb03-c274-4916-af06-25e6ca34be1f=[], 68c6f088-b640-4df3-90e8-be04b3922599=[], 3a387445-ca2b-4c47-8145-be1f74ad45c4=[], 148675fc-9bf4-4b99-9c85-09237a698d8b=[], 56ad5863-ad77-4ff5-acbe-abc623ef21b4=[], b57cf0f6-9361-4ff1-8884-158609ecd0ec=[], 23ac2c5d-1b43-4f31-b3b2-5072156674a6=[], 5a698302-663d-4205-9747-fe460fdafac3=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@49ffb198], 2178ee37-4800-48db-b315-72878060a3d2=[], 7494a504-d31c-4af7-b003-4a37d150d684=[], d137ab42-ba9a-4b3a-9270-5ca397ab5413=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@383796ee], e94b12f6-8b5d-48f0-8578-360f510be1c8=[], 308c0783-fb59-4bad-8f74-26a4108fa20b=[], ba005d84-ec98-4a32-a034-1de8bacb51f4=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6fe2eade], e5cbe1df-2a66-41e5-b6f6-ad4cc63c86ab=[], b7b79402-d5a9-4b88-9700-fddcde7fbce1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@53a83fd2], 5fdc2c3b-d45d-40d0-9dac-e0e82a8b26bc=[], 220f0791-2520-41c8-8ad9-413f1f002e03=[], 7c9465bd-3fe8-4628-b925-39e5b0022f54=[], fc08fb5b-a713-4876-a189-0cf66380fbff=[], ecdceaae-8683-4e7a-bef7-c952005f1e3a=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5f2d022c], 66417d72-4433-4b17-82ed-a5d0893911f1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@631c48e4], af52994d-e185-40ad-9f6a-965228cc321d=[], c2c4c929-72d3-4799-8d0b-4ebbf0c15629=[], 6d904282-c11b-4833-8bf3-23d8374b9038=[], 56e6225a-f576-4eac-a252-72e45a7376c9=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6e7b64a8], f29c0020-adb7-4c70-8cd1-0d8d739404b9=[], 47fe2c62-719d-4fc5-91c7-b1c27b5168a2=[], abda7f03-b2e0-4f8f-885e-96ada15e232a=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@575b466e], 3c9af4b2-1b53-4756-a5f6-f6f1ab42e24f=[], 82450b03-cb3f-488f-8bd4-78d92ebe2d09=[], f842b1f4-d8ce-43f7-84ad-880833f35a63=[], 38a58615-feda-43d5-9924-0ccc799d3419=[], 273991c3-c96b-4107-a567-695b6cd48a09=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@53f506b6]}\r\n11:36:43,482 ??? ifs.fnd.sf.storage.FndConnectionList.remove(): Removing connection: ifs.fnd.sf.storage.FndTaggedConnection@4e427bc1 REMOVED\r\n11:36:43,482 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.returnConnectionToPool(): Finished request in 172 ms.\r\n11:36:43,482 ??? ifs.fnd.plsql.pool.TaggedConnectionPoolManager.returnConnection(): Returning connection to pool: {nr=45 USED auto-commit=false key=-172 timestamp=-172 SID=486 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp}\r\n11:36:43,482 ??? ifs.fnd.plsql.pool.TaggedConnection.returnToPool(): Entered state transition method: \r\n11:36:43,482 ??? ifs.fnd.plsql.pool.TaggedConnection.returnToPool(): Returned connection to pool: \r\n\t{nr=45 INITIALIZED auto-commit=false key=0 timestamp=0 usedByRequest=false SID=486 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-33924 clientSessionId=null securityCheckpointAuth=null refreshSessionRoles=false} inUse=false language=en-US transactionId=null AUDSID=299103091\r\n\t\tInitializedSession(nr=45):  close=86399828 (2021-08-03 11:36:43)\r\n\t\t\r\n"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "COUNTERS",
+                            "type": "COUNTERS",
+                            "status": "Modify",
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "SQL_STATEMENT",
+                                    "type": "I",
+                                    "status": "*",
+                                    "value": "5"
+                                },
+                                {
+                                    "name": "SQL_FETCH",
+                                    "type": "I",
+                                    "status": "Q",
+                                    "value": "0"
+                                },
+                                {
+                                    "name": "CORBA_CALL",
+                                    "type": "I",
+                                    "status": "Q",
+                                    "value": "-1"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "APP_CONTEXT",
+                    "buffer": true,
+                    "value": []
+                }
+            ],
+            [
+                {
+                    "name": "PLSQL_INVOCATION",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "delimiter": 14,
+                            "name": "DATA",
+                            "type": "PLSQL_INVOCATION",
+                            "status": "Create",
+                            "value": "d719f215-1b81-4947-bb9b-688ab5044c05"
+                        },
+                        {
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "PLSQL_SERVER.COMMAND",
+                                            "status": "Create",
+                                            "value": "2c8a7cb8-b4f7-4063-878e-fadf0506759e"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "status": "*",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "p0",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "3622502.25"
+                                                        },
+                                                        {
+                                                            "name": "p1",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "7524425"
+                                                        },
+                                                        {
+                                                            "name": "p2",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p3",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p4",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "1887000"
+                                                        },
+                                                        {
+                                                            "name": "p5",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "1735502.25"
+                                                        },
+                                                        {
+                                                            "name": "p6",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p7",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "7524425"
+                                                        },
+                                                        {
+                                                            "name": "p8",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p9",
+                                                            "type": "LPA",
+                                                            "status": "IN",
+                                                            "value": "BP10111"
+                                                        },
+                                                        {
+                                                            "name": "p10",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "370"
+                                                        },
+                                                        {
+                                                            "name": "p11",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p12",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "1735502.25"
+                                                        },
+                                                        {
+                                                            "name": "p13",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "1887000"
+                                                        },
+                                                        {
+                                                            "name": "p14",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p15",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p16",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "name": "p17",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "value": "0"
+                                                        },
+                                                        {
+                                                            "delimiter": 20,
+                                                            "name": "p18",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "isNull": true,
+                                                            "value": null
+                                                        },
+                                                        {
+                                                            "delimiter": 20,
+                                                            "name": "p19",
+                                                            "type": "DEC",
+                                                            "status": "OUT",
+                                                            "isNull": true,
+                                                            "value": null
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "MAX_ROWS",
+                                                    "type": "I",
+                                                    "status": "Q",
+                                                    "value": "103"
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "isNull": true,
+                                                    "value": null
+                                                },
+                                                {
+                                                    "name": "GENERATE_OUTER_BLOCK",
+                                                    "type": "B",
+                                                    "status": "Q",
+                                                    "value": "TRUE"
+                                                },
+                                                {
+                                                    "name": "DEBUG_CONTEXT_NAME",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "value": "frmCustomerOrder"
+                                                },
+                                                {
+                                                    "name": "DEBUG_APP_STACK_FRAME",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "value": "Module: Ifs.Application.Order_.dll\rNamespace: Ifs.Application.Order_\rObject: frmCustomerOrder\rMethod: GetOrderTotals"
+                                                },
+                                                {
+                                                    "name": "DEBUG_BIND_INFO",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "value": "i_hWndFrame.frmCustomerOrder.nOrdTotBase,i_hWndFrame.frmCustomerOrder.nOrdTotSales,i_hWndFrame.frmCustomerOrder.nOrdTotWeight,i_hWndFrame.frmCustomerOrder.nOrdTotQnty,i_hWndFrame.frmCustomerOrder.nOrdTotCost,i_hWndFrame.frmCustomerOrder.nOrdTotContrib,i_hWndFrame.frmCustomerOrder.nOrdTotTaxAmt,i_hWndFrame.frmCustomerOrder.nOrdTotGrossAmt,i_hWndFrame.frmCustomerOrder.nOrdTotDiscAmt,i_hWndFrame.frmCustomerOrder.sOrderNo,i_hWndFrame.frmCustomerOrder.nOrderGrossWeight,i_hWndFrame.frmCustomerOrder.nCharges,i_hWndFrame.frmCustomerOrder.nTotalContributionAmount,i_hWndFrame.frmCustomerOrder.nTotalCostAmount,i_hWndFrame.frmCustomerOrder.nTotalChargeBase,i_hWndFrame.frmCustomerOrder.nTotalCharge,i_hWndFrame.frmCustomerOrder.nTotalChargeGross,i_hWndFrame.frmCustomerOrder.nTotalChaTax,i_hWndFrame.frmCustomerOrder.nTotalFreightGross,i_hWndFrame.frmCustomerOrder.nTotalFreightVolume"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "delimiter": 20,
+                                    "name": "TRANSACTION_ID",
+                                    "type": "LPT",
+                                    "status": "*",
+                                    "isNull": true,
+                                    "value": null
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        ]
+    },
+    "method": "PL_SQL"
+}

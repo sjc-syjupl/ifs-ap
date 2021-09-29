@@ -1,0 +1,911 @@
+STATUSLPTQDONEFND_CONTEXTCLIENT_IDSYJUPL2-WIA-CONSOLE-14588REQUEST_IDcf0fa941-f594-44db-a83e-15fd6df63002LOCALE*en-USENCODE_BINARY_VALUEFALSELANGUAGELPT*enDEBUGDEBUGModifyCALL_SEQUENCEDEBUGDB_ACCESSDEBUGSKELETON_ARGUMENTSDEBUGSTUB_ARGUMENTSDEBUGAPPLICATION_CODEDEBUGOUTPUT*12:24:38,326 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.debugRequestHeader(): PlsqlProxy Request Header
+12:24:38,326 ??? ifs.fnd.base.FndDebug$Instance.debugContext(): 
+   1:$FND_CONTEXT=
+      1:$SERIALIZATION_TARGET:T = SERVER
+      2:$JAVA_LOCALE:T = en_US
+      3:$DIRECTORY_ID:T = IFSAPP
+      4:$EXTERNAL_BODY_TYPE:I = 0
+      5:$STORAGE_TYPE:T = STANDARD_STORAGE
+      6:$IMPLEMENTATION_MODE:I = 3
+      7:$FND_CONTEXT=
+         1:$CLIENT_ID = SYJUPL2-WIA-CONSOLE-14588
+         2:$REQUEST_ID = cf0fa941-f594-44db-a83e-15fd6df63002
+         3:$LOCALE = en-US
+         4:$ENCODE_BINARY_VALUE = FALSE
+         5:$LANGUAGE:T = en
+         6:$DEBUG=
+            1:$CALL_SEQUENCE = DEBUG
+            2:$DB_ACCESS = DEBUG
+            3:$SKELETON_ARGUMENTS = DEBUG
+            4:$STUB_ARGUMENTS = DEBUG
+            5:$APPLICATION_CODE = DEBUG
+            6:$OUTPUT = 
+         7:$COUNTERS=
+            1:$SQL_STATEMENT:I = 0
+            2:$SQL_FETCH:I = 0
+            3:$CORBA_CALL:I = -1
+      8:$APP_CONTEXT=
+   2:$FND_SERVER_CONTEXT=
+      1:$CONNECTION_MGR:T = ifs.fnd.sf.storage.FndTaggedConnectionManager@1697b2e6
+      2:$INSIDE_ACTIVITY:B = false
+      3:$BASE_SERVER_METHOD_SECURITY_ENABLED:B = true
+      4:$SUPPORTED_CAPABILITIES:T = [LPTEXT]
+      5:$INIT_FND_SESSION_COUNT:I = 0
+      6:$INIT_FND_SESSION_DB_COUNT:I = 0
+      7:$VALIDATING_REAUTHENTICATION_RESPONSE:B = false
+   3:$FND_J2EE_CONTEXT=
+      1:$INSIDE_FND_ENTITY_BEAN:B = false
+      2:$CURRENT_METHODS:T = []
+
+12:24:38,326 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Started initialization of connection {null}
+12:24:38,326 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.getConnectionImpl(): Getting tagged connection from pool
+12:24:38,326 ??? ifs.fnd.plsql.pool.TaggedConnection.useOwnSession(): Entered state transition method: 
+12:24:38,326 ??? ifs.fnd.plsql.pool.TaggedConnection.useOwnSession(): Used own connection: 
+	{nr=44 USED(C) auto-commit=false key=0 timestamp=0 usedByRequest=true SID=353 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-14588 clientSessionId=ba2651b8-ad27-486a-8da9-74c684ad7be7/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false} inUse=true language=en-US transactionId=null AUDSID=299103090
+		InitializedSession(nr=44):  close=86377218 (2021-08-13 12:24:15)
+		DedicatedSession(ba2651b8-ad27-486a-8da9-74c684ad7be7/IFSAPP)
+		DedicatedCursor(nr=44): aec9c09a-1f50-44cc-8815-058c8a65537e close=166843 (2021-08-12 12:27:25)
+		
+12:24:38,326 ??? ifs.fnd.plsql.pool.TaggedConnectionPoolManager.getConnection(): Got connection from pool in 0 ms: {nr=44 USED(C) auto-commit=false key=0 timestamp=0 SID=353 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp}
+12:24:38,326 ??? ifs.fnd.sf.storage.FndConnectionList.add(): Adding connection: ifs.fnd.sf.storage.FndTaggedConnection@701a8d39 COUNT=1
+12:24:38,326 ??? ifs.fnd.sf.storage.FndConnection.<init>(): Created connection ifs.fnd.sf.storage.FndTaggedConnection@701a8d39(oracle.jdbc.driver.T4CConnection@1df9fc6b)
+12:24:38,326 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [REQUEST_ID]
+12:24:38,326 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [LOCALE]
+12:24:38,326 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [ENCODE_BINARY_VALUE]
+12:24:38,326 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [LANGUAGE]
+12:24:38,326 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Value [SYJUPL2-WIA-CONSOLE-14588] for context attribute [CLIENT_ID] has not been changed.
+12:24:38,326 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Initializing connection
+	{nr=44 USED(C) auto-commit=false key=0 timestamp=0 usedByRequest=true SID=353 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-14588 clientSessionId=ba2651b8-ad27-486a-8da9-74c684ad7be7/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false}
+12:24:38,326 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initPlsqlGatewaySession(): Initializing Plsql connection: initClientSession=false f1Context=true appContext=false
+12:24:38,326 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@3a9fa6
+12:24:38,326 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:
+<PLSQLSTMT>
+begin
+   IFSAPP.Fnd_Context_SYS.Init_Request_(:1 , :2 );
+end;
+</PLSQLSTMT>
+12:24:38,326 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): 
+<PLSQLBIND>
+ [1] F1_CONTEXT:TEXT/IN=!F1_CONTEXT
+$DEBUG=!DEBUG
+-$DB_ACCESS=DEBUG
+
+ [2] APP_CONTEXT:TEXT/IN=null
+</PLSQLBIND>
+12:24:38,326 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@3a9fa6
+12:24:38,388 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@3a9fa6 executed
+12:24:38,388 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1be6dcd2
+12:24:38,388 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:
+<PLSQLRECURSIVESTMT>
+begin IFSAPP.Client_SYS.Get_Trace(:1 ); end;
+</PLSQLRECURSIVESTMT>
+12:24:38,388 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): 
+<PLSQLRECURSIVEBIND>
+ [1] TEXT:LONG_TEXT/IN_OUT=null
+</PLSQLRECURSIVEBIND>
+12:24:38,388 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1be6dcd2
+12:24:38,388 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1be6dcd2' on request 'cf0fa941-f594-44db-a83e-15fd6df63002'
+12:24:38,482 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1be6dcd2 executed
+12:24:38,482 ??? ifs.fnd.sf.storage.FndStatement.closePlsqlResultLog(): 
+<PLSQLRECURSIVERESULT>
+ [1] TEXT:LONG_TEXT/IN_OUT=null
+</PLSQLRECURSIVERESULT>
+12:24:38,482 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1be6dcd2
+12:24:38,482 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@1be6dcd2' on request 'cf0fa941-f594-44db-a83e-15fd6df63002'
+12:24:38,482 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@3a9fa6
+12:24:38,482 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@3a9fa6' on request 'cf0fa941-f594-44db-a83e-15fd6df63002'
+12:24:38,482 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Finished initialization of connection
+	{nr=44 USED(C) auto-commit=false key=-156 timestamp=-156 usedByRequest=true SID=353 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-14588 clientSessionId=ba2651b8-ad27-486a-8da9-74c684ad7be7/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false}
+12:24:38,482 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): Calling AccessPlsql.invoke
+12:24:38,482 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): PlsqlProxy Request Body
+12:24:38,482 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): PLSQL_INVOCATION (Fnd_View) Create  identity=9da73ed9-5219-4102-9ca8-d6bc7f01472f
+   SYSTEM_NAME/Q (Alpha) Non_Existent
+   TRANSACTION_ID/Q (Text) Non_Existent
+   USER_SESSION/Q (Boolean) Non_Existent
+   COMMANDS/* (Array (DIRTY)) (1 elements):
+      1:COMMAND (Fnd_View) Create element of PLSQL_INVOCATION.COMMANDS  identity=c0766b04-943d-4fa3-82a2-34d361e074b7
+         BIND_VARIABLES/Q (Binary) Non_Existent
+         COUNT_ROWS/Q (Boolean) Non_Existent
+         CURSOR_ID/Q (Text) = aec9c09a-1f50-44cc-8815-058c8a65537e
+         GENERATE_OUTER_BLOCK/Q (Boolean) Non_Existent
+         MAX_ROWS/Q (Integer) = 103
+         PARTIAL_RESULT/Q (Boolean) Non_Existent
+         RESULT/Q (Binary) Non_Existent
+         RESULT_RECORD_TYPE/Q (Alpha) Null
+         ROW_COUNT/Q (Integer) Non_Existent
+         SELECT_COLUMNS/Q (Alpha) Non_Existent
+         SKIP_ROWS/Q (Integer) Non_Existent
+         STATEMENT/Q (Alpha) = FETCH
+         PROPAGATED_VARIABLES/Q (Array) Non_Existent
+
+12:24:38,482 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(): Invocation input: onlySelect=false oneCmdOnly=false returnRefCursor=false
+12:24:38,482 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(): PLSQL_INVOCATION (Fnd_View) Create  identity=9da73ed9-5219-4102-9ca8-d6bc7f01472f
+   SYSTEM_NAME/Q (Alpha) Non_Existent
+   TRANSACTION_ID/Q (Text) Non_Existent
+   USER_SESSION/Q (Boolean) Non_Existent
+   COMMANDS/* (Array (DIRTY)) (1 elements):
+      1:COMMAND (Fnd_View) Create element of PLSQL_INVOCATION.COMMANDS  identity=c0766b04-943d-4fa3-82a2-34d361e074b7
+         BIND_VARIABLES/Q (Binary) Non_Existent
+         COUNT_ROWS/Q (Boolean) Non_Existent
+         CURSOR_ID/Q (Text) = aec9c09a-1f50-44cc-8815-058c8a65537e
+         GENERATE_OUTER_BLOCK/Q (Boolean) Non_Existent
+         MAX_ROWS/Q (Integer) = 103
+         PARTIAL_RESULT/Q (Boolean) Non_Existent
+         RESULT/Q (Binary) Non_Existent
+         RESULT_RECORD_TYPE/Q (Alpha) Null
+         ROW_COUNT/Q (Integer) Non_Existent
+         SELECT_COLUMNS/Q (Alpha) Non_Existent
+         SKIP_ROWS/Q (Integer) Non_Existent
+         STATEMENT/Q (Alpha) = FETCH
+         PROPAGATED_VARIABLES/Q (Array) Non_Existent
+
+12:24:38,482 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationContext.<init>(): Called FndServerContext.setLanguageAndLocale(): language=en locale=en_US
+12:24:38,482 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 1 fetched (238/238 bytes)
+12:24:38,482 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 2 fetched (218/456 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 3 fetched (196/652 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 4 fetched (208/860 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 5 fetched (196/1056 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 6 fetched (192/1248 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 7 fetched (190/1438 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 8 fetched (194/1632 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 9 fetched (236/1868 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 10 fetched (206/2074 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 11 fetched (236/2310 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 12 fetched (234/2544 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 13 fetched (218/2762 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 14 fetched (214/2976 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 15 fetched (206/3182 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 16 fetched (208/3390 bytes)
+12:24:38,498 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 17 fetched (208/3598 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 18 fetched (206/3804 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 19 fetched (230/4034 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 20 fetched (230/4264 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 21 fetched (258/4522 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 22 fetched (234/4756 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 23 fetched (206/4962 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 24 fetched (224/5186 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 25 fetched (214/5400 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 26 fetched (210/5610 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 27 fetched (210/5820 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 28 fetched (188/6008 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 29 fetched (216/6224 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 30 fetched (226/6450 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 31 fetched (226/6676 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 32 fetched (226/6902 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 33 fetched (206/7108 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 34 fetched (226/7334 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 35 fetched (226/7560 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 36 fetched (240/7800 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 37 fetched (206/8006 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 38 fetched (218/8224 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 39 fetched (212/8436 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 40 fetched (178/8614 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 41 fetched (212/8826 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 42 fetched (262/9088 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 43 fetched (216/9304 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 44 fetched (174/9478 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 45 fetched (200/9678 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 46 fetched (208/9886 bytes)
+12:24:38,576 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 47 fetched (202/10088 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 48 fetched (190/10278 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 49 fetched (188/10466 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 50 fetched (192/10658 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 51 fetched (226/10884 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 52 fetched (222/11106 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 53 fetched (212/11318 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 54 fetched (210/11528 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 55 fetched (210/11738 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 56 fetched (210/11948 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 57 fetched (210/12158 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 58 fetched (210/12368 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 59 fetched (210/12578 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 60 fetched (210/12788 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 61 fetched (210/12998 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 62 fetched (212/13210 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 63 fetched (212/13422 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 64 fetched (212/13634 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 65 fetched (226/13860 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 66 fetched (262/14122 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 67 fetched (198/14320 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 68 fetched (214/14534 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 69 fetched (224/14758 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 70 fetched (224/14982 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 71 fetched (224/15206 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 72 fetched (224/15430 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 73 fetched (220/15650 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 74 fetched (226/15876 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 75 fetched (216/16092 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 76 fetched (208/16300 bytes)
+12:24:38,591 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 77 fetched (234/16534 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 78 fetched (212/16746 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 79 fetched (208/16954 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 80 fetched (210/17164 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 81 fetched (222/17386 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 82 fetched (186/17572 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 83 fetched (204/17776 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 84 fetched (202/17978 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 85 fetched (202/18180 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 86 fetched (194/18374 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 87 fetched (210/18584 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 88 fetched (214/18798 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 89 fetched (202/19000 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 90 fetched (214/19214 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 91 fetched (232/19446 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 92 fetched (170/19616 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 93 fetched (208/19824 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 94 fetched (224/20048 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 95 fetched (194/20242 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 96 fetched (256/20498 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 97 fetched (190/20688 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 98 fetched (200/20888 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 99 fetched (198/21086 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 100 fetched (182/21268 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 101 fetched (182/21450 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 102 fetched (186/21636 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Row 103 fetched (176/21812 bytes)
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Fetched 21812 bytes from database.
+12:24:38,607 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@304d5dca
+12:24:38,607 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:
+<PLSQLSTMT>
+begin IFSAPP.Fnd_Context_SYS.End_Request_(:1 , :2 , :3 ); end;
+</PLSQLSTMT>
+12:24:38,607 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): 
+<PLSQLBIND>
+ [1] TRANSACTION_ID:TEXT/OUT=null
+ [2] TRACE:LONG_TEXT/OUT=null
+ [3] ERROR_MSG:LONG_TEXT/OUT=null
+</PLSQLBIND>
+12:24:38,607 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@304d5dca
+12:24:38,607 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@304d5dca executed
+12:24:38,607 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@304d5dca
+12:24:38,607 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@304d5dca' on request 'cf0fa941-f594-44db-a83e-15fd6df63002'
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PlsqlProxy Response Header
+12:24:38,607 ??? ifs.fnd.base.FndDebug$Instance.debugContext(): 
+   1:$FND_CONTEXT=
+      1:$STATUS:T = DONE
+      2:$SERIALIZATION_TARGET:T = CLIENT
+      3:$JAVA_LOCALE:T = en_US
+      4:$DIRECTORY_ID:T = IFSAPP
+      5:$EXTERNAL_BODY_TYPE:I = 0
+      6:$STORAGE_TYPE:T = STANDARD_STORAGE
+      7:$IMPLEMENTATION_MODE:I = 3
+      8:$FND_CONTEXT=
+         1:$CLIENT_ID = SYJUPL2-WIA-CONSOLE-14588
+         2:$REQUEST_ID = cf0fa941-f594-44db-a83e-15fd6df63002
+         3:$LOCALE = en-US
+         4:$ENCODE_BINARY_VALUE = FALSE
+         5:$LANGUAGE:T = en
+         6:$DEBUG=
+            1:$CALL_SEQUENCE = DEBUG
+            2:$DB_ACCESS = DEBUG
+            3:$SKELETON_ARGUMENTS = DEBUG
+            4:$STUB_ARGUMENTS = DEBUG
+            5:$APPLICATION_CODE = DEBUG
+            6:$OUTPUT =             12:24:38,326 ??? ifs ......[Size=24400]
+
+         7:$COUNTERS=
+            1:$SQL_STATEMENT:I = 3
+            2:$SQL_FETCH:I = 0
+            3:$CORBA_CALL:I = -1
+      9:$APP_CONTEXT=
+   2:$FND_SERVER_CONTEXT=
+      1:$CONNECTION_MGR:T = ifs.fnd.sf.storage.FndTaggedConnectionManager@1697b2e6
+      2:$CONNECTION_LIST:T = [ifs.fnd.sf.storage.FndTaggedConnection@701a8d39]
+      3:$INSIDE_ACTIVITY:B = false
+      4:$BASE_SERVER_METHOD_SECURITY_ENABLED:B = true
+      5:$SUPPORTED_CAPABILITIES:T = [LPTEXT]
+      6:$INIT_FND_SESSION_COUNT:I = 0
+      7:$INIT_FND_SESSION_DB_COUNT:I = 0
+      8:$VALIDATING_REAUTHENTICATION_RESPONSE:B = false
+   3:$FND_J2EE_CONTEXT=
+      1:$INSIDE_FND_ENTITY_BEAN:B = false
+      2:$DEBUGGER_ROLE_GRANTED:B = true
+      3:$CURRENT_METHODS:T = []
+
+12:24:38,607 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PlsqlProxy Response Body
+12:24:38,623 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PLSQL_INVOCATION (Fnd_View) (DIRTY) Create  identity=9da73ed9-5219-4102-9ca8-d6bc7f01472f
+   SYSTEM_NAME/Q (Alpha) Non_Existent
+   TRANSACTION_ID/* (Text (DIRTY)) Null
+   USER_SESSION/Q (Boolean) Non_Existent
+   COMMANDS/* (Array (DIRTY)) (1 elements):
+      1:COMMAND (Fnd_View) (DIRTY) Create element of PLSQL_INVOCATION.COMMANDS  identity=c0766b04-943d-4fa3-82a2-34d361e074b7
+         BIND_VARIABLES/Q (Binary) Non_Existent
+         COUNT_ROWS/Q (Boolean) Non_Existent
+         CURSOR_ID/Q (Text) = aec9c09a-1f50-44cc-8815-058c8a65537e
+         GENERATE_OUTER_BLOCK/Q (Boolean) Non_Existent
+         MAX_ROWS/Q (Integer) = 103
+         PARTIAL_RESULT/Q (Boolean) Non_Existent
+         RESULT/* (Binary (DIRTY)) = 47898 bytes: !
+0:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAF
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=154206
+   3:$NAME:LPT=WM Morrisons Supermarket PLC
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED KINGDOM
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-06-07-00.00.00
+   9:$PARTY:LPT=865
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+1:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAG
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=154207
+   3:$NAME:LPT=Marks and Spensers
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED KINGDOM
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-06-07-00.00.00
+   9:$PARTY:LPT=866
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+2:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAH
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=154208
+   3:$NAME:LPT=Budgens
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED KINGDOM
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-06-07-00.00.00
+   9:$PARTY:LPT=867
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+3:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAI
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=154209
+   3:$NAME:LPT=Happy Shopper
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED KINGDOM
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-06-07-00.00.00
+   9:$PARTY:LPT=868
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+4:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAJ
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=154210
+   3:$NAME:LPT=Iceland
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED KINGDOM
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-06-07-00.00.00
+   9:$PARTY:LPT=869
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+5:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAK
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=154211
+   3:$NAME:LPT=Netto
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED KINGDOM
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-06-07-00.00.00
+   9:$PARTY:LPT=870
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+6:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAL
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=154212
+   3:$NAME:LPT=Lidl
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED KINGDOM
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-06-07-00.00.00
+   9:$PARTY:LPT=871
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+7:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAM
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=154213
+   3:$NAME:LPT=Tesco Ireland
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=IRELAND
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-06-07-00.00.00
+   9:$PARTY:LPT=872
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+8:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAN
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_AIRBUS_RUSSIA
+   3:$NAME:LPT=Airbus Russia
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=Russian
+   6:$COUNTRY:LPT=RUSSIAN FEDERATION
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-17-00.00.00
+   9:$PARTY:LPT=915
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+9:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAO
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_AIRBUS_SPAIN
+   3:$NAME:LPT=Airbus Spain
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=Spanish
+   6:$COUNTRY:LPT=SPAIN
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-17-00.00.00
+   9:$PARTY:LPT=914
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+10:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAP
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_AIRBUS_UK
+   3:$NAME:LPT=Airbus United Kingdom
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED KINGDOM
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-17-00.00.00
+   9:$PARTY:LPT=916
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+11:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAQ
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_AIRBUS_AMERICAS
+   3:$NAME:LPT=Airbus Americas
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED STATES
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-17-00.00.00
+   9:$PARTY:LPT=918
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+12:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAR
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_AIRBUS_ASIA
+   3:$NAME:LPT=Airbus Asia Pacific
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=JAPAN
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-17-00.00.00
+   9:$PARTY:LPT=919
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+13:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAS
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_AIRBUS_USA
+   3:$NAME:LPT=Airbus USA
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED STATES
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-17-00.00.00
+   9:$PARTY:LPT=920
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+14:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAT
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_AIRBUS_CHINA
+   3:$NAME:LPT=Airbus China
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=Chinese
+   6:$COUNTRY:LPT=CHINA
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-17-00.00.00
+   9:$PARTY:LPT=921
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+15:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAU
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_AIRBUS_JAPAN
+   3:$NAME:LPT=Airbus Japan
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=Japanese
+   6:$COUNTRY:LPT=JAPAN
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-17-00.00.00
+   9:$PARTY:LPT=922
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+16:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAV
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_AIRBUS_GROUP
+   3:$NAME:LPT=Groupe Airbus
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=French
+   6:$COUNTRY:LPT=FRANCE
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-17-00.00.00
+   9:$PARTY:LPT=923
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+17:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAW
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_AIRBUS_INDIA
+   3:$NAME:LPT=Airbus India
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=INDIA
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-17-00.00.00
+   9:$PARTY:LPT=924
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+18:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAX
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_AIRBUS_AUSTRALIA
+   3:$NAME:LPT=Airbus Australia
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=AUSTRALIA
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-17-00.00.00
+   9:$PARTY:LPT=925
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+19:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAY
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_AIRBUS_SINGAPORE
+   3:$NAME:LPT=Airbus Singapore
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=SINGAPORE
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-17-00.00.00
+   9:$PARTY:LPT=926
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+20:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAZ
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_AIRBUS_MIDDLEEAST
+   3:$NAME:LPT=Airbus Middle East
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED ARAB EMIRATES
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-17-00.00.00
+   9:$PARTY:LPT=927
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+21:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAa
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_AIRBUS_DUBAI
+   3:$NAME:LPT=Airbus Dubai
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=Arabic
+   6:$COUNTRY:LPT=UNITED ARAB EMIRATES
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-17-00.00.00
+   9:$PARTY:LPT=928
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+22:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAb
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=FR_CAILLAU
+   3:$NAME:LPT=CAILLAU
+   4:$ASSOCIATION_NO:LPT=0123456789
+   5:$DEFAULT_LANGUAGE:LPT=French
+   6:$COUNTRY:LPT=FRANCE
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2010-11-18-00.00.00
+   9:$PARTY:LPT=930
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+23:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAc
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=NA9702
+   3:$NAME:LPT=US Customer 9702 (NA)
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED STATES
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2011-12-22-00.00.00
+   9:$PARTY:LPT=1002
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+24:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAd
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=NA9001
+   3:$NAME:LPT=Brazilian Customer (NA)
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=BRAZIL
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2011-12-22-00.00.00
+   9:$PARTY:LPT=1006
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+25:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAe
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=NA9103
+   3:$NAME:LPT=Swedish Customer (NA)
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=SWEDEN
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2011-12-22-00.00.00
+   9:$PARTY:LPT=1010
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+26:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAf
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=NA9301
+   3:$NAME:LPT=Mexican Customer (NA)
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=MEXICO
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2011-12-22-00.00.00
+   9:$PARTY:LPT=1014
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+27:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAg
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=C003
+   3:$NAME:LPT=SEK Customer
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=Swedish
+   6:$COUNTRY:LPT=SWEDEN
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2012-05-22-00.00.00
+   9:$PARTY:LPT=1060
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+28:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAh
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=1000002
+   3:$NAME:LPT=Little Amsterdam Hotels
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=SWEDEN
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2012-05-27-00.00.00
+   9:$PARTY:LPT=1182
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+29:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAi
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=C151
+   3:$NAME:LPT=NA Internal Customer 151
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED STATES
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2012-11-05-00.00.00
+   9:$PARTY:LPT=1190
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+30:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAj
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=C111
+   3:$NAME:LPT=NA Internal Customer 111
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED STATES
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2012-11-05-00.00.00
+   9:$PARTY:LPT=1192
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+31:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAk
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=C112
+   3:$NAME:LPT=NA Internal Customer 112
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED STATES
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2012-11-05-00.00.00
+   9:$PARTY:LPT=1194
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+32:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAl
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=SPM3000
+   3:$NAME:LPT=IFS Trainer
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=English
+   6:$COUNTRY:LPT=UNITED STATES
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2012-11-10-00.00.00
+   9:$PARTY:LPT=1227
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+33:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAm
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=DEINT803
+   3:$NAME:LPT=Interner Kunde Standort 803
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=German
+   6:$COUNTRY:LPT=GERMANY
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2013-06-04-00.00.00
+   9:$PARTY:LPT=1247
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+34:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAn
+   1:$OBJVERSION:LPT=20151006115801
+   2:$CUSTOMER_ID:LPT=DEINT810
+   3:$NAME:LPT=Interner Kunde Standort 810
+   4:$ASSOCIATION_NO:LPT*
+   5:$DEFAULT_LANGUAGE:LPT=German
+   6:$COUNTRY:LPT=GERMANY
+   7:$CUSTOMER_CATEGORY:LPT=Customer
+   8:$CREATION_DATE:DTS=2013-06-04-00.00.00
+   9:$PARTY:LPT=1248
+   10:$PARTY_TYPE:LPT=Customer
+   11:$DEFAULT_DOMAIN:LPT=TRUE
+   12:$IFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE)):LPT=FALSE
+   13:$CORPORATE_FORM:LPT*
+35:$DATA=:
+   !
+   0:$OBJID:LPT=AAB2LAAAFAAAGt2AAo
+
+...
+         RESULT_RECORD_TYPE/Q (Alpha) Null
+         ROW_COUNT/* (Integer (DIRTY)) Null
+         SELECT_COLUMNS/Q (Alpha) Non_Existent
+         SKIP_ROWS/Q (Integer) Non_Existent
+         STATEMENT/Q (Alpha) = FETCH
+         PROPAGATED_VARIABLES/Q (Array) Non_Existent
+
+12:24:38,623 ??? ifs.fnd.sf.admin.FndProcessList.debug(): Registered abortable processes: {2326db39-4aa8-49ad-91f8-74b539b050ba=[], cf54cb03-c274-4916-af06-25e6ca34be1f=[], 148675fc-9bf4-4b99-9c85-09237a698d8b=[], 5a698302-663d-4205-9747-fe460fdafac3=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@49ffb198], 2178ee37-4800-48db-b315-72878060a3d2=[], 7494a504-d31c-4af7-b003-4a37d150d684=[], d137ab42-ba9a-4b3a-9270-5ca397ab5413=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@383796ee], e94b12f6-8b5d-48f0-8578-360f510be1c8=[], ba005d84-ec98-4a32-a034-1de8bacb51f4=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6fe2eade], e5cbe1df-2a66-41e5-b6f6-ad4cc63c86ab=[], 8bcdadcd-6708-4968-a52b-3fb1e74ad06b=[], b7b79402-d5a9-4b88-9700-fddcde7fbce1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@53a83fd2], ecdceaae-8683-4e7a-bef7-c952005f1e3a=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5f2d022c], 66417d72-4433-4b17-82ed-a5d0893911f1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@631c48e4], af52994d-e185-40ad-9f6a-965228cc321d=[], c2c4c929-72d3-4799-8d0b-4ebbf0c15629=[], 47fe2c62-719d-4fc5-91c7-b1c27b5168a2=[], 3c9af4b2-1b53-4756-a5f6-f6f1ab42e24f=[], f842b1f4-d8ce-43f7-84ad-880833f35a63=[], 38a58615-feda-43d5-9924-0ccc799d3419=[], 273991c3-c96b-4107-a567-695b6cd48a09=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@53f506b6], 701829e1-bd93-4a1c-9893-cb0eab27a2cf=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@75a3dae0], b433c43a-1095-42fb-a01e-23d202bf81b1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@4e2e4461], 1b2b4663-6c4b-491d-9803-c3f26f40188a=[], 6a10a379-78c4-4745-9008-6a1f7068fe31=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2093afa0], ac3be920-ba38-4b1c-ab30-3d3ccb6f0664=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2493241d], 68c6f088-b640-4df3-90e8-be04b3922599=[], 3a387445-ca2b-4c47-8145-be1f74ad45c4=[], 56ad5863-ad77-4ff5-acbe-abc623ef21b4=[], b57cf0f6-9361-4ff1-8884-158609ecd0ec=[], 23ac2c5d-1b43-4f31-b3b2-5072156674a6=[], 5cec6fdc-9f71-4185-a73d-fb26aaf16e28=[], 308c0783-fb59-4bad-8f74-26a4108fa20b=[], 5fdc2c3b-d45d-40d0-9dac-e0e82a8b26bc=[], 220f0791-2520-41c8-8ad9-413f1f002e03=[], 7c9465bd-3fe8-4628-b925-39e5b0022f54=[], fc08fb5b-a713-4876-a189-0cf66380fbff=[], 6d904282-c11b-4833-8bf3-23d8374b9038=[], 56e6225a-f576-4eac-a252-72e45a7376c9=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6e7b64a8], f29c0020-adb7-4c70-8cd1-0d8d739404b9=[], abda7f03-b2e0-4f8f-885e-96ada15e232a=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@575b466e], 82450b03-cb3f-488f-8bd4-78d92ebe2d09=[]}
+12:24:38,623 ??? ifs.fnd.sf.storage.FndConnectionList.remove(): Removing connection: ifs.fnd.sf.storage.FndTaggedConnection@701a8d39 REMOVED
+12:24:38,623 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.returnConnectionToPool(): Finished request in 297 ms.
+12:24:38,623 ??? ifs.fnd.plsql.pool.TaggedConnectionPoolManager.returnConnection(): Returning connection to pool: {nr=44 USED(C) auto-commit=false key=-297 timestamp=-297 SID=353 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp}
+12:24:38,623 ??? ifs.fnd.plsql.pool.TaggedConnection.returnToPool(): Entered state transition method: 
+12:24:38,623 ??? ifs.fnd.plsql.pool.TaggedConnection.returnToPool(): Returned connection to pool: 
+	{nr=44 RESERVED(C) auto-commit=false key=60000 timestamp=0 usedByRequest=false SID=353 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-14588 clientSessionId=ba2651b8-ad27-486a-8da9-74c684ad7be7/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false} inUse=false language=en-US transactionId=null AUDSID=299103090
+		InitializedSession(nr=44):  close=86376921 (2021-08-13 12:24:15)
+		DedicatedSession(ba2651b8-ad27-486a-8da9-74c684ad7be7/IFSAPP)
+		DedicatedCursor(nr=44): aec9c09a-1f50-44cc-8815-058c8a65537e close=180000 (2021-08-12 12:27:38)
+		
+COUNTERSCOUNTERSModifySQL_STATEMENTI*3SQL_FETCHIQ0CORBA_CALLIQ-1APP_CONTEXTPLSQL_INVOCATIONDATAPLSQL_INVOCATIONCreate9da73ed9-5219-4102-9ca8-d6bc7f01472fCOMMANDSARRAY*DATAPLSQL_SERVER.COMMANDCreatec0766b04-943d-4fa3-82a2-34d361e074b7MAX_ROWSIQ103RESULTR.B64*!  »DATAOBJIDLPTAAB2LAAAFAAAGt2AAFOBJVERSIONLPT20151006115801CUSTOMER_IDLPT154206NAMELPTWM Morrisons Supermarket PLCASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-06-07-00.00.00PARTYLPT865PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAGOBJVERSIONLPT20151006115801CUSTOMER_IDLPT154207NAMELPTMarks and SpensersASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-06-07-00.00.00PARTYLPT866PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAHOBJVERSIONLPT20151006115801CUSTOMER_IDLPT154208NAMELPTBudgensASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-06-07-00.00.00PARTYLPT867PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAIOBJVERSIONLPT20151006115801CUSTOMER_IDLPT154209NAMELPTHappy ShopperASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-06-07-00.00.00PARTYLPT868PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAJOBJVERSIONLPT20151006115801CUSTOMER_IDLPT154210NAMELPTIcelandASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-06-07-00.00.00PARTYLPT869PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAKOBJVERSIONLPT20151006115801CUSTOMER_IDLPT154211NAMELPTNettoASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-06-07-00.00.00PARTYLPT870PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AALOBJVERSIONLPT20151006115801CUSTOMER_IDLPT154212NAMELPTLidlASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-06-07-00.00.00PARTYLPT871PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAMOBJVERSIONLPT20151006115801CUSTOMER_IDLPT154213NAMELPTTesco IrelandASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTIRELANDCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-06-07-00.00.00PARTYLPT872PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AANOBJVERSIONLPT20151006115801CUSTOMER_IDLPTFR_AIRBUS_RUSSIANAMELPTAirbus RussiaASSOCIATION_NOLPTDEFAULT_LANGUAGELPTRussianCOUNTRYLPTRUSSIAN FEDERATIONCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-17-00.00.00PARTYLPT915PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAOOBJVERSIONLPT20151006115801CUSTOMER_IDLPTFR_AIRBUS_SPAINNAMELPTAirbus SpainASSOCIATION_NOLPTDEFAULT_LANGUAGELPTSpanishCOUNTRYLPTSPAINCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-17-00.00.00PARTYLPT914PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAPOBJVERSIONLPT20151006115801CUSTOMER_IDLPTFR_AIRBUS_UKNAMELPTAirbus United KingdomASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-17-00.00.00PARTYLPT916PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAQOBJVERSIONLPT20151006115801CUSTOMER_IDLPTFR_AIRBUS_AMERICASNAMELPTAirbus AmericasASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-17-00.00.00PARTYLPT918PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAROBJVERSIONLPT20151006115801CUSTOMER_IDLPTFR_AIRBUS_ASIANAMELPTAirbus Asia PacificASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTJAPANCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-17-00.00.00PARTYLPT919PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AASOBJVERSIONLPT20151006115801CUSTOMER_IDLPTFR_AIRBUS_USANAMELPT
+Airbus USAASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-17-00.00.00PARTYLPT920PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AATOBJVERSIONLPT20151006115801CUSTOMER_IDLPTFR_AIRBUS_CHINANAMELPTAirbus ChinaASSOCIATION_NOLPTDEFAULT_LANGUAGELPTChineseCOUNTRYLPTCHINACUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-17-00.00.00PARTYLPT921PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAUOBJVERSIONLPT20151006115801CUSTOMER_IDLPTFR_AIRBUS_JAPANNAMELPTAirbus JapanASSOCIATION_NOLPTDEFAULT_LANGUAGELPTJapaneseCOUNTRYLPTJAPANCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-17-00.00.00PARTYLPT922PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAVOBJVERSIONLPT20151006115801CUSTOMER_IDLPTFR_AIRBUS_GROUPNAMELPTGroupe AirbusASSOCIATION_NOLPTDEFAULT_LANGUAGELPTFrenchCOUNTRYLPTFRANCECUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-17-00.00.00PARTYLPT923PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAWOBJVERSIONLPT20151006115801CUSTOMER_IDLPTFR_AIRBUS_INDIANAMELPTAirbus IndiaASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTINDIACUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-17-00.00.00PARTYLPT924PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAXOBJVERSIONLPT20151006115801CUSTOMER_IDLPTFR_AIRBUS_AUSTRALIANAMELPTAirbus AustraliaASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPT	AUSTRALIACUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-17-00.00.00PARTYLPT925PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAYOBJVERSIONLPT20151006115801CUSTOMER_IDLPTFR_AIRBUS_SINGAPORENAMELPTAirbus SingaporeASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPT	SINGAPORECUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-17-00.00.00PARTYLPT926PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAZOBJVERSIONLPT20151006115801CUSTOMER_IDLPTFR_AIRBUS_MIDDLEEASTNAMELPTAirbus Middle EastASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED ARAB EMIRATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-17-00.00.00PARTYLPT927PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAaOBJVERSIONLPT20151006115801CUSTOMER_IDLPTFR_AIRBUS_DUBAINAMELPTAirbus DubaiASSOCIATION_NOLPTDEFAULT_LANGUAGELPTArabicCOUNTRYLPTUNITED ARAB EMIRATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-17-00.00.00PARTYLPT928PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAbOBJVERSIONLPT20151006115801CUSTOMER_IDLPT
+FR_CAILLAUNAMELPTCAILLAUASSOCIATION_NOLPT
+0123456789DEFAULT_LANGUAGELPTFrenchCOUNTRYLPTFRANCECUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-18-00.00.00PARTYLPT930PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAcOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9702NAMELPTUS Customer 9702 (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1002PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAdOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9001NAMELPTBrazilian Customer (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTBRAZILCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1006PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAeOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9103NAMELPTSwedish Customer (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTSWEDENCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1010PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAfOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9301NAMELPTMexican Customer (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTMEXICOCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1014PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAgOBJVERSIONLPT20151006115801CUSTOMER_IDLPTC003NAMELPTSEK CustomerASSOCIATION_NOLPTDEFAULT_LANGUAGELPTSwedishCOUNTRYLPTSWEDENCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-05-22-00.00.00PARTYLPT1060PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAhOBJVERSIONLPT20151006115801CUSTOMER_IDLPT1000002NAMELPTLittle Amsterdam HotelsASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTSWEDENCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-05-27-00.00.00PARTYLPT1182PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAiOBJVERSIONLPT20151006115801CUSTOMER_IDLPTC151NAMELPTNA Internal Customer 151ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-05-00.00.00PARTYLPT1190PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAjOBJVERSIONLPT20151006115801CUSTOMER_IDLPTC111NAMELPTNA Internal Customer 111ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-05-00.00.00PARTYLPT1192PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAkOBJVERSIONLPT20151006115801CUSTOMER_IDLPTC112NAMELPTNA Internal Customer 112ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-05-00.00.00PARTYLPT1194PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAlOBJVERSIONLPT20151006115801CUSTOMER_IDLPTSPM3000NAMELPTIFS TrainerASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-10-00.00.00PARTYLPT1227PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAmOBJVERSIONLPT20151006115801CUSTOMER_IDLPTDEINT803NAMELPTInterner Kunde Standort 803ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTGermanCOUNTRYLPTGERMANYCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2013-06-04-00.00.00PARTYLPT1247PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAnOBJVERSIONLPT20151006115801CUSTOMER_IDLPTDEINT810NAMELPTInterner Kunde Standort 810ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTGermanCOUNTRYLPTGERMANYCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2013-06-04-00.00.00PARTYLPT1248PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAoOBJVERSIONLPT20151006115801CUSTOMER_IDLPTEFABNAMELPTElectro Fabrications ScotlandASSOCIATION_NOLPTDDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2003-11-22-00.00.00PARTYLPT343PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTEDATAOBJIDLPTAAB2LAAAFAAAGt2AApOBJVERSIONLPT20151006115801CUSTOMER_IDLPTDEINT802NAMELPTInterner Kunde 802ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTGermanCOUNTRYLPTGERMANYCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2006-10-20-00.00.00PARTYLPT606PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAqOBJVERSIONLPT20151006115801CUSTOMER_IDLPTS502NAMELPTInternal Site 502ASSOCIATION_NOLPTDDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2003-11-22-00.00.00PARTYLPT344PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTISDATAOBJIDLPTAAB2LAAAFAAAGt2AArOBJVERSIONLPT20151006115801CUSTOMER_IDLPTXX-1000NAMELPTC.S.C. New YorkASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2008-06-19-00.00.00PARTYLPT811PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAsOBJVERSIONLPT20151006115801CUSTOMER_IDLPTBP9NAMELPTMercedesASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTGERMANYCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2000-01-01-00.00.00PARTYLPT121PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAtOBJVERSIONLPT20151006115801CUSTOMER_IDLPT11000NAMELPTAmerican AirlinesASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2003-11-18-00.00.00PARTYLPT310PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAuOBJVERSIONLPT20151006115801CUSTOMER_IDLPTRDMF1-INT-CUSTNAMELPT Internal Customer for Site RDMF1ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2013-10-14-00.00.00PARTYLPT1259PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAvOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNAT101NAMELPTNational CustomerASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-21-00.00.00PARTYLPT1000PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt2AAwOBJVERSIONLPT20151006115801CUSTOMER_IDLPTDE1060NAMELPTBASFASSOCIATION_NOLPTDEFAULT_LANGUAGELPTGermanCOUNTRYLPTGERMANYCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2006-10-20-00.00.00PARTYLPT596PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAAOBJVERSIONLPT20190722134738CUSTOMER_IDLPTDE10040NAMELPTDMP Kunde 10040ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTGermanCOUNTRYLPTGERMANYCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2006-10-20-00.00.00PARTYLPT610PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPT1DATAOBJIDLPTAAB2LAAAFAAAGt3AABOBJVERSIONLPT20151006115801CUSTOMER_IDLPTDE1111NAMELPTVIM: Kunde in NLASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTNETHERLANDSCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2006-10-23-00.00.00PARTYLPT634PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AACOBJVERSIONLPT20151006115801CUSTOMER_IDLPTPL6771120229NAMELPTKlient PolskiASSOCIATION_NOLPTDEFAULT_LANGUAGELPTPolishCOUNTRYLPTPOLANDCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2007-10-25-00.00.00PARTYLPT703PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AADOBJVERSIONLPT20151006115801CUSTOMER_IDLPTXX-1001NAMELPTC.S.C. OsloASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTNORWAYCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2008-06-19-00.00.00PARTYLPT810PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAEOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNL67454NAMELPTMakroASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTNETHERLANDSCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2009-07-02-00.00.00PARTYLPT834PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAFOBJVERSIONLPT20151006115801CUSTOMER_IDLPT850002NAMELPTHoechst GmbHASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTGERMANYCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2008-11-28-00.00.00PARTYLPT819PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAGOBJVERSIONLPT20151006115801CUSTOMER_IDLPTSMK1NAMELPTSommers Supermarket A1ASSOCIATION_NOLPTDDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2008-11-25-00.00.00PARTYLPT815PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTRDATAOBJIDLPTAAB2LAAAFAAAGt3AAHOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA1060NAMELPTLockbox Customer 1060ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-01-18-00.00.00PARTYLPT851PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAIOBJVERSIONLPT20151006115801CUSTOMER_IDLPTC150NAMELPTNA Internal Customer 150ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTCANADACUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-07-00.00.00PARTYLPT1198PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAJOBJVERSIONLPT20151006115801CUSTOMER_IDLPTSPM3001NAMELPTIFS Trainee 1ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-10-00.00.00PARTYLPT1228PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAKOBJVERSIONLPT20151006115801CUSTOMER_IDLPTSPM3002NAMELPTIFS Trainee 2ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-10-00.00.00PARTYLPT1229PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AALOBJVERSIONLPT20151006115801CUSTOMER_IDLPTSPM3003NAMELPTIFS Trainee 3ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-10-00.00.00PARTYLPT1230PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAMOBJVERSIONLPT20151006115801CUSTOMER_IDLPTSPM3004NAMELPTIFS Trainee 4ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-10-00.00.00PARTYLPT1231PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AANOBJVERSIONLPT20151006115801CUSTOMER_IDLPTSPM3005NAMELPTIFS Trainee 5ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-10-00.00.00PARTYLPT1232PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAOOBJVERSIONLPT20151006115801CUSTOMER_IDLPTSPM3006NAMELPTIFS Trainee 6ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-10-00.00.00PARTYLPT1233PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAPOBJVERSIONLPT20151006115801CUSTOMER_IDLPTSPM3007NAMELPTIFS Trainee 7ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-10-00.00.00PARTYLPT1234PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAQOBJVERSIONLPT20151006115801CUSTOMER_IDLPTSPM3009NAMELPTIFS Trainee 9ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-10-00.00.00PARTYLPT1236PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAROBJVERSIONLPT20151006115801CUSTOMER_IDLPTSPM3010NAMELPTIFS Trainee 10ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-10-00.00.00PARTYLPT1237PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AASOBJVERSIONLPT20151006115801CUSTOMER_IDLPTSPM3012NAMELPTIFS Trainee 12ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-10-00.00.00PARTYLPT1238PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AATOBJVERSIONLPT20151006115801CUSTOMER_IDLPTSPM3011NAMELPTIFS Trainee 11ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-11-10-00.00.00PARTYLPT1239PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAUOBJVERSIONLPT20151006115801CUSTOMER_IDLPTC105NAMELPTNA Internal Customer 105ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2013-06-06-00.00.00PARTYLPT1251PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAVOBJVERSIONLPT20151006115801CUSTOMER_IDLPTRDMF2-INT-CUSTNAMELPT Internal Customer for Site RDMF2ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2013-10-14-00.00.00PARTYLPT1260PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAWOBJVERSIONLPT20151006115801CUSTOMER_IDLPTC005NAMELPTInternal CustomerASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTSWEDENCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2014-12-03-00.00.00PARTYLPT1264PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAXOBJVERSIONLPT20151006115801CUSTOMER_IDLPTDE2000NAMELPTSportScheck GmbH-MAMUDEASSOCIATION_NOLPTDEFAULT_LANGUAGELPTGermanCOUNTRYLPTGERMANYCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-20-00.00.00PARTYLPT979PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPT2DATAOBJIDLPTAAB2LAAAFAAAGt3AAYOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9701NAMELPTUS Customer 9701 (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1001PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAZOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9703NAMELPTUS Customer 9703 (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1003PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAaOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9704NAMELPTUS Customer 9704 (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1004PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAbOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9705NAMELPTUS Customer 9705 (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1005PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAcOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9002NAMELPTArgentine Customer (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPT	ARGENTINACUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1007PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAdOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9101NAMELPTBritish Customer (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1008PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAeOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9104NAMELPTDutch Customer (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTNETHERLANDSCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1011PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAfOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9105NAMELPTPolish Customer (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTPOLANDCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1012PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAgOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9201NAMELPTSouth African Customer (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTSOUTH AFRICACUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1013PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAhOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9401NAMELPTCanadian Customer (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTCANADACUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1015PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAiOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9501NAMELPTChinese Customer (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTCHINACUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1016PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAjOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9502NAMELPTJapanese Customer (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTJAPANCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1017PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAkOBJVERSIONLPT20151006115801CUSTOMER_IDLPTNA9601NAMELPTAustralian Customer (NA)ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPT	AUSTRALIACUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2011-12-22-00.00.00PARTYLPT1019PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAlOBJVERSIONLPT20151006115801CUSTOMER_IDLPTC001NAMELPTEUR CustomerASSOCIATION_NOLPTDEFAULT_LANGUAGELPTFrenchCOUNTRYLPTFRANCECUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-05-22-00.00.00PARTYLPT1058PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAmOBJVERSIONLPT20151006115801CUSTOMER_IDLPTC002NAMELPTGBP CustomerASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-05-22-00.00.00PARTYLPT1059PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAnOBJVERSIONLPT20151006115801CUSTOMER_IDLPTC004NAMELPTUSD CustomerASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-05-22-00.00.00PARTYLPT1062PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAoOBJVERSIONLPT20151006115801CUSTOMER_IDLPTCA1000NAMELPTCanadian CustomerASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTCANADACUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-05-25-00.00.00PARTYLPT1178PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AApOBJVERSIONLPT20151006115801CUSTOMER_IDLPT1000001NAMELPTHotel ChainsASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTSWEDENCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-05-27-00.00.00PARTYLPT1181PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAqOBJVERSIONLPT20151006115801CUSTOMER_IDLPT1000003NAMELPTLittle Venice HotelsASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTSWEDENCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2012-05-27-00.00.00PARTYLPT1183PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AArOBJVERSIONLPT20151006115801CUSTOMER_IDLPT
+FR_TECHNIPNAMELPTTECHNIPASSOCIATION_NOLPT58980326100223DEFAULT_LANGUAGELPTFrenchCOUNTRYLPTFRANCECUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2010-11-16-00.00.00PARTYLPT900PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAsOBJVERSIONLPT20151006115801CUSTOMER_IDLPT1900NAMELPTCustomer 1900ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2006-04-05-00.00.00PARTYLPT453PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAtOBJVERSIONLPT20151006115801CUSTOMER_IDLPT3000NAMELPTPulp and Paper MillASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2001-09-28-00.00.00PARTYLPT137PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAuOBJVERSIONLPT20151006115801CUSTOMER_IDLPT500NAMELPTNational Construction CompanyASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2001-09-27-00.00.00PARTYLPT119PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAvOBJVERSIONLPT20151006115801CUSTOMER_IDLPT7000NAMELPTBMWASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTGERMANYCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2002-04-16-00.00.00PARTYLPT304PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt3AAwOBJVERSIONLPT20151006115801CUSTOMER_IDLPT12000NAMELPTUnited AirlinesASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2003-11-18-00.00.00PARTYLPT311PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt4AAAOBJVERSIONLPT20151006115801CUSTOMER_IDLPTPACORNAMELPTPACOR International ASSOCIATION_NOLPTDDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2003-11-22-00.00.00PARTYLPT342PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTTDATAOBJIDLPTAAB2LAAAFAAAGt4AABOBJVERSIONLPT20151006115801CUSTOMER_IDLPT51NAMELPTDistributorASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2003-11-24-00.00.00PARTYLPT349PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt4AACOBJVERSIONLPT20191120124510CUSTOMER_IDLPTNA1000NAMELPTSTATOIL PETROLUEM AS GULLFAKSASSOCIATION_NOLPT	993246328DEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED STATESCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2006-01-28-00.00.00PARTYLPT389PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt4AADOBJVERSIONLPT20151006115801CUSTOMER_IDLPT901NAMELPTSvensson RacingASSOCIATION_NOLPTDEFAULT_LANGUAGELPTSwedishCOUNTRYLPTSWEDENCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2006-03-14-00.00.00PARTYLPT404PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt4AAEOBJVERSIONLPT20151006115801CUSTOMER_IDLPTCUST1NAMELPT
+Customer 1ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2006-04-06-00.00.00PARTYLPT496PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt4AAFOBJVERSIONLPT20151006115801CUSTOMER_IDLPTSUP1NAMELPT
+Supplier 1ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTUNITED KINGDOMCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2006-04-06-00.00.00PARTYLPT500PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt4AAGOBJVERSIONLPT20151006115801CUSTOMER_IDLPTSP410NAMELPT
+Planta 410ASSOCIATION_NOLPTDEFAULT_LANGUAGELPTSpanishCOUNTRYLPTSPAINCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2006-04-05-00.00.00PARTYLPT456PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt4AAHOBJVERSIONLPT20151006115801CUSTOMER_IDLPT903NAMELPT
+Fox RacingASSOCIATION_NOLPTDEFAULT_LANGUAGELPTEnglishCOUNTRYLPTGERMANYCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2006-04-12-00.00.00PARTYLPT509PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt4AAIOBJVERSIONLPT20151006115801CUSTOMER_IDLPTDE1020NAMELPT
+Siemens AGASSOCIATION_NOLPTDEFAULT_LANGUAGELPTGermanCOUNTRYLPTGERMANYCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2006-10-20-00.00.00PARTYLPT592PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTDATAOBJIDLPTAAB2LAAAFAAAGt4AAJOBJVERSIONLPT20151006115801CUSTOMER_IDLPTDE1080NAMELPTBayerASSOCIATION_NOLPTDEFAULT_LANGUAGELPTGermanCOUNTRYLPTGERMANYCUSTOMER_CATEGORYLPTCustomerCREATION_DATEDTS2006-10-20-00.00.00PARTYLPT598PARTY_TYPELPTCustomerDEFAULT_DOMAINLPTTRUEIFSAPP.PERSONAL_DATA_MAN_UTIL_API.IS_VALID_CONSENT_BY_KEYS('CUSTOMER',CUSTOMER_ID,NULL,TRUNC(SYSDATE))LPTFALSECORPORATE_FORMLPTRESULT_RECORD_TYPELPAQROW_COUNTI*STATEMENTLPAQFETCHCURSOR_IDLPTQ$aec9c09a-1f50-44cc-8815-058c8a65537eTRANSACTION_IDLPT*

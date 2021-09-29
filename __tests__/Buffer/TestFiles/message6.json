@@ -1,0 +1,462 @@
+{
+    "requestFile": "message6_Request.dat",
+    "responseFile": "message6_Response.dat",
+    "request": {
+        "clientId": "SYJUPL2-WIA-CONSOLE-39308",
+        "requestId": "9b08c79e-bc8c-455d-bada-0bb7bfea49c4",
+        "locale": "en-US",
+        "debug": true,
+        "invocationId": "5fa1b302-4d94-42d4-9405-38617e7c55ed",
+        "transactionId": "",
+        "commands": [
+            {
+                "commandId": "8b35e604-1a24-478a-b99b-c16fd30ed609",
+                "sqlString": "select objid, IDENTITY, NAME, SERIES_ID, INVOICE_NO                                                                                                                                                                                                                                                        from &AO.INSTANT_INVOICE where COMPANY=:p0                                    ",
+                "method": "SQL",
+                "maxRows": "103",
+                "debugContextName": "frmInstantInvoice",
+                "debugAppStackFrame": "Module: Ifs.Application.Invoic_.dll\rNamespace: Ifs.Application.Invoic_\rObject: frmInstantInvoice\rMethod: DataSourcePopulateIt",
+                "selectColumns": "LPT^-1,LPT^-1,LPT^200,LPT^20,LPT^50",
+                "debugIntoInfo": "i_hWndFrame.frmInstantInvoice.cmbIdentity.__sRecordObjidTmp,i_hWndFrame.frmInstantInvoice.cmbIdentity.i_sMyValue,i_hWndFrame.frmInstantInvoice.dfName,i_hWndFrame.frmInstantInvoice.dfSeriesId,i_hWndFrame.frmInstantInvoice.dfInvoiceNo",
+                "debugBindInfo": "i_hWndFrame.frmInstantInvoice.sCompany",
+                "generateOuterBlock": "TRUE",
+                "bindingsObject": {
+                    "p0": "10"
+                },
+                "bindingsSendObject": {
+                    "p0": {
+                        "direction": "IN",
+                        "value": "10",
+                        "type": "LPA"
+                    }
+                }
+            }
+        ],
+        "message": [
+            [
+                {
+                    "name": "FND_CONTEXT",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "name": "CLIENT_ID",
+                            "value": "SYJUPL2-WIA-CONSOLE-39308"
+                        },
+                        {
+                            "name": "REQUEST_ID",
+                            "value": "9b08c79e-bc8c-455d-bada-0bb7bfea49c4"
+                        },
+                        {
+                            "name": "LOCALE",
+                            "value": "en-US"
+                        },
+                        {
+                            "name": "ENCODE_BINARY_VALUE",
+                            "value": "FALSE"
+                        },
+                        {
+                            "name": "DEBUG",
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "CALL_SEQUENCE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "DB_ACCESS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "SKELETON_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "STUB_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "APPLICATION_CODE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "OUTPUT",
+                                    "value": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    "name": "PLSQL_INVOCATION",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "delimiter": 14,
+                            "name": "DATA",
+                            "type": "PLSQL_INVOCATION",
+                            "status": "Create",
+                            "value": "5fa1b302-4d94-42d4-9405-38617e7c55ed"
+                        },
+                        {
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "COMMAND",
+                                            "status": "Create",
+                                            "value": "8b35e604-1a24-478a-b99b-c16fd30ed609"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "STATEMENT",
+                                                    "type": "LPA",
+                                                    "value": "select objid, IDENTITY, NAME, SERIES_ID, INVOICE_NO                                                                                                                                                                                                                                                        from &AO.INSTANT_INVOICE where COMPANY=:p0                                    "
+                                                },
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "p0",
+                                                            "type": "LPA",
+                                                            "status": "IN",
+                                                            "value": "10"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "GENERATE_OUTER_BLOCK",
+                                                    "type": "B",
+                                                    "value": "TRUE"
+                                                },
+                                                {
+                                                    "name": "DEBUG_CONTEXT_NAME",
+                                                    "type": "LPA",
+                                                    "value": "frmInstantInvoice"
+                                                },
+                                                {
+                                                    "name": "DEBUG_APP_STACK_FRAME",
+                                                    "type": "LPA",
+                                                    "value": "Module: Ifs.Application.Invoic_.dll\rNamespace: Ifs.Application.Invoic_\rObject: frmInstantInvoice\rMethod: DataSourcePopulateIt"
+                                                },
+                                                {
+                                                    "name": "DEBUG_BIND_INFO",
+                                                    "type": "LPA",
+                                                    "value": "i_hWndFrame.frmInstantInvoice.sCompany"
+                                                },
+                                                {
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "value": ""
+                                                },
+                                                {
+                                                    "name": "MAX_ROWS",
+                                                    "type": "I",
+                                                    "value": "103"
+                                                },
+                                                {
+                                                    "name": "SELECT_COLUMNS",
+                                                    "type": "LPA",
+                                                    "value": "LPT^-1,LPT^-1,LPT^200,LPT^20,LPT^50"
+                                                },
+                                                {
+                                                    "name": "DEBUG_INTO_INFO",
+                                                    "type": "LPA",
+                                                    "value": "i_hWndFrame.frmInstantInvoice.cmbIdentity.__sRecordObjidTmp,i_hWndFrame.frmInstantInvoice.cmbIdentity.i_sMyValue,i_hWndFrame.frmInstantInvoice.dfName,i_hWndFrame.frmInstantInvoice.dfSeriesId,i_hWndFrame.frmInstantInvoice.dfInvoiceNo"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        ]
+    },
+    "response": {
+        "status": "DONE",
+        "clientId": "SYJUPL2-WIA-CONSOLE-39308",
+        "requestId": "9b08c79e-bc8c-455d-bada-0bb7bfea49c4",
+        "locale": "en-US",
+        "language": "en",
+        "debug": true,
+        "invocationId": "5fa1b302-4d94-42d4-9405-38617e7c55ed",
+        "transactionId": "",
+        "commands": [
+            {
+                "commandId": "8b35e604-1a24-478a-b99b-c16fd30ed609",
+                "maxRows": "103",
+                "rowCount": "0",
+                "partialResult": "FALSE",
+                "cursorId": null,
+                "debugContextName": "frmInstantInvoice",
+                "debugAppStackFrame": "Module: Ifs.Application.Invoic_.dll\rNamespace: Ifs.Application.Invoic_\rObject: frmInstantInvoice\rMethod: DataSourcePopulateIt",
+                "debugIntoInfo": "i_hWndFrame.frmInstantInvoice.cmbIdentity.__sRecordObjidTmp,i_hWndFrame.frmInstantInvoice.cmbIdentity.i_sMyValue,i_hWndFrame.frmInstantInvoice.dfName,i_hWndFrame.frmInstantInvoice.dfSeriesId,i_hWndFrame.frmInstantInvoice.dfInvoiceNo",
+                "debugBindInfo": "i_hWndFrame.frmInstantInvoice.sCompany",
+                "generateOuterBlock": "TRUE",
+                "bindingsObject": {
+                    "p0": "10"
+                },
+                "bindingsSendObject": {
+                    "p0": {
+                        "direction": "IN",
+                        "value": "10",
+                        "type": "LPA"
+                    }
+                },
+                "result": []
+            }
+        ],
+        "message": [
+            [
+                {
+                    "name": "STATUS",
+                    "type": "LPT",
+                    "status": "Q",
+                    "value": "DONE"
+                },
+                {
+                    "name": "FND_CONTEXT",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "name": "CLIENT_ID",
+                            "value": "SYJUPL2-WIA-CONSOLE-39308"
+                        },
+                        {
+                            "name": "REQUEST_ID",
+                            "value": "9b08c79e-bc8c-455d-bada-0bb7bfea49c4"
+                        },
+                        {
+                            "name": "LOCALE",
+                            "status": "*",
+                            "value": "en-US"
+                        },
+                        {
+                            "name": "ENCODE_BINARY_VALUE",
+                            "value": "FALSE"
+                        },
+                        {
+                            "name": "LANGUAGE",
+                            "type": "LPT",
+                            "status": "*",
+                            "value": "en"
+                        },
+                        {
+                            "name": "DEBUG",
+                            "type": "DEBUG",
+                            "status": "Modify",
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "CALL_SEQUENCE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "DB_ACCESS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "SKELETON_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "STUB_ARGUMENTS",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "APPLICATION_CODE",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "name": "OUTPUT",
+                                    "status": "*",
+                                    "value": "08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.debugRequestHeader(): PlsqlProxy Request Header\r\n08:08:16,022 ??? ifs.fnd.base.FndDebug$Instance.debugContext(): \r\n   1:$FND_CONTEXT=\r\n      1:$SERIALIZATION_TARGET:T = SERVER\r\n      2:$JAVA_LOCALE:T = en_US\r\n      3:$DIRECTORY_ID:T = IFSAPP\r\n      4:$EXTERNAL_BODY_TYPE:I = 0\r\n      5:$STORAGE_TYPE:T = STANDARD_STORAGE\r\n      6:$IMPLEMENTATION_MODE:I = 3\r\n      7:$FND_CONTEXT=\r\n         1:$CLIENT_ID = SYJUPL2-WIA-CONSOLE-39308\r\n         2:$REQUEST_ID = 9b08c79e-bc8c-455d-bada-0bb7bfea49c4\r\n         3:$LOCALE = en-US\r\n         4:$ENCODE_BINARY_VALUE = FALSE\r\n         5:$LANGUAGE:T = en\r\n         6:$DEBUG=\r\n            1:$CALL_SEQUENCE = DEBUG\r\n            2:$DB_ACCESS = DEBUG\r\n            3:$SKELETON_ARGUMENTS = DEBUG\r\n            4:$STUB_ARGUMENTS = DEBUG\r\n            5:$APPLICATION_CODE = DEBUG\r\n            6:$OUTPUT = \r\n         7:$COUNTERS=\r\n            1:$SQL_STATEMENT:I = 0\r\n            2:$SQL_FETCH:I = 0\r\n            3:$CORBA_CALL:I = -1\r\n      8:$APP_CONTEXT=\r\n   2:$FND_SERVER_CONTEXT=\r\n      1:$CONNECTION_MGR:T = ifs.fnd.sf.storage.FndTaggedConnectionManager@24de62f2\r\n      2:$INSIDE_ACTIVITY:B = false\r\n      3:$BASE_SERVER_METHOD_SECURITY_ENABLED:B = true\r\n      4:$SUPPORTED_CAPABILITIES:T = [LPTEXT]\r\n      5:$INIT_FND_SESSION_COUNT:I = 0\r\n      6:$INIT_FND_SESSION_DB_COUNT:I = 0\r\n      7:$VALIDATING_REAUTHENTICATION_RESPONSE:B = false\r\n   3:$FND_J2EE_CONTEXT=\r\n      1:$INSIDE_FND_ENTITY_BEAN:B = false\r\n      2:$CURRENT_METHODS:T = []\r\n\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Started initialization of connection {null}\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.getConnectionImpl(): Getting tagged connection from pool\r\n08:08:16,022 ??? ifs.fnd.plsql.pool.TaggedConnection.reuseOwnSession(): Entered state transition method: \r\n08:08:16,022 ??? ifs.fnd.plsql.pool.TaggedConnection.reuseOwnSession(): Reused own connection: \r\n\t{nr=3 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-39308 clientSessionId=3e875dc1-9d07-4f77-9f08-43aca81d9bfb/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false} inUse=true language=en-US transactionId=null AUDSID=299103035\r\n\t\tInitializedSession(nr=3):  close=86394610 (2021-08-07 08:08:10)\r\n\t\tDedicatedSession(3e875dc1-9d07-4f77-9f08-43aca81d9bfb/IFSAPP)\r\n\t\t\r\n08:08:16,022 ??? ifs.fnd.plsql.pool.TaggedConnectionPoolManager.getConnection(): Got connection from pool in 0 ms: {nr=3 USED auto-commit=false key=0 timestamp=0 SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp}\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndConnectionList.add(): Adding connection: ifs.fnd.sf.storage.FndTaggedConnection@7a50e7a2 COUNT=1\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndConnection.<init>(): Created connection ifs.fnd.sf.storage.FndTaggedConnection@7a50e7a2(oracle.jdbc.driver.T4CConnection@5f188f01)\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [REQUEST_ID]\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [LOCALE]\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [ENCODE_BINARY_VALUE]\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.addSimpleF1Attributes(): Skipped simple context attribute [LANGUAGE]\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Value [SYJUPL2-WIA-CONSOLE-39308] for context attribute [CLIENT_ID] has not been changed.\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Initializing connection\r\n\t{nr=3 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-39308 clientSessionId=3e875dc1-9d07-4f77-9f08-43aca81d9bfb/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false}\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initPlsqlGatewaySession(): Initializing Plsql connection: initClientSession=false f1Context=true appContext=false\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@705ebfcd\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001STMT>\r\nbegin\r\n   IFSAPP.Fnd_Context_SYS.Init_Request_(:1 , :2 );\r\nend;\r\n</PLSQL\u0001STMT>\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001BIND>\r\n [1] F1_CONTEXT:TEXT/IN=!F1_CONTEXT\r\n$DEBUG=!DEBUG\r\n-$DB_ACCESS=DEBUG\r\n\r\n [2] APP_CONTEXT:TEXT/IN=null\r\n</PLSQL\u0001BIND>\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@705ebfcd\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@705ebfcd executed\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@da87c3b\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001RECURSIVE\u0001STMT>\r\nbegin IFSAPP.Client_SYS.Get_Trace(:1 ); end;\r\n</PLSQL\u0001RECURSIVE\u0001STMT>\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001RECURSIVE\u0001BIND>\r\n [1] TEXT:LONG_TEXT/IN_OUT=null\r\n</PLSQL\u0001RECURSIVE\u0001BIND>\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@da87c3b\r\n08:08:16,022 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@da87c3b' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@da87c3b executed\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.closePlsqlResultLog(): \r\n<PLSQL\u0001RECURSIVE\u0001RESULT>\r\n [1] TEXT:LONG_TEXT/IN_OUT=null\r\n</PLSQL\u0001RECURSIVE\u0001RESULT>\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@da87c3b\r\n08:08:16,022 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@da87c3b' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@705ebfcd\r\n08:08:16,022 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@705ebfcd' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.initializeConnection(): Finished initialization of connection\r\n\t{nr=3 USED auto-commit=false key=0 timestamp=0 usedByRequest=true SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-39308 clientSessionId=3e875dc1-9d07-4f77-9f08-43aca81d9bfb/IFSAPP securityCheckpointAuth=null refreshSessionRoles=false}\r\n08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): Calling AccessPlsql.invoke\r\n08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): PlsqlProxy Request Body\r\n08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.beforeCall(): PLSQL_INVOCATION (Fnd_View) Create  identity=5fa1b302-4d94-42d4-9405-38617e7c55ed\r\n   SYSTEM_NAME/Q (Alpha) Non_Existent\r\n   TRANSACTION_ID/Q (Text) Non_Existent\r\n   USER_SESSION/Q (Boolean) Non_Existent\r\n   COMMANDS/* (Array (DIRTY)) (1 elements):\r\n      1:COMMAND (Fnd_View) Create element of PLSQL_INVOCATION.COMMANDS  identity=8b35e604-1a24-478a-b99b-c16fd30ed609\r\n         BIND_VARIABLES/Q (Binary) = 16 bytes: !\r\n0:$p0:LPA/IN=10\r\n\r\n         COUNT_ROWS/Q (Boolean) Non_Existent\r\n         CURSOR_ID/Q (Text) Non_Existent\r\n         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Invoic_.dllNamespace: Ifs.Application.Invoic_Object: frmInstantInvoiceMethod: DataSourcePopulateIt\r\n         DEBUG_BIND_INFO/Q (Alpha) = i_hWndFrame.frmInstantInvoice.sCompany\r\n         DEBUG_CONTEXT_NAME/Q (Alpha) = frmInstantInvoice\r\n         DEBUG_INTO_INFO/Q (Alpha) = i_hWndFrame.frmInstantInvoice.cmbIdentity.__sRecordObjidTmp,i_hWndFrame.frmInstantInvoice.cmbIdentity.i_sMyValue,i_hWndFrame.frmInstantInvoice.dfName,i_hWndFrame.frmInstantInvoice.dfSeriesId,i_hWndFrame.frmInstantInvoice.dfInvoiceNo\r\n         GENERATE_OUTER_BLOCK/Q (Boolean) = true\r\n         MAX_ROWS/Q (Integer) = 103\r\n         PARTIAL_RESULT/Q (Boolean) Non_Existent\r\n         RESULT/Q (Binary) Non_Existent\r\n         RESULT_RECORD_TYPE/Q (Alpha) Null\r\n         ROW_COUNT/Q (Integer) Non_Existent\r\n         SELECT_COLUMNS/Q (Alpha) = LPT^-1,LPT^-1,LPT^200,LPT^20,LPT^50\r\n         SKIP_ROWS/Q (Integer) Non_Existent\r\n         STATEMENT/Q (Alpha) = select objid, IDENTITY, NAME, SERIES_ID, INVOICE_NO                                                                                                                                                                                                                                                        from &AO.INSTANT_INVOICE where COMPANY=:p0                                    \r\n         PROPAGATED_VARIABLES/Q (Array) Non_Existent\r\n\r\n08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(): Invocation input: onlySelect=false oneCmdOnly=false returnRefCursor=false\r\n08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationProcessor.invokeImpl(): PLSQL_INVOCATION (Fnd_View) Create  identity=5fa1b302-4d94-42d4-9405-38617e7c55ed\r\n   SYSTEM_NAME/Q (Alpha) Non_Existent\r\n   TRANSACTION_ID/Q (Text) Non_Existent\r\n   USER_SESSION/Q (Boolean) Non_Existent\r\n   COMMANDS/* (Array (DIRTY)) (1 elements):\r\n      1:COMMAND (Fnd_View) Create element of PLSQL_INVOCATION.COMMANDS  identity=8b35e604-1a24-478a-b99b-c16fd30ed609\r\n         BIND_VARIABLES/Q (Binary) = 16 bytes: !\r\n0:$p0:LPA/IN=10\r\n\r\n         COUNT_ROWS/Q (Boolean) Non_Existent\r\n         CURSOR_ID/Q (Text) Non_Existent\r\n         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Invoic_.dllNamespace: Ifs.Application.Invoic_Object: frmInstantInvoiceMethod: DataSourcePopulateIt\r\n         DEBUG_BIND_INFO/Q (Alpha) = i_hWndFrame.frmInstantInvoice.sCompany\r\n         DEBUG_CONTEXT_NAME/Q (Alpha) = frmInstantInvoice\r\n         DEBUG_INTO_INFO/Q (Alpha) = i_hWndFrame.frmInstantInvoice.cmbIdentity.__sRecordObjidTmp,i_hWndFrame.frmInstantInvoice.cmbIdentity.i_sMyValue,i_hWndFrame.frmInstantInvoice.dfName,i_hWndFrame.frmInstantInvoice.dfSeriesId,i_hWndFrame.frmInstantInvoice.dfInvoiceNo\r\n         GENERATE_OUTER_BLOCK/Q (Boolean) = true\r\n         MAX_ROWS/Q (Integer) = 103\r\n         PARTIAL_RESULT/Q (Boolean) Non_Existent\r\n         RESULT/Q (Binary) Non_Existent\r\n         RESULT_RECORD_TYPE/Q (Alpha) Null\r\n         ROW_COUNT/Q (Integer) Non_Existent\r\n         SELECT_COLUMNS/Q (Alpha) = LPT^-1,LPT^-1,LPT^200,LPT^20,LPT^50\r\n         SKIP_ROWS/Q (Integer) Non_Existent\r\n         STATEMENT/Q (Alpha) = select objid, IDENTITY, NAME, SERIES_ID, INVOICE_NO                                                                                                                                                                                                                                                        from &AO.INSTANT_INVOICE where COMPANY=:p0                                    \r\n         PROPAGATED_VARIABLES/Q (Array) Non_Existent\r\n\r\n08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlInvocationContext.<init>(): Called FndServerContext.setLanguageAndLocale(): language=en locale=en_US\r\n08:08:16,022 ??? ifs.fnd.service.SQLRecognizer.<init>(): Rocognizing SQL: 'select objid, IDENTITY, NAME, SERIES_ID, INVOICE_NO                                                                                                                                                                                                                                                        from IFSAPP.INSTANT_INVOICE where COMPANY=:p0                                    '\r\n08:08:16,022 ??? ifs.fnd.service.SQLRecognizer.getSQLText(): SQL text: select objid, IDENTITY, NAME, SERIES_ID, INVOICE_NO                                                                                                                                                                                                                                                        from IFSAPP.INSTANT_INVOICE where COMPANY=?                                    \r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5a36468e\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.prepareStatement(): Preparing statement:\r\n<PLSQL\u0001STMT>\r\nselect objid, IDENTITY, NAME, SERIES_ID, INVOICE_NO                                                                                                                                                                                                                                                        from IFSAPP.INSTANT_INVOICE where COMPANY=:1\r\n</PLSQL\u0001STMT>\r\n08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes(): PlsqlProcessor.defineColumnTypes(): selectColumns: LPT^-1,LPT^-1,LPT^200,LPT^20,LPT^50\r\n08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [1] TEXT -1\r\n08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [2] TEXT -1\r\n08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [3] TEXT 200\r\n08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [4] TEXT 20\r\n08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes():    [5] TEXT 50\r\n08:08:16,022 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.defineColumnTypes(): PlsqlProcessor.defineColumnTypes(): columnTypes: [TEXT, TEXT, TEXT, TEXT, TEXT]\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001BIND>\r\n [1] p0:TEXT/IN=10\r\n</PLSQL\u0001BIND>\r\n08:08:16,022 ??? ifs.fnd.sf.storage.FndStatement.executeQuery(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5a36468e\r\n08:08:16,022 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5a36468e' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.executeQuery(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5a36468e executed\r\n08:08:18,460 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Closing tagged cursor [3323c691-cbed-4f9f-ac4e-7b26416a79b5] because fetchCount=0 < maxRows=103\r\n08:08:18,460 ??? ifs.fnd.plsql.pool.TaggedConnection.closeCursorImpl(): Closing cursor [3323c691-cbed-4f9f-ac4e-7b26416a79b5] in connection {nr=3 USED auto-commit=false key=-2438 timestamp=-2438 SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp}\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.closeDatabaseCursor(): Closing cursor ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5a36468e\r\n08:08:18,460 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5a36468e' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'\r\n08:08:18,460 ??? ifs.fnd.services.plsqlserver.service.PlsqlProcessor.resultSetToBuffer(): Fetched 0 bytes from database.\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@27a6d79d\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001RECURSIVE\u0001STMT>\r\nbegin IFSAPP.Client_SYS.Get_Trace(:1 ); end;\r\n</PLSQL\u0001RECURSIVE\u0001STMT>\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001RECURSIVE\u0001BIND>\r\n [1] TEXT:LONG_TEXT/IN_OUT=null\r\n</PLSQL\u0001RECURSIVE\u0001BIND>\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@27a6d79d\r\n08:08:18,460 ??? ifs.fnd.sf.admin.FndProcessList.registerProcess(): Registered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@27a6d79d' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@27a6d79d executed\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.closePlsqlResultLog(): \r\n<PLSQL\u0001RECURSIVE\u0001RESULT>\r\n [1] TEXT:LONG_TEXT/IN_OUT=6^2030097020^CALLSTACK^INFORMA... (223 characters)\r\n</PLSQL\u0001RECURSIVE\u0001RESULT>\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndStandardStatement.spoolPlSqlTrace(): \r\n<PLSQL\u0001TRACE>\r\n6^2030097020^CALLSTACK^INFORMATION^^Rm_Acc_Filter_Util_API.Skip_Security\r\n8^2030097021^CALLSTACK^INFORMATION^^Rm_Acc_Usage_API.Is_Security_Enabled\r\n8^2030097021^CALLSTACK^INFORMATION^^Rm_Acc_Filter_Util_API.Filter_Not_Active\r\n</PLSQL\u0001TRACE>\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@27a6d79d\r\n08:08:18,460 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@27a6d79d' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndConnection.createStatement(): Creating statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2203b473\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.prepareCall(): Preparing call:\r\n<PLSQL\u0001STMT>\r\nbegin IFSAPP.Fnd_Context_SYS.End_Request_(:1 , :2 , :3 ); end;\r\n</PLSQL\u0001STMT>\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.bindArguments(): \r\n<PLSQL\u0001BIND>\r\n [1] TRANSACTION_ID:TEXT/OUT=null\r\n [2] TRACE:LONG_TEXT/OUT=null\r\n [3] ERROR_MSG:LONG_TEXT/OUT=null\r\n</PLSQL\u0001BIND>\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.execute(): Executing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2203b473\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.execute(): Statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2203b473 executed\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndStatement.close(): Closing statement ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2203b473\r\n08:08:18,460 ??? ifs.fnd.sf.admin.FndProcessList.unregisterProcess(): Unregistered process 'ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2203b473' on request '9b08c79e-bc8c-455d-bada-0bb7bfea49c4'\r\n08:08:18,460 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PlsqlProxy Response Header\r\n08:08:18,460 ??? ifs.fnd.base.FndDebug$Instance.debugContext(): \r\n   1:$FND_CONTEXT=\r\n      1:$STATUS:T = DONE\r\n      2:$SERIALIZATION_TARGET:T = CLIENT\r\n      3:$JAVA_LOCALE:T = en_US\r\n      4:$DIRECTORY_ID:T = IFSAPP\r\n      5:$EXTERNAL_BODY_TYPE:I = 0\r\n      6:$STORAGE_TYPE:T = STANDARD_STORAGE\r\n      7:$IMPLEMENTATION_MODE:I = 3\r\n      8:$FND_CONTEXT=\r\n         1:$CLIENT_ID = SYJUPL2-WIA-CONSOLE-39308\r\n         2:$REQUEST_ID = 9b08c79e-bc8c-455d-bada-0bb7bfea49c4\r\n         3:$LOCALE = en-US\r\n         4:$ENCODE_BINARY_VALUE = FALSE\r\n         5:$LANGUAGE:T = en\r\n         6:$DEBUG=\r\n            1:$CALL_SEQUENCE = DEBUG\r\n            2:$DB_ACCESS = DEBUG\r\n            3:$SKELETON_ARGUMENTS = DEBUG\r\n            4:$STUB_ARGUMENTS = DEBUG\r\n            5:$APPLICATION_CODE = DEBUG\r\n            6:$OUTPUT =             08:08:16,022 ??? ifs ......[Size=19294]\r\n\r\n         7:$COUNTERS=\r\n            1:$SQL_STATEMENT:I = 5\r\n            2:$SQL_FETCH:I = 0\r\n            3:$CORBA_CALL:I = -1\r\n      9:$APP_CONTEXT=\r\n   2:$FND_SERVER_CONTEXT=\r\n      1:$CONNECTION_MGR:T = ifs.fnd.sf.storage.FndTaggedConnectionManager@24de62f2\r\n      2:$CONNECTION_LIST:T = [ifs.fnd.sf.storage.FndTaggedConnection@7a50e7a2]\r\n      3:$INSIDE_ACTIVITY:B = false\r\n      4:$BASE_SERVER_METHOD_SECURITY_ENABLED:B = true\r\n      5:$SUPPORTED_CAPABILITIES:T = [LPTEXT]\r\n      6:$INIT_FND_SESSION_COUNT:I = 0\r\n      7:$INIT_FND_SESSION_DB_COUNT:I = 0\r\n      8:$VALIDATING_REAUTHENTICATION_RESPONSE:B = false\r\n   3:$FND_J2EE_CONTEXT=\r\n      1:$INSIDE_FND_ENTITY_BEAN:B = false\r\n      2:$DEBUGGER_ROLE_GRANTED:B = true\r\n      3:$CURRENT_METHODS:T = []\r\n\r\n08:08:18,460 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PlsqlProxy Response Body\r\n08:08:18,460 ??? ifs.fnd.services.plsqlserver.service.PlsqlProxy.afterCall(): PLSQL_INVOCATION (Fnd_View) (DIRTY) Create  identity=5fa1b302-4d94-42d4-9405-38617e7c55ed\r\n   SYSTEM_NAME/Q (Alpha) Non_Existent\r\n   TRANSACTION_ID/* (Text (DIRTY)) Null\r\n   USER_SESSION/Q (Boolean) Non_Existent\r\n   COMMANDS/* (Array (DIRTY)) (1 elements):\r\n      1:COMMAND (Fnd_View) (DIRTY) Create element of PLSQL_INVOCATION.COMMANDS  identity=8b35e604-1a24-478a-b99b-c16fd30ed609\r\n         BIND_VARIABLES/Q (Binary) = 16 bytes: !\r\n0:$p0:LPA/IN=10\r\n\r\n         COUNT_ROWS/Q (Boolean) Non_Existent\r\n         CURSOR_ID/* (Text (DIRTY)) Null\r\n         DEBUG_APP_STACK_FRAME/Q (Alpha) = Module: Ifs.Application.Invoic_.dllNamespace: Ifs.Application.Invoic_Object: frmInstantInvoiceMethod: DataSourcePopulateIt\r\n         DEBUG_BIND_INFO/Q (Alpha) = i_hWndFrame.frmInstantInvoice.sCompany\r\n         DEBUG_CONTEXT_NAME/Q (Alpha) = frmInstantInvoice\r\n         DEBUG_INTO_INFO/Q (Alpha) = i_hWndFrame.frmInstantInvoice.cmbIdentity.__sRecordObjidTmp,i_hWndFrame.frmInstantInvoice.cmbIdentity.i_sMyValue,i_hWndFrame.frmInstantInvoice.dfName,i_hWndFrame.frmInstantInvoice.dfSeriesId,i_hWndFrame.frmInstantInvoice.dfInvoiceNo\r\n         GENERATE_OUTER_BLOCK/Q (Boolean) = true\r\n         MAX_ROWS/Q (Integer) = 103\r\n         PARTIAL_RESULT/* (Boolean (DIRTY)) = false\r\n         RESULT/* (Binary (DIRTY)) = 2 bytes: !\r\n\r\n         RESULT_RECORD_TYPE/Q (Alpha) Null\r\n         ROW_COUNT/* (Integer (DIRTY)) = 0\r\n         SELECT_COLUMNS/Q (Alpha) Non_Existent\r\n         SKIP_ROWS/Q (Integer) Non_Existent\r\n         STATEMENT/Q (Alpha) Non_Existent\r\n         PROPAGATED_VARIABLES/Q (Array) Non_Existent\r\n\r\n08:08:18,460 ??? ifs.fnd.sf.admin.FndProcessList.debug(): Registered abortable processes: {701829e1-bd93-4a1c-9893-cb0eab27a2cf=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@75a3dae0], 2326db39-4aa8-49ad-91f8-74b539b050ba=[], b433c43a-1095-42fb-a01e-23d202bf81b1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@4e2e4461], 1b2b4663-6c4b-491d-9803-c3f26f40188a=[], 6a10a379-78c4-4745-9008-6a1f7068fe31=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2093afa0], ac3be920-ba38-4b1c-ab30-3d3ccb6f0664=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@2493241d], cf54cb03-c274-4916-af06-25e6ca34be1f=[], 68c6f088-b640-4df3-90e8-be04b3922599=[], 3a387445-ca2b-4c47-8145-be1f74ad45c4=[], 148675fc-9bf4-4b99-9c85-09237a698d8b=[], 56ad5863-ad77-4ff5-acbe-abc623ef21b4=[], b57cf0f6-9361-4ff1-8884-158609ecd0ec=[], 23ac2c5d-1b43-4f31-b3b2-5072156674a6=[], 5a698302-663d-4205-9747-fe460fdafac3=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@49ffb198], 2178ee37-4800-48db-b315-72878060a3d2=[], 7494a504-d31c-4af7-b003-4a37d150d684=[], 5cec6fdc-9f71-4185-a73d-fb26aaf16e28=[], d137ab42-ba9a-4b3a-9270-5ca397ab5413=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@383796ee], e94b12f6-8b5d-48f0-8578-360f510be1c8=[], 308c0783-fb59-4bad-8f74-26a4108fa20b=[], ba005d84-ec98-4a32-a034-1de8bacb51f4=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6fe2eade], e5cbe1df-2a66-41e5-b6f6-ad4cc63c86ab=[], b7b79402-d5a9-4b88-9700-fddcde7fbce1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@53a83fd2], 5fdc2c3b-d45d-40d0-9dac-e0e82a8b26bc=[], 220f0791-2520-41c8-8ad9-413f1f002e03=[], 7c9465bd-3fe8-4628-b925-39e5b0022f54=[], fc08fb5b-a713-4876-a189-0cf66380fbff=[], ecdceaae-8683-4e7a-bef7-c952005f1e3a=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@5f2d022c], 66417d72-4433-4b17-82ed-a5d0893911f1=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@631c48e4], af52994d-e185-40ad-9f6a-965228cc321d=[], c2c4c929-72d3-4799-8d0b-4ebbf0c15629=[], 6d904282-c11b-4833-8bf3-23d8374b9038=[], 56e6225a-f576-4eac-a252-72e45a7376c9=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@6e7b64a8], f29c0020-adb7-4c70-8cd1-0d8d739404b9=[], 47fe2c62-719d-4fc5-91c7-b1c27b5168a2=[], abda7f03-b2e0-4f8f-885e-96ada15e232a=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@575b466e], 3c9af4b2-1b53-4756-a5f6-f6f1ab42e24f=[], 82450b03-cb3f-488f-8bd4-78d92ebe2d09=[], f842b1f4-d8ce-43f7-84ad-880833f35a63=[], 38a58615-feda-43d5-9924-0ccc799d3419=[], 273991c3-c96b-4107-a567-695b6cd48a09=[ifs.fnd.sf.j2ee.container.weblogic.FndOracleStatementForWebLogic@53f506b6]}\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndConnectionList.remove(): Removing connection: ifs.fnd.sf.storage.FndTaggedConnection@7a50e7a2 REMOVED\r\n08:08:18,460 ??? ifs.fnd.sf.storage.FndTaggedConnectionManager.returnConnectionToPool(): Finished request in 2438 ms.\r\n08:08:18,460 ??? ifs.fnd.plsql.pool.TaggedConnectionPoolManager.returnConnection(): Returning connection to pool: {nr=3 USED auto-commit=false key=-2438 timestamp=-2438 SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp}\r\n08:08:18,460 ??? ifs.fnd.plsql.pool.TaggedConnection.returnToPool(): Entered state transition method: \r\n08:08:18,460 ??? ifs.fnd.plsql.pool.TaggedConnection.returnToPool(): Returned connection to pool: \r\n\t{nr=3 INITIALIZED auto-commit=false key=0 timestamp=0 usedByRequest=false SID=120 fndUser=IFSAPP dbUser=IFSAPP directoryId=ifsapp clientId=SYJUPL2-WIA-CONSOLE-39308 clientSessionId=null securityCheckpointAuth=null refreshSessionRoles=false} inUse=false language=en-US transactionId=null AUDSID=299103035\r\n\t\tInitializedSession(nr=3):  close=86397562 (2021-08-07 08:08:16)\r\n\t\t\r\n"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "COUNTERS",
+                            "type": "COUNTERS",
+                            "status": "Modify",
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "SQL_STATEMENT",
+                                    "type": "I",
+                                    "status": "*",
+                                    "value": "5"
+                                },
+                                {
+                                    "name": "SQL_FETCH",
+                                    "type": "I",
+                                    "status": "Q",
+                                    "value": "0"
+                                },
+                                {
+                                    "name": "CORBA_CALL",
+                                    "type": "I",
+                                    "status": "Q",
+                                    "value": "-1"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "APP_CONTEXT",
+                    "buffer": true,
+                    "value": []
+                }
+            ],
+            [
+                {
+                    "name": "PLSQL_INVOCATION",
+                    "buffer": true,
+                    "value": [
+                        {
+                            "delimiter": 14,
+                            "name": "DATA",
+                            "type": "PLSQL_INVOCATION",
+                            "status": "Create",
+                            "value": "5fa1b302-4d94-42d4-9405-38617e7c55ed"
+                        },
+                        {
+                            "buffer": true,
+                            "value": [
+                                {
+                                    "name": "COMMANDS",
+                                    "type": "ARRAY",
+                                    "status": "*",
+                                    "buffer": true,
+                                    "value": [
+                                        {
+                                            "delimiter": 14,
+                                            "name": "DATA",
+                                            "type": "PLSQL_SERVER.COMMAND",
+                                            "status": "Create",
+                                            "value": "8b35e604-1a24-478a-b99b-c16fd30ed609"
+                                        },
+                                        {
+                                            "buffer": true,
+                                            "value": [
+                                                {
+                                                    "name": "BIND_VARIABLES",
+                                                    "type": "R.B64",
+                                                    "status": "Q",
+                                                    "buffer": true,
+                                                    "value": [
+                                                        {
+                                                            "name": "p0",
+                                                            "type": "LPA",
+                                                            "status": "IN",
+                                                            "value": "10"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "MAX_ROWS",
+                                                    "type": "I",
+                                                    "status": "Q",
+                                                    "value": "103"
+                                                },
+                                                {
+                                                    "name": "PARTIAL_RESULT",
+                                                    "type": "B",
+                                                    "status": "*",
+                                                    "value": "FALSE"
+                                                },
+                                                {
+                                                    "name": "RESULT",
+                                                    "type": "R.B64",
+                                                    "status": "*",
+                                                    "buffer": true,
+                                                    "value": []
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "RESULT_RECORD_TYPE",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "isNull": true,
+                                                    "value": null
+                                                },
+                                                {
+                                                    "name": "ROW_COUNT",
+                                                    "type": "I",
+                                                    "status": "*",
+                                                    "value": "0"
+                                                },
+                                                {
+                                                    "delimiter": 20,
+                                                    "name": "CURSOR_ID",
+                                                    "type": "LPT",
+                                                    "status": "*",
+                                                    "isNull": true,
+                                                    "value": null
+                                                },
+                                                {
+                                                    "name": "GENERATE_OUTER_BLOCK",
+                                                    "type": "B",
+                                                    "status": "Q",
+                                                    "value": "TRUE"
+                                                },
+                                                {
+                                                    "name": "DEBUG_CONTEXT_NAME",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "value": "frmInstantInvoice"
+                                                },
+                                                {
+                                                    "name": "DEBUG_APP_STACK_FRAME",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "value": "Module: Ifs.Application.Invoic_.dll\rNamespace: Ifs.Application.Invoic_\rObject: frmInstantInvoice\rMethod: DataSourcePopulateIt"
+                                                },
+                                                {
+                                                    "name": "DEBUG_BIND_INFO",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "value": "i_hWndFrame.frmInstantInvoice.sCompany"
+                                                },
+                                                {
+                                                    "name": "DEBUG_INTO_INFO",
+                                                    "type": "LPA",
+                                                    "status": "Q",
+                                                    "value": "i_hWndFrame.frmInstantInvoice.cmbIdentity.__sRecordObjidTmp,i_hWndFrame.frmInstantInvoice.cmbIdentity.i_sMyValue,i_hWndFrame.frmInstantInvoice.dfName,i_hWndFrame.frmInstantInvoice.dfSeriesId,i_hWndFrame.frmInstantInvoice.dfInvoiceNo"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "delimiter": 20,
+                                    "name": "TRANSACTION_ID",
+                                    "type": "LPT",
+                                    "status": "*",
+                                    "isNull": true,
+                                    "value": null
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        ]
+    },
+    "method": "SQL"
+}
