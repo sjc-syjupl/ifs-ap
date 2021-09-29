@@ -1,5 +1,5 @@
 {
-  "name": "Ifs.Node.AP",
+  "name": "ifs-ap",
   "version": "1.0.0",
   "description": "IFS Node.js Access Provider, this module allows access to IFS data from Node.js",
   "main": "build/index.js",

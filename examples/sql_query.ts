@@ -1,5 +1,5 @@
 
-import { Connection } from "Ifs.Node.AP"
+import { Connection } from "ifs-ap"
 
 let conn = new Connection("https://ifs.demo.com:48080/", "ifsapp", "ifsapp", "IFS10");
 
