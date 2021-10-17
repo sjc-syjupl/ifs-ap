@@ -21,11 +21,11 @@ The next step, I hope, will be allowed to connect the app directly to IFS withou
 npm install ifs-ap
 ```
 
-<!-- ## SQL query -->
+## SQL query
 
 ```javascript
 import { Connection } from "ifs-ap";
-let conn = new Connection("https://ifs.demo.com:48080/", "ifsapp", "ifsapp", "IFS10" );
+const conn = new Connection("https://ifs.demo.com:48080/", "ifsapp", "ifsapp", "IFS10" );
 
 conn.Sql(
     `SELECT customer_id,
@@ -51,7 +51,7 @@ conn.Sql(
 
 ```javascript
 import { Connection } from "ifs-ap";
-let conn = new Connection("https://ifs.demo.com:48080/", "ifsapp", "ifsapp", "IFS10" );
+const conn = new Connection("https://ifs.demo.com:48080/", "ifsapp", "ifsapp", "IFS10" );
 
 conn.PlSql(
     `
@@ -73,3 +73,24 @@ conn.PlSql(
     */
   });
 ```
+
+## Download Attachemt
+```javascript
+import { Connection } from "ifs-ap";
+import * as fs from 'fs';
+const conn = new Connection("https://ifs.demo.com:48080/", "ifsapp", "ifsapp", "IFS10" );
+const attachment = conn.Attachments();
+
+attachment.GetFilesByRef('Voucher', 'ACCOUNTING_YEAR=2020^COMPANY=10^VOUCHER_NO=2020000000^VOUCHER_TYPE=I^') // get all attachments by lu and ref
+    .then(result => {
+        if (result) {
+            console.log( result );
+            for(const file of result){
+                if (file.fileName && file.fileData) {
+                    fs.writeFile( file.fileName, Buffer.from( file.fileData ), _err => {} );
+                }
+            }
+        }
+    })
+```
+
