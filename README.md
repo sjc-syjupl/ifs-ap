@@ -1,3 +1,8 @@
+<!--
+  Title: IFS Node.js Access Provider
+  Description: This is a package allowed to connect to the IFS ERP system from the Node.js environment.
+  Author: Sylwester Jurczyk
+  -->
 # ifs-ap
 
 This is a package allowed to connect to the IFS ERP system from the Node.js environment.<br>
