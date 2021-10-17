@@ -38,5 +38,5 @@ export interface ConnectionInterface {
     set clientSessionId(value: string);
 
     get clientId(): string;
-
+    
 }

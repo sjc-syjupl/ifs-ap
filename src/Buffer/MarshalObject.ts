@@ -29,6 +29,8 @@ export type IfsDataObjectType = { [k: string]: any };
 export type IfsDataArrayType = Array<IfsDataObjectType>;
 export type IfsDataType = (IfsDataObjectType | IfsDataArrayType | Array<IfsDataType>);
 
+export type transfromFuncType = (path: string, value: IfsDataType) => IfsDataType;
+
 export class MasrshalObject {
 
     private static Write4BytesLength(length : number, writer : BinaryWriter) {
@@ -174,7 +176,7 @@ export class MasrshalObject {
         writer.WriteByte(BufferMarkers.EndBufferMarker);
     }
 
-    private static ReadIfsDataFromBuffer( tr : TokenReader, path : string, transformFunc? : (path: string, value: IfsDataType)=>IfsDataType ): IfsDataType {
+    private static ReadIfsDataFromBuffer( tr : TokenReader, path : string, transformFunc? : transfromFuncType ): IfsDataType {
         let bufferTable: IfsDataArrayType = [];
         let name: string, type: string, status: string;
         let item: { [k: string]: any } = {}
@@ -290,7 +292,7 @@ export class MasrshalObject {
         return writer.ToUint8Array();
     }
 
-    public static Unmarshall(data: Uint8Array, transformFunc?: (path: string, value: IfsDataType) => IfsDataType): IfsDataType {
+    public static Unmarshall(data: Uint8Array, transformFunc?: transfromFuncType): IfsDataType {
         if (data.byteLength === 0) return [];
         const tr = new TokenReader(data);
         let returnValue = []

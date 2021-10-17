@@ -553,32 +553,7 @@ export class _PlSqlCommand extends _Message implements _IPlSqlCommand, _ISqlComm
     }
 
     protected async _Execute(): Promise<(PlSqlOneResponse | PlSqlMultiResponse)> {
-        const [headerBytes, body] = this.RequestMessage();
-        const response = await this.SendMessage(headerBytes, body);
-
-        if (!response.ok || response.status != 200 ||
-            !response.headers.has("Content-Type") || response.headers.get("Content-Type") != "application/octet-stream") {
-            const errorText = await response.text();
-            return this.ErrorResponse(errorText);
-        }
-
-        const buffer = await response.arrayBuffer();
-        //fs.writeFileSync("Response.dat", new Uint8Array( buffer));
-        
-        let ifsData = MasrshalObject.Unmarshall(new Uint8Array(buffer), _PlSqlCommand.TransformResultFunc);
-        if (Array.isArray(ifsData) && ifsData.length > 0 && !Array.isArray(ifsData[0])) {
-            ifsData = [ifsData, undefined];// response with error don't have body part
-        }
-        //console.log(JSON.stringify(ifsData, null, 4));
-        if (!(Array.isArray(ifsData) && ifsData.length >= 2 && Array.isArray(ifsData[0]))) {
-            throw Error("Wrong type of response.");
-        }
-
-        const errorMessage = this.GetErrorMessage(ifsData);
-        if (errorMessage)
-            return this.ErrorResponse(errorMessage);
-        else
-            return this.MapResponse(ifsData);
+        return (await this._ExecuteMessage( _PlSqlCommand.TransformResultFunc )) as (PlSqlOneResponse | PlSqlMultiResponse);
     };
 
      public MapResponse(ifsData: IfsDataType): (PlSqlOneResponse | PlSqlMultiResponse) {

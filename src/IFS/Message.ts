@@ -1,7 +1,7 @@
 import { fetch } from "cross-fetch";
 import { NewId, ToIfsString } from "./Util";
 import { BindingsArray, Bindings, BindingParameterType, BindingValueType } from "./Bindings"
-import { MasrshalObject, IfsDataType, IfsDataObjectType } from "../Buffer/MarshalObject"
+import { MasrshalObject, IfsDataType, IfsDataObjectType, transfromFuncType } from "../Buffer/MarshalObject"
 import { BinaryWriter } from "../Buffer/BinaryWriter"
 import { UTF8Length } from "../Buffer/utf8";
 import { ConnectionInterface } from "./ConnectionInterface"
@@ -224,6 +224,38 @@ export abstract class _Message implements Message {
             return "Something wrong in returned data. Status = " + statusInfo.value;
         }
         return "";
+    }
+
+    protected abstract ErrorResponse(errorText: string): object;
+    protected abstract MapResponse(ifsData: IfsDataType): object;
+
+    protected async _ExecuteMessage( transfrmFunc? : transfromFuncType): Promise<IfsDataType> {
+        const [headerBytes, body] = this.RequestMessage();
+        const response = await this.SendMessage(headerBytes, body);
+
+        if (!response.ok || response.status != 200 ||
+            !response.headers.has("Content-Type") || response.headers.get("Content-Type") != "application/octet-stream") {
+            const errorText = await response.text();
+            return this.ErrorResponse(errorText);
+        }
+
+        const buffer = await response.arrayBuffer();
+        //fs.writeFileSync("Response.dat", new Uint8Array( buffer));
+        
+        let ifsData = MasrshalObject.Unmarshall(new Uint8Array(buffer), transfrmFunc);
+        if (Array.isArray(ifsData) && ifsData.length > 0 && !Array.isArray(ifsData[0])) {
+            ifsData = [ifsData, undefined];// response with error don't have body part
+        }
+        //console.log(JSON.stringify(ifsData, null, 4));
+        if (!(Array.isArray(ifsData) && ifsData.length >= 2 && Array.isArray(ifsData[0]))) {
+            return this.ErrorResponse("Wrong type of response.");
+        }
+
+        const errorMessage = this.GetErrorMessage(ifsData);
+        if (errorMessage)
+            return this.ErrorResponse(errorMessage);
+        else
+            return this.MapResponse(ifsData);
     }
 
 }

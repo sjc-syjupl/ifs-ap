@@ -4,6 +4,8 @@ import { NewId } from "./Util"
 import { PlSqlOneCommand, _PlSqlCommand, PlSqlResponse, PlSqlOneResponse, SqlResponse, _ISqlCommand } from './PlSqlCommand';
 import { CmdBlock, _CmdBlock } from "./CmdBlock"
 import { ConnectionInterface, IfsVersion } from "./ConnectionInterface"
+import { AttachmentsInterface } from "./AttachmentsInterface"
+import { Attachments } from "./Attachments"
 //import { AttrFunc, AttrType, ActionType } from "./AttrFunc"
 
 export type ConnectionOptions = ({ locale? : string, runAs? : string, ifsVersion?: (string|IfsVersion), timeout?:number});
@@ -166,7 +168,7 @@ export class Connection implements ConnectionInterface {
     public CmdBlock(): CmdBlock {
         return new _CmdBlock(this);
     }
-
+   
     public async Sql<T extends BindingParameterType>(sqlString: string, bindings?: T, maxRows?: number, skipRows?: number, options?: { [k: string]: string }): Promise<SqlResponse<T>> {
         if (!_PlSqlCommand.IsSelectStatement(sqlString))
             throw Error("This is not SQL expression: "+ sqlString);
@@ -266,6 +268,10 @@ export class Connection implements ConnectionInterface {
         this._clientSessionId = "";
         this.transactionId = "";
         return plSql.response as PlSqlOneResponse;
+    }
+
+    public Attachments(): AttachmentsInterface {
+        return new Attachments(this);
     }
 
     /*
