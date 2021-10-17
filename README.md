@@ -74,7 +74,7 @@ conn.PlSql(
   });
 ```
 
-## Download Attachemt
+## Download Attachment
 ```javascript
 import { Connection } from "ifs-ap";
 import * as fs from 'fs';
