@@ -1,7 +1,6 @@
-
 import { Connection } from "ifs-ap"
 
-let conn = new Connection("https://ifs.demo.com:48080/", "ifsapp", "ifsapp", "IFS10");
+const conn = new Connection("https://ifs.demo.com:48080/", "ifsapp", "ifsapp", "IFS10");
 
 
 // Example Pl/SQL code
@@ -119,3 +118,5 @@ First Pl/Sql block, status=true error=
 Second Pl/Sql block, status=true error=
 Commit
 */
+
+//conn.EndSession();

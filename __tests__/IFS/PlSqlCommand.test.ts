@@ -1,4 +1,5 @@
-import { _PlSqlCommand, PlSqlOneResponse, PlSqlMultiResponse } from "../../src/IFS/PlSqlCommand"
+import { _PlSqlCommand } from "../../src/IFS/PlSqlCommand"
+import { PlSqlOneResponse, PlSqlMultiResponse } from "../../src/IFS/PlSqlCommandTypes"
 import { Connection } from "../../src/IFS/Connection"
 import { _Message } from "../../src/IFS/Message"
 import { _CmdBlock } from "../../src/IFS/CmdBlock"

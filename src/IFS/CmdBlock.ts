@@ -2,7 +2,8 @@ import { BindingParameterType } from "./Bindings"
 import { IfsDataType, IfsDataArrayType, IfsDataObjectType  } from "../Buffer/MarshalObject"
 import { ConnectionInterface } from './ConnectionInterface';
 import { _Message } from "./Message"
-import { PlSqlOneCommand, _IPlSqlCommand, _ISqlCommand, _PlSqlCommand, MultiResponse, PlSqlCommand, SqlCommand, PlSqlMultiResponse} from "./PlSqlCommand"
+import { _PlSqlCommand } from "./PlSqlCommand"
+import { PlSqlOneCommand, _IPlSqlCommand, _ISqlCommand, MultiResponse, PlSqlCommand, SqlCommand, PlSqlMultiResponse} from "./PlSqlCommandTypes"
 import { Connection } from './Connection';
 //import { AttrType, ActionType } from "./AttrFunc"
 

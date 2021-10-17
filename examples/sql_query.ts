@@ -1,7 +1,7 @@
 
 import { Connection } from "ifs-ap"
 
-let conn = new Connection("https://ifs.demo.com:48080/", "ifsapp", "ifsapp", "IFS10");
+const conn = new Connection("https://ifs.demo.com:48080/", "ifsapp", "ifsapp", "IFS10");
 
 
 // Simple SQL query 
@@ -99,3 +99,6 @@ conn.Sql(`SELECT customer_id,
 
     return result.request.CloseCursor();
 });
+
+
+//conn.EndSession();

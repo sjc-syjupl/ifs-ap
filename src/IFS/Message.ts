@@ -5,6 +5,9 @@ import { MasrshalObject, IfsDataType, IfsDataObjectType, transfromFuncType } fro
 import { BinaryWriter } from "../Buffer/BinaryWriter"
 import { UTF8Length } from "../Buffer/utf8";
 import { ConnectionInterface } from "./ConnectionInterface"
+import { SqlOneResponse } from './PlSqlCommandTypes';
+import { _PlSqlCommand } from './PlSqlCommand';
+
 
 export interface Message {
     get connection(): ConnectionInterface;
@@ -37,6 +40,12 @@ export abstract class _Message implements Message {
     public get connection() : ConnectionInterface {
         return this._connection;
     }
+
+    public OpenTempSession() {
+        this._clientSessionId = NewId();
+    }
+
+    public abstract CloseTempSession(): Promise<SqlOneResponse>;
 
 
     public AddBinding(bindings: BindingParameterType ) {

@@ -2,7 +2,8 @@ import * as fs from 'fs';
 import { Response } from "cross-fetch"
 import { IfsDataArrayType } from "../../src/Buffer/MarshalObject"
 import { _Message } from "../../src/IFS/Message"
-import { _PlSqlResponse, _PlSqlCommand, SqlOneResponse } from "../../src/IFS/PlSqlCommand"
+import { _PlSqlCommand } from "../../src/IFS/PlSqlCommand"
+import { _PlSqlResponse, SqlOneResponse } from "../../src/IFS/PlSqlCommandTypes"
 import { Connection } from "../../src/IFS/Connection"
 //import { MasrshalObject } from "../../src/Buffer/MarshalObject"
 const util = require("../../src/IFS/Util")

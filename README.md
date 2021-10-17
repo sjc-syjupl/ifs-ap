@@ -7,12 +7,12 @@ Now, If you create your own application (like an app on the phone or website) an
 - The first option is to use IFS Access Provider, a package delivered by IFS. Unfortunately, those packages delivered by IFS are only for only two programming languages, .Net and Java.<br>
   This forces us to use servers written in those two languages, and all servers are written in a different language (line for example Node.js) are excluded from the possibility to connect to IFS.<br>
 - The second option is connected to Oracle directly, but this type of connection many times are forbidden because of licence limitations.<br>
-  <br>
-  The purpose of this package is to expand the above possibilities by allowing to connect to IFS from the Node.js ecosystem.<br>
-  This package connects with the IFS Extender Server and exchanges messages in the same binary format as IFS Access Provider do.<br>
-  Look to the folder with examples to get more information about functions provided by this library.<br>
-  <br>
-  The next step, I hope, will be allowed to connect the app directly to IFS without any servers in the middle.<br>
+<p>
+The purpose of this package is to expand the above possibilities by allowing to connect to IFS from the Node.js ecosystem.<br>
+This package connects with the IFS Extender Server and exchanges messages in the same binary format as IFS Access Provider do.<br>
+Look to the folder with examples to get more information about functions provided by this library.<br>
+<br>
+The next step, I hope, will be allowed to connect the app directly to IFS without any servers in the middle.<br>
 
 ## Install
 
@@ -20,7 +20,7 @@ Now, If you create your own application (like an app on the phone or website) an
 npm install ifs-ap
 ```
 
-## SQL query
+<!-- ## SQL query -->
 
 ```javascript
 import { Connection } from "ifs-ap";

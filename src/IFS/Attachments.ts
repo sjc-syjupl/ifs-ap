@@ -1,11 +1,22 @@
-import { SqlOneResponse } from "./PlSqlCommand"
+import { SqlOneResponse } from "./PlSqlCommandTypes"
 import { IfsDataType } from "../Buffer/MarshalObject"
 import { AttachmentsFileTransfer, AttachmentResponse } from "./AttachmentsFileTransfer"
 import { Connection } from "./Connection"
 import { AttachmentsInterface, AttachmentKeys } from "./AttachmentsInterface"
+import { _PlSqlCommand } from "./PlSqlCommand"
+import { IsEmpty } from "./Util"
 
 export class Attachments extends AttachmentsFileTransfer implements AttachmentsInterface {
 
+    public async CloseTempSession(): Promise<SqlOneResponse> {
+        const endSessionQuery = new _PlSqlCommand(this._connection, "END_CLIENT_SESSION", {}, {'clientSessionId':this._clientSessionId} );
+        if (this._clientSessionId) {
+            await endSessionQuery.Execute()
+            this._clientSessionId = "";
+        }
+        return endSessionQuery.response as SqlOneResponse;
+    }
+    
     public async GetInfo(luName: string, keyRef: string, onlyFirst: boolean = false): Promise<SqlOneResponse> {
         return await (this._connection as Connection).Sql(
             `SELECT D.DOC_CLASS, D.DOC_NO, D.DOC_SHEET, D.DOC_REV, F.FILE_NO, F.DOC_TYPE, F.FILE_TYPE, F.USER_FILE_NAME FILE_NAME,
@@ -18,7 +29,7 @@ export class Attachments extends AttachmentsFileTransfer implements AttachmentsI
    JOIN &AO.DOC_ISSUE i ON d.DOC_CLASS = i.DOC_CLASS AND d.DOC_NO = i.DOC_NO AND d.DOC_SHEET = i.DOC_SHEET AND d.DOC_REV = i.DOC_REV
   WHERE d.LU_NAME = :luName 
     AND d.KEY_REF = :keyRef`
-                + onlyFirst ? ' AND ROWNUM = 1' : ''
+                + (onlyFirst ? ' AND ROWNUM = 1' : '')
             ,
             { "luName": luName, "keyRef": keyRef });
     }
@@ -52,10 +63,19 @@ export class Attachments extends AttachmentsFileTransfer implements AttachmentsI
 
     public async GetFile(docKeysParam: AttachmentKeys): Promise<AttachmentResponse> {
         const docKeys = this.FixDocKeysName(docKeysParam);
-        return await this.Download(docKeys.docClass, docKeys.docNo, docKeys.docSheet,
+        const getFileSession = new Attachments(this.connection);
+        return await getFileSession.Download(docKeys.docClass, docKeys.docNo, docKeys.docSheet,
             docKeys.docRev, docKeys.docType, docKeys.fileNo, docKeys.fileName)
     }
     
+    public async GetFilesByRef(luName: string, keyRef: string): Promise<AttachmentResponse[]>{
+        const keys = await this.GetKeys(luName, keyRef);
+        if (!IsEmpty(keys)) {
+            return (await Promise.all( keys.map( key => this.GetFile( key ) ) )) as AttachmentResponse[];
+        }
+        return [];
+    }
+
     public async AddFile(docClass: string, title: string, fileName: string, fileData: ArrayBuffer, luName?: string, keyRef?: string, ): Promise<AttachmentResponse> {
         const docKeys = await this.AttachEmptyDoc(docClass, title, fileName, luName||"", keyRef||"" );
         return await this.ModifyFile(this.FixDocKeysName(docKeys), fileName, fileData);
@@ -63,14 +83,17 @@ export class Attachments extends AttachmentsFileTransfer implements AttachmentsI
 
     public async ModifyFile(docKeysParam: AttachmentKeys, fileName: string, fileData: ArrayBuffer): Promise<AttachmentResponse> {
         const docKeys = this.FixDocKeysName(docKeysParam);
-        const checkOut = await this.CheckOut(docKeys);
+        const getFileSession = new Attachments(this.connection);
+        getFileSession.OpenTempSession()
+        const checkOut = await getFileSession.CheckOut(docKeys);
         if (!checkOut.ok) return this.ErrorResponse(checkOut.errorText);
 
-        const upload = await this.Upload(docKeys.docClass, docKeys.docNo, docKeys.docSheet,
+        const upload = await getFileSession.Upload(docKeys.docClass, docKeys.docNo, docKeys.docSheet,
             docKeys.docRev, docKeys.docType, docKeys.fileNo, fileName, fileData)
         if (!upload.ok) return this.ErrorResponse(upload.errorText);
 
-        const checkIn = await this.CheckIn(docKeys);
+        const checkIn = await getFileSession.CheckIn(docKeys);
+        getFileSession.CloseTempSession().then(_ => { } );           
         return checkIn;
     }
 

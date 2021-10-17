@@ -1,7 +1,8 @@
 import { StringToBase64 } from "../Buffer/utf8"
 import { BindingParameterType } from "./Bindings"
 import { NewId } from "./Util"
-import { PlSqlOneCommand, _PlSqlCommand, PlSqlResponse, PlSqlOneResponse, SqlResponse, _ISqlCommand } from './PlSqlCommand';
+import { _PlSqlCommand} from './PlSqlCommand';
+import { PlSqlOneCommand, PlSqlResponse, PlSqlOneResponse, SqlResponse, _ISqlCommand } from './PlSqlCommandTypes';
 import { CmdBlock, _CmdBlock } from "./CmdBlock"
 import { ConnectionInterface, IfsVersion } from "./ConnectionInterface"
 import { AttachmentsInterface } from "./AttachmentsInterface"

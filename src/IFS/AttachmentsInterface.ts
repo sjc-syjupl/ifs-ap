@@ -1,5 +1,5 @@
 import { IfsDataType } from "../Buffer/MarshalObject"
-import { SqlOneResponse } from "./PlSqlCommand"
+import { SqlOneResponse } from "./PlSqlCommandTypes"
 import { AttachmentResponse } from "./AttachmentsFileTransfer"
 
 export interface AttachmentKeys{
@@ -19,6 +19,7 @@ export interface AttachmentsInterface {
     GetFirstKey(luName: string, keyRef: string): Promise<AttachmentKeys | undefined>;
 
     GetFile(docKeysParam: AttachmentKeys): Promise<AttachmentResponse>;
+    GetFilesByRef(luName: string, keyRef: string): Promise<AttachmentResponse[]>;
     AddFile(docClass: string, title: string, fileName: string, fileData: ArrayBuffer, luName?: string, keyRef?: string,): Promise<AttachmentResponse>;
     ModifyFile(docKeysParam: AttachmentKeys, fileName: string, fileData: ArrayBuffer): Promise<AttachmentResponse>;
     RemoveFile(docKeysParam: AttachmentKeys): Promise<AttachmentResponse>;

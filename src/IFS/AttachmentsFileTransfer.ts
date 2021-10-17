@@ -3,6 +3,8 @@ import { _Message } from "./Message"
 import { fetch } from "cross-fetch";
 import { MasrshalObject, IfsDataType, IfsDataObjectType  } from "../Buffer/MarshalObject"
 import { UTF8Length } from "../Buffer/utf8";
+import { assert } from "console";
+import { Delay } from "./Util"
 
 export interface AttachmentResponse{
     ok: boolean,
@@ -22,7 +24,7 @@ export interface AttachmentResponse{
     fileData? : ArrayBuffer
 }
 
-export class AttachmentsFileTransfer extends _Message {
+export abstract class AttachmentsFileTransfer extends _Message {
     private static FileTransferIntercface = "FileOperationHelper";
     private static CreateTicketOperation = "CreateTicket";
     private static DeleteTicketOperation = "DeleteTicket";
@@ -257,7 +259,11 @@ export class AttachmentsFileTransfer extends _Message {
     protected ErrorResponse(errorText: string ): AttachmentResponse {
         return { ok: false, errorText: errorText };
     }
+
     protected _ErrorResponse(errorText: string, fileInfo: Object ): AttachmentResponse {
+        if (this._clientSessionId) {
+            this.CloseTempSession().then(_ => { } );
+        }
         return { ...fileInfo, ok: false, errorText: errorText };
     }
 
@@ -280,25 +286,37 @@ export class AttachmentsFileTransfer extends _Message {
                 return this.ErrorResponse("Error in returned data. I can't find a record with ticket.");
             }
         } else {
-            this._ticketId = "";
+            if (this._operation != AttachmentsFileTransfer.ReadFileOperation && this._operation != AttachmentsFileTransfer.WriteFileOperation) {
+                this._ticketId = "";
+            }
             result = { ok: true, errorText: "" };
         }
         return result;
 ;
     }
 
-    protected async Download(docClass: string, docNo: string, docSheet: string, docRev: string, docType: string, fileNo: number, fileName: string) : Promise<AttachmentResponse> {
+    protected async Download(docClass: string, docNo: string, docSheet: string, docRev: string, docType: string, fileNo: number, fileName: string): Promise<AttachmentResponse> {
+        this.OpenTempSession()
         const ticket = await this.CreateTicket();
         const fileInfo = { docClass: docClass, docNo: docNo, docSheet: docSheet, docRev: docRev, docType: docType, fileNo: fileNo };
-        if (!ticket.ok || !this._ticketId) return this._ErrorResponse(ticket.errorText, fileInfo);
-
-        const readFile = await this.GetDownloadTicket(docClass, docNo, docSheet, docRev, docType, fileNo, this._ticketId, fileName);
-        if (!readFile.ok) return this._ErrorResponse(readFile.errorText, fileInfo);
+        if (!ticket.ok || !this._ticketId) return this._ErrorResponse('CreateTicket: '+ticket.errorText, fileInfo);
+        
+        const maxTry = 50; //try for 5 seconds
+        for (let i = 1; i <= maxTry; i++){
+            const readFile = await this.GetDownloadTicket(docClass, docNo, docSheet, docRev, docType, fileNo, this._ticketId, fileName);
+            if (readFile.ok) break;
+            if (i === maxTry) {
+                return this._ErrorResponse('GetDownloadTicket: '+readFile.errorText, fileInfo);            
+            } else {
+                await Delay(100);
+            }
+        }
 
         const fileData = await this.DownloadFile(this._ticketId, fileName);
         
-        const deleteTicket = await this.DeleteTicket();
-        if (!deleteTicket.ok) return this._ErrorResponse(deleteTicket.errorText, fileInfo);
+        this.DeleteTicket().then( _ => {
+            this.CloseTempSession().then(_ => { } );           
+        });
 
         return { ...fileInfo, ok: true, errorText: "", fileName: fileName, fileData: fileData };
     }
@@ -321,6 +339,7 @@ export class AttachmentsFileTransfer extends _Message {
 
     private async UploadFile(ticket: string, fileName : string, fileData: ArrayBuffer): Promise<ArrayBuffer> {
         const formData  = new FormData();
+        assert(ticket);
         formData.append("FILE_TRANSFER_TICKET", ticket);
         formData.append("file", new Blob([new Uint8Array(fileData)]), fileName)
 
@@ -332,7 +351,8 @@ export class AttachmentsFileTransfer extends _Message {
         return await response.arrayBuffer();
     }
 
-    private async DownloadFile( ticket : string, fileName : string) : Promise<ArrayBuffer> {
+    private async DownloadFile(ticket: string, fileName: string): Promise<ArrayBuffer> {
+        assert(ticket);
         const response = await fetch(this._connection.connectionString + AttachmentsFileTransfer.FileServiceInterfaceOperation,  {
             method: 'POST',
             body: new URLSearchParams({
